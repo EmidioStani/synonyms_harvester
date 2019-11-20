@@ -1,0 +1,2699 @@
+@prefix concept-status: <http://publications.europa.eu/resource/authority/concept-status/> .
+@prefix days: <http://data.sparna.fr/vocabularies/days#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+days:accompanies a skos:Concept ;
+    skos:altLabel "brings"@en,
+        "entails"@en,
+        "follows"@en,
+        "implies"@en,
+        "involves"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Accompanies"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:acknowledgement a skos:Concept ;
+    skos:altLabel "acknowledgment"@en,
+        "recognition"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Acknowledgement"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:actasfollows a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Actasfollows"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:actions a skos:Concept ;
+    skos:altLabel "action at law"@en,
+        "activeness"@en,
+        "activity"@en,
+        "legal action"@en,
+        "military action"@en,
+        "natural action"@en,
+        "natural process"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Actions"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:activity a skos:Concept ;
+    skos:altLabel "action"@en,
+        "activeness"@en,
+        "bodily_function"@en,
+        "bodily_process"@en,
+        "body_process"@en,
+        "natural_action"@en,
+        "natural_process"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Activity"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:additionalinformation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Additionalinformation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:address a skos:Concept ;
+    skos:altLabel "adroitness"@en,
+        "computer_address"@en,
+        "destination"@en,
+        "discourse"@en,
+        "harangue"@en,
+        "ingenuity"@en,
+        "lecture"@en,
+        "name_and_address"@en,
+        "oration"@en,
+        "petition"@en,
+        "readiness"@en,
+        "reference"@en,
+        "savoir-faire"@en,
+        "speech"@en,
+        "tact"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Address"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#alltheregion’sservices> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Alltheregion’sservices"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:alsoimportant a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Alsoimportant"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:annex a skos:Concept ;
+    skos:altLabel "addition"@en,
+        "annexe"@en,
+        "extension"@en,
+        "supplement"@en,
+        "wing"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Annex"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:annextoapplication a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Annextoapplication"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:applicationdossieraliapplicationformarketingauthorization a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Applicationdossieraliapplicationformarketingauthorization"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:arrangeyourbusinesswiththegovernmentonline a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Arrangeyourbusinesswiththegovernmentonline"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:associatedprocedures a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Associatedprocedures"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:audience a skos:Concept ;
+    skos:altLabel "consultation"@en,
+        "crowd"@en,
+        "hearership"@en,
+        "hearing"@en,
+        "interview"@en,
+        "listenership"@en,
+        "spectators"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Audience"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:author a skos:Concept ;
+    skos:altLabel "artist"@en,
+        "bookwright"@en,
+        "creator"@en,
+        "fabulator"@en,
+        "generator"@en,
+        "source"@en,
+        "subcreator"@en,
+        "writer"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Author"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:authorisationtobeobtained a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Authorisationtobeobtained"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:availabilityrestriction a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "AvailabilityRestriction"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:availableservices a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "AvailableServices"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:background a skos:Concept ;
+    skos:altLabel "backcloth"@en,
+        "backdrop"@en,
+        "background_knowledge"@en,
+        "background_signal"@en,
+        "desktop"@en,
+        "ground"@en,
+        "scope"@en,
+        "screen_background"@en,
+        "setting"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Background"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:backgroundpaper a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Backgroundpaper"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:bankaccount a skos:Concept ;
+    skos:altLabel "1st"@en,
+        "abdication"@en,
+        "abs"@en,
+        "accolade"@en,
+        "accounting"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "BankAccount"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:beforeyoubegin a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Beforeyoubegin"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:businessactivitieswhichapply a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "BusinessActivitieswhichApply"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:businessesnotrequiringalicence a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Businessesnotrequiringalicence"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:businessid a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "BusinessID"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:capital a skos:Concept ;
+    skos:altLabel "cap"@en,
+        "capital_letter"@en,
+        "caps"@en,
+        "chapiter"@en,
+        "majuscule"@en,
+        "upper-case_letter"@en,
+        "uppercase"@en,
+        "working_capital"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Capital"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:casestudies a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Casestudies"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:category a skos:Concept ;
+    skos:altLabel "class"@en,
+        "family"@en,
+        "genus"@en,
+        "group"@en,
+        "kingdom"@en,
+        "order"@en,
+        "phylum"@en,
+        "race"@en,
+        "tribe"@en,
+        "type"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Category"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:certificate a skos:Concept ;
+    skos:altLabel "certification"@en,
+        "credential"@en,
+        "credentials"@en,
+        "security"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Certificate"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:circumstances a skos:Concept ;
+    skos:altLabel "destiny"@en,
+        "fate"@en,
+        "fortune"@en,
+        "lot"@en,
+        "luck"@en,
+        "portion"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "circumstances"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:city a skos:Concept ;
+    skos:altLabel "metropolis"@en,
+        "urban_center"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "City"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:code a skos:Concept ;
+    skos:altLabel "codification"@en,
+        "computer_code"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Code"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:comment a skos:Concept ;
+    skos:altLabel "commentary"@en,
+        "gossip"@en,
+        "input"@en,
+        "remark"@en,
+        "scuttlebutt"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Comment"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:commune a skos:Concept ;
+    skos:altLabel "communicate"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Commune"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:competentauthority a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Competentauthority"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:competentorgan a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Competentorgan"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:conditionsandevidence a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Conditionsandevidence"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:contact a skos:Concept ;
+    skos:altLabel "contact_lens"@en,
+        "impinging"@en,
+        "inter-group_communication"@en,
+        "liaison"@en,
+        "link"@en,
+        "middleman"@en,
+        "physical_contact"@en,
+        "striking"@en,
+        "tangency"@en,
+        "touch"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Contact"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:contactdetails a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Contactdetails"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:costsofproceedings a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Costsofproceedings"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:country a skos:Concept ;
+    skos:altLabel "area"@en,
+        "body_politic"@en,
+        "commonwealth"@en,
+        "land"@en,
+        "nation"@en,
+        "res_publica"@en,
+        "rural_area"@en,
+        "state"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Country"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:countryoforigin a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Countryoforigin"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:cross-borderorestablishment a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Cross-borderorestablishment"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:cross-borderprovisionsofprofession a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Cross-borderprovisionsofprofession"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:cross-borderserviceprovision a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Cross-borderserviceprovision"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:currency a skos:Concept ;
+    skos:altLabel "currentness"@en,
+        "up-to-dateness"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Currency"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:date a skos:Concept ;
+    skos:altLabel "appointment"@en,
+        "day_of_the_month"@en,
+        "engagement"@en,
+        "escort"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Date"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:deadline a skos:Concept ;
+    skos:altLabel "expire"@en,
+        "timeframe"@en,
+        "timeline"@en,
+        "timelines"@en,
+        "timetable"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Deadline"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:department a skos:Concept ;
+    skos:altLabel "ministry"@en,
+        "province"@en,
+        "section"@en,
+        "specialty"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Department"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:departmentsandorganizationalunits a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Departmentsandorganizationalunits"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:dependencies a skos:Concept ;
+    skos:altLabel "addiction"@en,
+        "addictions"@en,
+        "colonies"@en,
+        "dependences"@en,
+        "dependent"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Dependencies"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:description a skos:Concept ;
+    skos:altLabel "kind"@en,
+        "sort"@en,
+        "type"@en,
+        "variety"@en,
+        "verbal_description"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Description"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:documents a skos:Concept ;
+    skos:altLabel "papers"@en,
+        "text file"@en,
+        "written document"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Documents"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:downloadformsforprinting a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Downloadformsforprinting"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:drivingdirections a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Drivingdirections"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:e-mail a skos:Concept ;
+    skos:altLabel "electronic_mail"@en,
+        "email"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "E-mail"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:e-notes a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "E-notes"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:education a skos:Concept ;
+    skos:altLabel "breeding"@en,
+        "didactics"@en,
+        "educational_activity"@en,
+        "instruction"@en,
+        "pedagogy"@en,
+        "teaching"@en,
+        "training"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Education"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:effectivedate a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "EffectiveDate"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:electronicapplicationformorservices a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Electronicapplicationformorservices"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:elsewhereontheweb a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Elsewhereontheweb"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:email a skos:Concept ;
+    skos:altLabel "e-mail"@en,
+        "electronic_mail"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Email"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:employees a skos:Concept ;
+    skos:altLabel "employer"@en,
+        "employers"@en,
+        "staffers"@en,
+        "workers"@en,
+        "workforce"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Employees"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:enteredintoforce a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Enteredintoforce"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:events a skos:Concept ;
+    skos:altLabel "case"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Events"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:exclusionsfromthescope a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Exclusionsfromthescope"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:exemptions a skos:Concept ;
+    skos:altLabel "freedom"@en,
+        "granting immunity"@en,
+        "immunity"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Exemptions"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:externallinks a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Externallinks"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:faq a skos:Concept ;
+    skos:altLabel "fair"@en,
+        "foire"@en,
+        "frequent"@en,
+        "item"@en,
+        "mff"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "FAQ"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:faqs a skos:Concept ;
+    skos:altLabel "aspx"@en,
+        "htm"@en,
+        "mff"@en,
+        "qfp"@en,
+        "questions"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "FAQS"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:fax a skos:Concept ;
+    skos:altLabel "facsimile"@en,
+        "facsimile_machine"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Fax"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:fees a skos:Concept ;
+    skos:altLabel "contract"@en,
+        "sign"@en,
+        "sign on"@en,
+        "sign up"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Fees"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:field a skos:Concept ;
+    skos:altLabel "airfield"@en,
+        "area"@en,
+        "arena"@en,
+        "athletic_field"@en,
+        "bailiwick"@en,
+        "battlefield"@en,
+        "battleground"@en,
+        "box"@en,
+        "champaign"@en,
+        "course"@en,
+        "court"@en,
+        "discipline"@en,
+        "domain"@en,
+        "field_of_battle"@en,
+        "field_of_force"@en,
+        "field_of_honor"@en,
+        "field_of_operation"@en,
+        "field_of_operations"@en,
+        "field_of_study"@en,
+        "field_of_view"@en,
+        "flying_field"@en,
+        "force_field"@en,
+        "ground"@en,
+        "input_field"@en,
+        "landing_field"@en,
+        "line_of_business"@en,
+        "orbit"@en,
+        "pitch"@en,
+        "plain"@en,
+        "playing_area"@en,
+        "playing_field"@en,
+        "realm"@en,
+        "sphere"@en,
+        "study"@en,
+        "subject"@en,
+        "subject_area"@en,
+        "subject_field"@en,
+        "theater"@en,
+        "theater_of_operations"@en,
+        "theatre"@en,
+        "theatre_of_operations"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Field"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:figure a skos:Concept ;
+    skos:altLabel "anatomy"@en,
+        "bod"@en,
+        "build"@en,
+        "chassis"@en,
+        "design"@en,
+        "digit"@en,
+        "fig"@en,
+        "figure_of_speech"@en,
+        "flesh"@en,
+        "form"@en,
+        "frame"@en,
+        "human_body"@en,
+        "image"@en,
+        "material_body"@en,
+        "name"@en,
+        "number"@en,
+        "pattern"@en,
+        "physical_body"@en,
+        "physique"@en,
+        "public_figure"@en,
+        "shape"@en,
+        "soma"@en,
+        "trope"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Figure"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:financialorganization a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Financialorganization"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:firstname a skos:Concept ;
+    skos:altLabel "behalf"@en,
+        "fields"@en,
+        "name"@en,
+        "number"@en,
+        "numbers"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Firstname"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:firstpublished a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Firstpublished"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:follows a skos:Concept ;
+    skos:altLabel "accompany"@en,
+        "adopt"@en,
+        "be"@en,
+        "come"@en,
+        "comply"@en,
+        "espouse"@en,
+        "observe"@en,
+        "pursue"@en,
+        "succeed"@en,
+        "watch"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Follows"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:form a skos:Concept ;
+    skos:altLabel "anatomy"@en,
+        "bod"@en,
+        "build"@en,
+        "cast"@en,
+        "chassis"@en,
+        "class"@en,
+        "configuration"@en,
+        "conformation"@en,
+        "contour"@en,
+        "cookie_cutter"@en,
+        "course"@en,
+        "descriptor"@en,
+        "f."@en,
+        "figure"@en,
+        "flesh"@en,
+        "formular"@en,
+        "frame"@en,
+        "grade"@en,
+        "human_body"@en,
+        "kind"@en,
+        "makeup"@en,
+        "manakin"@en,
+        "manikin"@en,
+        "mannequin"@en,
+        "mannikin"@en,
+        "material_body"@en,
+        "mold"@en,
+        "pattern"@en,
+        "phase"@en,
+        "physical_body"@en,
+        "physique"@en,
+        "shape"@en,
+        "signifier"@en,
+        "soma"@en,
+        "sort"@en,
+        "strain"@en,
+        "var."@en,
+        "variant"@en,
+        "variety"@en,
+        "word_form"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Form"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:formid a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "FormID"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:forms a skos:Concept ;
+    skos:altLabel "build"@en,
+        "constitute"@en,
+        "forge"@en,
+        "kind"@en,
+        "make"@en,
+        "pattern"@en,
+        "shape"@en,
+        "sort"@en,
+        "strain"@en,
+        "variant"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Forms"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#forwhom?> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Forwhom?"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:frequency a skos:Concept ;
+    skos:altLabel "absolute_frequency"@en,
+        "freq"@en,
+        "frequence"@en,
+        "oftenness"@en,
+        "relative_frequency"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Frequency"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:from a skos:Concept ;
+    skos:altLabel "after"@en,
+        "around"@en,
+        "following"@en,
+        "outside"@en,
+        "via"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "From"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:goodtoknow a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Goodtoknow"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:guides a skos:Concept ;
+    skos:altLabel "conduct"@en,
+        "direct"@en,
+        "guidebook"@en,
+        "pass"@en,
+        "pathfinder"@en,
+        "scout"@en,
+        "steer"@en,
+        "take"@en,
+        "template"@en,
+        "usher"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Guides"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hasaddress a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasAddress"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:haschannel a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasChannel"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hascompetentauthority a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasCompetentAuthority"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hascontactpoint a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasContactPoint"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hascost a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasCost"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hascriterion a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasCriterion"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hasinput a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasInput"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:haslegalresource a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasLegalResource"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hasparticipation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "HasParticipation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:hasyettoenterintoforce a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Hasyettoenterintoforce"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#help&support> a skos:Concept ;
+    skos:altLabel ""@en,
+        "activity "@en,
+        "advance "@en,
+        "aid"@en,
+        "ameliorate "@en,
+        "amend "@en,
+        "assist"@en,
+        "assistance"@en,
+        "assistant"@en,
+        "avail"@en,
+        "back up "@en,
+        "better "@en,
+        "boost "@en,
+        "cater "@en,
+        "encourage "@en,
+        "exploit "@en,
+        "facilitate"@en,
+        "forbear "@en,
+        "further "@en,
+        "help oneself"@en,
+        "helper"@en,
+        "helpfulness "@en,
+        "improve "@en,
+        "meliorate "@en,
+        "ply "@en,
+        "promote "@en,
+        "provide "@en,
+        "refrain "@en,
+        "resource "@en,
+        "serve"@en,
+        "serve "@en,
+        "service"@en,
+        "supply "@en,
+        "support "@en,
+        "supporter"@en,
+        "work "@en,
+        "worker "@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Help&Support"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:highlights a skos:Concept ;
+    skos:altLabel "foreground"@en,
+        "high spot"@en,
+        "play up"@en,
+        "spotlight"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Highlights"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#howtoapply?> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Howtoapply?"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:identifier a skos:Concept ;
+    skos:altLabel "code"@en,
+        "designator"@en,
+        "designators"@en,
+        "identification"@en,
+        "identity"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Identifier"@en,
+        "identifier"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:ifaccessedthrough a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "IfAccessedThrough"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:implements a skos:Concept ;
+    skos:altLabel "apply"@en,
+        "carry out"@en,
+        "enforce"@en,
+        "follow through"@en,
+        "go through"@en,
+        "put through"@en,
+        "utilize"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Implements"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:importantnumbers a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Importantnumbers"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:inperson a skos:Concept ;
+    skos:altLabel "biweekly"@en,
+        "clandestine"@en,
+        "confidential"@en,
+        "counseling"@en,
+        "daylong"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Inperson"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:instructions a skos:Concept ;
+    skos:altLabel "book_of_instructions"@en,
+        "instruction_manual"@en,
+        "operating_instructions"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Instructions"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:inwhatpartofthecountrythisformalityisobserved a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Inwhatpartofthecountrythisformalityisobserved"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:isclassifiedby a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "isClassifiedby"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:isdefinedby a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "IsDefinedBy"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:isgroupedby a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "IsGroupedBy"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:issue a skos:Concept ;
+    skos:altLabel "charge"@en,
+        "consequence"@en,
+        "descendant"@en,
+        "effect"@en,
+        "egress"@en,
+        "emergence"@en,
+        "event"@en,
+        "exit"@en,
+        "fruit_of_one's_loins"@en,
+        "government_issue"@en,
+        "issuance"@en,
+        "issuing"@en,
+        "matter"@en,
+        "military_issue"@en,
+        "number"@en,
+        "offspring"@en,
+        "outcome"@en,
+        "outlet"@en,
+        "payoff"@en,
+        "proceeds"@en,
+        "progeny"@en,
+        "publication"@en,
+        "result"@en,
+        "return"@en,
+        "sally"@en,
+        "sortie"@en,
+        "subject"@en,
+        "take"@en,
+        "takings"@en,
+        "topic"@en,
+        "upshot"@en,
+        "way_out"@en,
+        "yield"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Issue"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:issuer a skos:Concept ;
+    skos:altLabel "consignor"@en,
+        "grantor"@en,
+        "issuance"@en,
+        "offeree"@en,
+        "preparer"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "issuer"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:jobdescription a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Jobdescription"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:jobtitle a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Jobtitle"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:keyword a skos:Concept ;
+    skos:altLabel "operative_word"@en,
+        "workword"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Keyword"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:landingpage a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Landingpage"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:language a skos:Concept ;
+    skos:altLabel "computer_language"@en,
+        "linguistic_communication"@en,
+        "linguistic_process"@en,
+        "lyric"@en,
+        "machine_language"@en,
+        "nomenclature"@en,
+        "oral_communication"@en,
+        "programming_language"@en,
+        "speech"@en,
+        "speech_communication"@en,
+        "spoken_communication"@en,
+        "spoken_language"@en,
+        "terminology"@en,
+        "voice_communication"@en,
+        "words"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Language"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:lastmodified a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Lastmodified"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:lastupdate a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Lastupdate"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:lastupdated a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Lastupdated"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:latestonthispolicy a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Latestonthispolicy"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:lawsandregulations a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Lawsandregulations"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:legalauthority a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Legalauthority"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:legalbasis a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Legalbasis"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#legalbasis/grounds> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Legalbasis/grounds"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:legalprotection a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Legalprotection"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:legalrepresentative a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Legalrepresentative"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:legislation a skos:Concept ;
+    skos:altLabel "lawmaking"@en,
+        "legislating"@en,
+        "statute_law"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Legislation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:level a skos:Concept ;
+    skos:altLabel "degree"@en,
+        "floor"@en,
+        "grade"@en,
+        "horizontal_surface"@en,
+        "layer"@en,
+        "point"@en,
+        "spirit_level"@en,
+        "stage"@en,
+        "storey"@en,
+        "story"@en,
+        "stratum"@en,
+        "tier"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Level"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#licence/notification/registrationname> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Licence/Notification/Registrationname"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:lifecycle a skos:Concept ;
+    skos:altLabel "bike"@en,
+        "cycle"@en,
+        "life"@en,
+        "life-cycle"@en,
+        "life-span"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Lifecycle"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:liftavailable a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Liftavailable"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:links a skos:Concept ;
+    skos:altLabel "golf_links"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Links"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:listofactivities a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Listofactivities"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:listofdocuments a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Listofdocuments"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:locationonthemap a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Locationonthemap"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:mailaddress a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Mailaddress"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:makeanappointment a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Makeanappointment"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:member a skos:Concept ;
+    skos:altLabel "appendage"@en,
+        "extremity"@en,
+        "fellow_member"@en,
+        "penis"@en,
+        "phallus"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Member"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:methodofcommencement a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Methodofcommencement"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:municipalities a skos:Concept ;
+    skos:altLabel "districts"@en,
+        "localities"@en,
+        "mayors"@en,
+        "municipal"@en,
+        "towns"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Municipalities"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:name a skos:Concept ;
+    skos:altLabel "epithet"@en,
+        "figure"@en,
+        "gens"@en,
+        "public_figure"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Name"@en,
+        "name"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#name(person)> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Name(person)"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:nameoftheorganisation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Nameoftheorganisation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:nationaldevelopmentplans a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Nationaldevelopmentplans"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:news a skos:Concept ;
+    skos:altLabel "intelligence"@en,
+        "news_program"@en,
+        "news_show"@en,
+        "newsworthiness"@en,
+        "tidings"@en,
+        "word"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "News"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#no.crt.> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "No.Crt."@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:note a skos:Concept ;
+    skos:altLabel "Federal_Reserve_note"@en,
+        "annotation"@en,
+        "attention"@en,
+        "bank_bill"@en,
+        "bank_note"@en,
+        "banker's_bill"@en,
+        "banknote"@en,
+        "bill"@en,
+        "billet"@en,
+        "blemish"@en,
+        "blot"@en,
+        "brand"@en,
+        "distinction"@en,
+        "eminence"@en,
+        "government_note"@en,
+        "greenback"@en,
+        "line"@en,
+        "mark"@en,
+        "musical_note"@en,
+        "notation"@en,
+        "note_of_hand"@en,
+        "preeminence"@en,
+        "promissory_note"@en,
+        "reproach"@en,
+        "short_letter"@en,
+        "stain"@en,
+        "stigma"@en,
+        "taint"@en,
+        "tone"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Note"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:notes a skos:Concept ;
+    skos:altLabel "banknote"@en,
+        "bill"@en,
+        "distinction"@en,
+        "mention"@en,
+        "notation"@en,
+        "notice"@en,
+        "observe"@en,
+        "promissory note"@en,
+        "remark"@en,
+        "tone"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Notes"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:notificationofcross-borderservicesprovision a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Notificationofcross-borderservicesprovision"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:number a skos:Concept ;
+    skos:altLabel "act"@en,
+        "bit"@en,
+        "figure"@en,
+        "issue"@en,
+        "numeral"@en,
+        "phone_number"@en,
+        "rime"@en,
+        "routine"@en,
+        "scalar"@en,
+        "telephone_number"@en,
+        "turn"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Number"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:numberofpages a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Numberofpages"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:obligations a skos:Concept ;
+    skos:altLabel "duty"@en,
+        "responsibility"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Obligations"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:offsets a skos:Concept ;
+    skos:altLabel "cancel"@en,
+        "counterbalance"@en,
+        "countervail"@en,
+        "first"@en,
+        "offset printing"@en,
+        "offshoot"@en,
+        "outgrowth"@en,
+        "set off"@en,
+        "setoff"@en,
+        "start"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Offsets"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:openinghours a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "OpeningHours"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#organisation’spresentation> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Organisation’spresentation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:organization a skos:Concept ;
+    skos:altLabel "administration"@en,
+        "arrangement"@en,
+        "brass"@en,
+        "constitution"@en,
+        "establishment"@en,
+        "formation"@en,
+        "governance"@en,
+        "governing_body"@en,
+        "organisation"@en,
+        "system"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Organization"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:otheractivities a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Otheractivities"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:othercontacts a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Othercontacts"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:otherdetails a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Otherdetails"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:otherinformation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Otherinformation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:otherlanguages a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Otherlanguages"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:otherpossiblesteps a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Otherpossiblesteps"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:otherusefulinformation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Otherusefulinformation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:ownedby a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "OwnedBy"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:parking a skos:Concept ;
+    skos:altLabel "berthing"@en,
+        "camping"@en,
+        "carpark"@en,
+        "garage"@en,
+        "mooring"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Parking"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:parkinglot a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Parkinglot"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:participants a skos:Concept ;
+    skos:altLabel "player"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Participants"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:particularlyforcompanies a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Particularlyforcompanies"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:partof a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Partof"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:paymentfortheservicestep a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Paymentfortheservicestep"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:paymenttype a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Paymenttype"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:penalties a skos:Concept ;
+    skos:altLabel "fines"@en,
+        "punishment"@en,
+        "punishments"@en,
+        "sanction"@en,
+        "sanctions"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Penalties"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:performance a skos:Concept ;
+    skos:altLabel "carrying_into_action"@en,
+        "carrying_out"@en,
+        "execution"@en,
+        "functioning"@en,
+        "operation"@en,
+        "public_presentation"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Performance"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:permitcode a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Permitcode"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:phone a skos:Concept ;
+    skos:altLabel "earphone"@en,
+        "earpiece"@en,
+        "headphone"@en,
+        "sound"@en,
+        "speech_sound"@en,
+        "telephone"@en,
+        "telephone_set"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Phone"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:playsrole a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "PlaysRole"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:popular a skos:Concept ;
+    skos:altLabel "common"@en,
+        "fashionable"@en,
+        "favorite"@en,
+        "favourite"@en,
+        "general"@en,
+        "hot"@en,
+        "plain"@en,
+        "pop"@en,
+        "touristed"@en,
+        "touristy"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Popular"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:population a skos:Concept ;
+    skos:altLabel "universe"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Population"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:postalcode a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Postalcode"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:preferredlabel a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "PreferredLabel"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:pricelisttable a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Pricelisttable"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:privateexperts a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Privateexperts"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#procedure/institutionwebsite> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Procedure/Institutionwebsite"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:procedures a skos:Concept ;
+    skos:altLabel "function"@en,
+        "operation"@en,
+        "process"@en,
+        "routine"@en,
+        "subprogram"@en,
+        "subroutine"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Procedures"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:process a skos:Concept ;
+    skos:altLabel "appendage"@en,
+        "cognitive_operation"@en,
+        "cognitive_process"@en,
+        "mental_process"@en,
+        "operation"@en,
+        "outgrowth"@en,
+        "physical_process"@en,
+        "procedure"@en,
+        "summons"@en,
+        "unconscious_process"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Process"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:processingpointname a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Processingpointname"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:processingtime a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "ProcessingTime"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:produces a skos:Concept ;
+    skos:altLabel "acquire"@en,
+        "bring about"@en,
+        "bring out"@en,
+        "create"@en,
+        "develop"@en,
+        "farm"@en,
+        "get"@en,
+        "grow"@en,
+        "make"@en,
+        "raise"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Produces"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:products a skos:Concept ;
+    skos:altLabel "intersection"@en,
+        "mathematical product"@en,
+        "merchandise"@en,
+        "production"@en,
+        "wares"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Products"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:province a skos:Concept ;
+    skos:altLabel "circuit"@en,
+        "dao"@en,
+        "lu"@en,
+        "responsibility"@en,
+        "route"@en,
+        "state"@en,
+        "tao"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Province"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:provinces a skos:Concept ;
+    skos:altLabel "colony"@en,
+        "dominion"@en,
+        "mandate"@en,
+        "responsibility"@en,
+        "state"@en,
+        "territorial dominion"@en,
+        "territory"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Provinces"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:publication a skos:Concept ;
+    skos:altLabel "issue"@en,
+        "publishing"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Publication"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:publicrelationspointofcontact a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Publicrelationspointofcontact"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:publictransport a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Publictransport"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:publisher a skos:Concept ;
+    skos:altLabel "newspaper_publisher"@en,
+        "publishing_company"@en,
+        "publishing_firm"@en,
+        "publishing_house"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "publisher"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#questions?/contact> a skos:Concept ;
+    skos:altLabel "affairs"@en,
+        "answer"@en,
+        "answers"@en,
+        "any"@en,
+        "anything"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Questions?/Contact"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:quicklinks a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Quicklinks"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:readmore a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Readmore"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:receiver a skos:Concept ;
+    skos:altLabel "liquidator"@en,
+        "pass_catcher"@en,
+        "pass_receiver"@en,
+        "receiving_system"@en,
+        "recipient"@en,
+        "telephone_receiver"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Receiver"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:recognitionofqualificationsacquiredabroad a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Recognitionofqualificationsacquiredabroad"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:referencesandcontact a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Referencesandcontact"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:referencestandards a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Referencestandards"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:region a skos:Concept ;
+    skos:altLabel "area"@en,
+        "neighborhood"@en,
+        "part"@en,
+        "realm"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Region"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:registeredauthority a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Registeredauthority"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:registrationcode a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Registrationcode"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:regulation a skos:Concept ;
+    skos:altLabel "ordinance"@en,
+        "regularisation"@en,
+        "regularization"@en,
+        "regulating"@en,
+        "rule"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Regulation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:related a skos:Concept ;
+    skos:altLabel "associated"@en,
+        "concerning"@en,
+        "connected"@en,
+        "correlate"@en,
+        "correlated"@en,
+        "corresponding"@en,
+        "germane"@en,
+        "incidental"@en,
+        "regarding"@en,
+        "relevant"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Related"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedcontent a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Relatedcontent"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relateddocumentation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "RelatedDocumentation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedexternalservices a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Relatedexternalservices"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedinstitution a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Relatedinstitution"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedlinks a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Relatedlinks"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedservice a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "RelatedService"@en,
+        "Relatedservice"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedtags a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Relatedtags"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relatedtopic a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Relatedtopic"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:relativelinks a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "RelativeLinks"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:reply a skos:Concept ;
+    skos:altLabel "account"@en,
+        "answer"@en,
+        "comeback"@en,
+        "reaction"@en,
+        "rejoinder"@en,
+        "response"@en,
+        "retort"@en,
+        "return"@en,
+        "riposte"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Reply"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:reports a skos:Concept ;
+    skos:altLabel "account"@en,
+        "composition"@en,
+        "cover"@en,
+        "describe"@en,
+        "paper"@en,
+        "report card"@en,
+        "reputation"@en,
+        "story"@en,
+        "study"@en,
+        "theme"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Reports"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:requires a skos:Concept ;
+    skos:altLabel "ask"@en,
+        "command"@en,
+        "compel"@en,
+        "demand"@en,
+        "expect"@en,
+        "involve"@en,
+        "necessitate"@en,
+        "need"@en,
+        "take"@en,
+        "want"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Requires"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:responsibilities a skos:Concept ;
+    skos:altLabel "duties"@en,
+        "obligations"@en,
+        "role"@en,
+        "roles"@en,
+        "tasks"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Responsibilities"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:responsibilityresponsiblepartyotherproviders a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "ResponsibilityResponsiblePartyOtherproviders"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:responsible a skos:Concept ;
+    skos:altLabel "accountable"@en,
+        "answerable"@en,
+        "causative"@en,
+        "creditworthy"@en,
+        "judicious"@en,
+        "liable"@en,
+        "responsible for"@en,
+        "trustworthy"@en,
+        "trusty"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Responsible"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:responsiblefor a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Responsiblefor"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:responsibleforsuap a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Responsibleforsuap"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:responsibleorganisation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Responsibleorganisation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:role a skos:Concept ;
+    skos:altLabel "character"@en,
+        "function"@en,
+        "office"@en,
+        "part"@en,
+        "persona"@en,
+        "purpose"@en,
+        "theatrical_role"@en,
+        "use"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Role"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:rss a skos:Concept ;
+    skos:altLabel "cnm"@en,
+        "cnr"@en,
+        "ecr"@en,
+        "feed"@en,
+        "gcos"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "RSS"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:rules a skos:Concept ;
+    skos:altLabel "decree"@en,
+        "dominion"@en,
+        "formula"@en,
+        "govern"@en,
+        "pattern"@en,
+        "prevail"@en,
+        "principle"@en,
+        "regulation"@en,
+        "reign"@en,
+        "ruler"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Rules"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:searchwords a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Searchwords"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:sector a skos:Concept ;
+    skos:altLabel "sphere"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Sector"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:sectororganisations a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Sectororganisations"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:seealso a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Seealso"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:sendpractises a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Sendpractises"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:service a skos:Concept ;
+    skos:altLabel "armed_service"@en,
+        "avail"@en,
+        "divine_service"@en,
+        "help"@en,
+        "inspection_and_repair"@en,
+        "military_service"@en,
+        "overhaul"@en,
+        "religious_service"@en,
+        "serve"@en,
+        "service_of_process"@en,
+        "servicing"@en,
+        "serving"@en,
+        "table_service"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Service"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:serviceprovider a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "ServiceProvider"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:services a skos:Concept ;
+    skos:altLabel "armed service"@en,
+        "avail"@en,
+        "divine service"@en,
+        "help"@en,
+        "inspection and repair"@en,
+        "military service"@en,
+        "overhaul"@en,
+        "overhauling"@en,
+        "serve"@en,
+        "serving"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Services"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:servicesoftheorganisation a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Servicesoftheorganisation"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:site a skos:Concept ;
+    skos:altLabel "internet_site"@en,
+        "land_site"@en,
+        "situation"@en,
+        "web_site"@en,
+        "website"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Site"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:size a skos:Concept ;
+    skos:altLabel "size_of_it"@en,
+        "sizing"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Size"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:spatial a skos:Concept ;
+    skos:altLabel "spacial"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Spatial"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:statistics a skos:Concept ;
+    skos:altLabel "data"@en,
+        "figures"@en,
+        "numbers"@en,
+        "statistical"@en,
+        "stats"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Statistics"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:statisticsapplication a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Statisticsapplication"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:status a skos:Concept ;
+    skos:altLabel "condition"@en,
+        "position"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Status"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:statutorytimeframefortheexecution a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Statutorytimeframefortheexecution"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:step-by-stepguide a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Step-by-stepguide"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:step-by-stepguides a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Step-by-stepguides"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:stepnumber a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Stepnumber"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:stepsofproceedings a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Stepsofproceedings"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:subcategories a skos:Concept ;
+    skos:altLabel "categories"@en,
+        "classes"@en,
+        "classification"@en,
+        "classifications"@en,
+        "groupings"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Subcategories"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:subcategory a skos:Concept ;
+    skos:altLabel "child_category"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Subcategory"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:subject a skos:Concept ;
+    skos:altLabel "bailiwick"@en,
+        "case"@en,
+        "content"@en,
+        "depicted_object"@en,
+        "discipline"@en,
+        "field"@en,
+        "field_of_study"@en,
+        "guinea_pig"@en,
+        "issue"@en,
+        "matter"@en,
+        "national"@en,
+        "study"@en,
+        "subject_area"@en,
+        "subject_field"@en,
+        "theme"@en,
+        "topic"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Subject"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:subrequirementsservices a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Subrequirementsservices"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:subsector a skos:Concept ;
+    skos:altLabel "clustering"@en,
+        "constituency"@en,
+        "electrical"@en,
+        "grouping"@en,
+        "industry"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Subsector"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:subsidies a skos:Concept ;
+    skos:altLabel "incentives"@en,
+        "subsidization"@en,
+        "subsidized"@en,
+        "subsidizing"@en,
+        "subventions"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Subsidies"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:substitute a skos:Concept ;
+    skos:altLabel "backup"@en,
+        "backup_man"@en,
+        "fill-in"@en,
+        "relief"@en,
+        "reliever"@en,
+        "replacement"@en,
+        "reserve"@en,
+        "second-stringer"@en,
+        "stand-in"@en,
+        "surrogate"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Substitute"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:summary a skos:Concept ;
+    skos:altLabel "sum-up"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Summary"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:supportingdetails a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Supportingdetails"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:supportingevidence a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Supportingevidence"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:supraregionalresponsibilities a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Supraregionalresponsibilities"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:surname a skos:Concept ;
+    skos:altLabel "byname"@en,
+        "cognomen"@en,
+        "epithet"@en,
+        "family_name"@en,
+        "last_name"@en,
+        "nickname"@en,
+        "sobriquet"@en,
+        "to-name"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Surname"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:taxes a skos:Concept ;
+    skos:altLabel "assess"@en,
+        "revenue enhancement"@en,
+        "task"@en,
+        "taxation"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Taxes"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:telephone a skos:Concept ;
+    skos:altLabel "Ameche"@en,
+        "blower"@en,
+        "dog_and_bone"@en,
+        "farspeaker"@en,
+        "horn"@en,
+        "phone"@en,
+        "telephone_set"@en,
+        "telephony"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Telephone"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:template a skos:Concept ;
+    skos:altLabel "guide"@en,
+        "templet"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Template"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:thematicarea a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "ThematicArea"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:thisinformationispostedby a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Thisinformationispostedby"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:timelimit a skos:Concept ;
+    skos:altLabel "answer"@en,
+        "answers"@en,
+        "deadline"@en,
+        "delay"@en,
+        "duration"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Timelimit"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:timetable a skos:Concept ;
+    skos:altLabel "deadline"@en,
+        "timeframe"@en,
+        "timeline"@en,
+        "timelines"@en,
+        "timescale"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Timetable"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:tips a skos:Concept ;
+    skos:altLabel "angle"@en,
+        "baksheesh"@en,
+        "bung"@en,
+        "gratuity"@en,
+        "hint"@en,
+        "peak"@en,
+        "point"@en,
+        "slant"@en,
+        "steer"@en,
+        "tilt"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Tips"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:tool a skos:Concept ;
+    skos:altLabel "cock"@en,
+        "creature"@en,
+        "dick"@en,
+        "instrument"@en,
+        "pecker"@en,
+        "prick"@en,
+        "puppet"@en,
+        "putz"@en,
+        "shaft"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Tool"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:toolcategory a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Toolcategory"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:tools a skos:Concept ;
+    skos:altLabel "cock"@en,
+        "creature"@en,
+        "dick"@en,
+        "drive"@en,
+        "instrument"@en,
+        "pecker"@en,
+        "prick"@en,
+        "puppet"@en,
+        "shaft"@en,
+        "tool around"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Tools"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:topic a skos:Concept ;
+    skos:altLabel "issue"@en,
+        "matter"@en,
+        "subject"@en,
+        "subject_area"@en,
+        "theme"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Topic"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:topics a skos:Concept ;
+    skos:altLabel "issue"@en,
+        "matter"@en,
+        "subject"@en,
+        "theme"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Topics"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:topicurl a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "TopicURL"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:townorcity a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Townorcity"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:type a skos:Concept ;
+    skos:altLabel "case"@en,
+        "category"@en,
+        "character"@en,
+        "class"@en,
+        "data_type"@en,
+        "eccentric"@en,
+        "genre"@en,
+        "group"@en,
+        "kind"@en,
+        "nature"@en,
+        "sort"@en,
+        "stripe"@en,
+        "tribe"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Type"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:typeofcompany a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Typeofcompany"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:typeofestablishment a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Typeofestablishment"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:url a skos:Concept ;
+    skos:altLabel "address"@en,
+        "email"@en,
+        "jar"@en,
+        "uri"@en,
+        "website"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "URL"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:urlsubcategory a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "URLSubcategory"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#validityofthelicence/notification/registration> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "ValidityoftheLicence/Notification/Registration"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:value a skos:Concept ;
+    skos:altLabel "economic_value"@en,
+        "note_value"@en,
+        "time_value"@en,
+        "valence"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Value"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#versionnumber.> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Versionnumber."@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:website a skos:Concept ;
+    skos:altLabel "internet_site"@en,
+        "site"@en,
+        "web_site"@en ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Website"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:websiteforms a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Websiteforms"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#whatwillchange/haschanged?> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Whatwillchange/haschanged?"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+days:wheelchairaccessible a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Wheelchairaccessible"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#when?> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "When?"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#whowe’reconsulting> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Whowe’reconsulting"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days#whowe’reworkingwith> a skos:Concept ;
+    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
+    skos:prefLabel "Whowe’reworkingwith"@en ;
+    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+
+<http://data.sparna.fr/vocabularies/days> a skos:ConceptScheme ;
+    dct:description "Thedaysoftheweek"@en ;
+    dct:title "Weekdays"@en ;
+    skos:hasTopConcept days:accompanies,
+        days:acknowledgement,
+        days:actasfollows,
+        days:actions,
+        days:activity,
+        days:additionalinformation,
+        days:address,
+        <http://data.sparna.fr/vocabularies/days#alltheregion’sservices>,
+        days:alsoimportant,
+        days:annex,
+        days:annextoapplication,
+        days:applicationdossieraliapplicationformarketingauthorization,
+        days:arrangeyourbusinesswiththegovernmentonline,
+        days:associatedprocedures,
+        days:audience,
+        days:author,
+        days:authorisationtobeobtained,
+        days:availabilityrestriction,
+        days:availableservices,
+        days:background,
+        days:backgroundpaper,
+        days:bankaccount,
+        days:beforeyoubegin,
+        days:businessactivitieswhichapply,
+        days:businessesnotrequiringalicence,
+        days:businessid,
+        days:capital,
+        days:casestudies,
+        days:category,
+        days:certificate,
+        days:circumstances,
+        days:city,
+        days:code,
+        days:comment,
+        days:commune,
+        days:competentauthority,
+        days:competentorgan,
+        days:conditionsandevidence,
+        days:contact,
+        days:contactdetails,
+        days:costsofproceedings,
+        days:country,
+        days:countryoforigin,
+        days:cross-borderorestablishment,
+        days:cross-borderprovisionsofprofession,
+        days:cross-borderserviceprovision,
+        days:currency,
+        days:date,
+        days:deadline,
+        days:department,
+        days:departmentsandorganizationalunits,
+        days:dependencies,
+        days:description,
+        days:documents,
+        days:downloadformsforprinting,
+        days:drivingdirections,
+        days:e-mail,
+        days:e-notes,
+        days:education,
+        days:effectivedate,
+        days:electronicapplicationformorservices,
+        days:elsewhereontheweb,
+        days:email,
+        days:employees,
+        days:enteredintoforce,
+        days:events,
+        days:exclusionsfromthescope,
+        days:exemptions,
+        days:externallinks,
+        days:faq,
+        days:faqs,
+        days:fax,
+        days:fees,
+        days:field,
+        days:figure,
+        days:financialorganization,
+        days:firstname,
+        days:firstpublished,
+        days:follows,
+        days:form,
+        days:formid,
+        days:forms,
+        <http://data.sparna.fr/vocabularies/days#forwhom?>,
+        days:frequency,
+        days:from,
+        days:goodtoknow,
+        days:guides,
+        days:hasaddress,
+        days:haschannel,
+        days:hascompetentauthority,
+        days:hascontactpoint,
+        days:hascost,
+        days:hascriterion,
+        days:hasinput,
+        days:haslegalresource,
+        days:hasparticipation,
+        days:hasyettoenterintoforce,
+        <http://data.sparna.fr/vocabularies/days#help&support>,
+        days:highlights,
+        <http://data.sparna.fr/vocabularies/days#howtoapply?>,
+        days:identifier,
+        days:ifaccessedthrough,
+        days:implements,
+        days:importantnumbers,
+        days:inperson,
+        days:instructions,
+        days:inwhatpartofthecountrythisformalityisobserved,
+        days:isclassifiedby,
+        days:isdefinedby,
+        days:isgroupedby,
+        days:issue,
+        days:issuer,
+        days:jobdescription,
+        days:jobtitle,
+        days:keyword,
+        days:landingpage,
+        days:language,
+        days:lastmodified,
+        days:lastupdate,
+        days:lastupdated,
+        days:latestonthispolicy,
+        days:lawsandregulations,
+        days:legalauthority,
+        days:legalbasis,
+        <http://data.sparna.fr/vocabularies/days#legalbasis/grounds>,
+        days:legalprotection,
+        days:legalrepresentative,
+        days:legislation,
+        days:level,
+        <http://data.sparna.fr/vocabularies/days#licence/notification/registrationname>,
+        days:lifecycle,
+        days:liftavailable,
+        days:links,
+        days:listofactivities,
+        days:listofdocuments,
+        days:locationonthemap,
+        days:mailaddress,
+        days:makeanappointment,
+        days:member,
+        days:methodofcommencement,
+        days:municipalities,
+        days:name,
+        <http://data.sparna.fr/vocabularies/days#name(person)>,
+        days:nameoftheorganisation,
+        days:nationaldevelopmentplans,
+        days:news,
+        <http://data.sparna.fr/vocabularies/days#no.crt.>,
+        days:note,
+        days:notes,
+        days:notificationofcross-borderservicesprovision,
+        days:number,
+        days:numberofpages,
+        days:obligations,
+        days:offsets,
+        days:openinghours,
+        <http://data.sparna.fr/vocabularies/days#organisation’spresentation>,
+        days:organization,
+        days:otheractivities,
+        days:othercontacts,
+        days:otherdetails,
+        days:otherinformation,
+        days:otherlanguages,
+        days:otherpossiblesteps,
+        days:otherusefulinformation,
+        days:ownedby,
+        days:parking,
+        days:parkinglot,
+        days:participants,
+        days:particularlyforcompanies,
+        days:partof,
+        days:paymentfortheservicestep,
+        days:paymenttype,
+        days:penalties,
+        days:performance,
+        days:permitcode,
+        days:phone,
+        days:playsrole,
+        days:popular,
+        days:population,
+        days:postalcode,
+        days:preferredlabel,
+        days:pricelisttable,
+        days:privateexperts,
+        <http://data.sparna.fr/vocabularies/days#procedure/institutionwebsite>,
+        days:procedures,
+        days:process,
+        days:processingpointname,
+        days:processingtime,
+        days:produces,
+        days:products,
+        days:province,
+        days:provinces,
+        days:publication,
+        days:publicrelationspointofcontact,
+        days:publictransport,
+        days:publisher,
+        <http://data.sparna.fr/vocabularies/days#questions?/contact>,
+        days:quicklinks,
+        days:readmore,
+        days:receiver,
+        days:recognitionofqualificationsacquiredabroad,
+        days:referencesandcontact,
+        days:referencestandards,
+        days:region,
+        days:registeredauthority,
+        days:registrationcode,
+        days:regulation,
+        days:related,
+        days:relatedcontent,
+        days:relateddocumentation,
+        days:relatedexternalservices,
+        days:relatedinstitution,
+        days:relatedlinks,
+        days:relatedservice,
+        days:relatedtags,
+        days:relatedtopic,
+        days:relativelinks,
+        days:reply,
+        days:reports,
+        days:requires,
+        days:responsibilities,
+        days:responsibilityresponsiblepartyotherproviders,
+        days:responsible,
+        days:responsiblefor,
+        days:responsibleforsuap,
+        days:responsibleorganisation,
+        days:role,
+        days:rss,
+        days:rules,
+        days:searchwords,
+        days:sector,
+        days:sectororganisations,
+        days:seealso,
+        days:sendpractises,
+        days:service,
+        days:serviceprovider,
+        days:services,
+        days:servicesoftheorganisation,
+        days:site,
+        days:size,
+        days:spatial,
+        days:statistics,
+        days:statisticsapplication,
+        days:status,
+        days:statutorytimeframefortheexecution,
+        days:step-by-stepguide,
+        days:step-by-stepguides,
+        days:stepnumber,
+        days:stepsofproceedings,
+        days:subcategories,
+        days:subcategory,
+        days:subject,
+        days:subrequirementsservices,
+        days:subsector,
+        days:subsidies,
+        days:substitute,
+        days:summary,
+        days:supportingdetails,
+        days:supportingevidence,
+        days:supraregionalresponsibilities,
+        days:surname,
+        days:taxes,
+        days:telephone,
+        days:template,
+        days:thematicarea,
+        days:thisinformationispostedby,
+        days:timelimit,
+        days:timetable,
+        days:tips,
+        days:tool,
+        days:toolcategory,
+        days:tools,
+        days:topic,
+        days:topics,
+        days:topicurl,
+        days:townorcity,
+        days:type,
+        days:typeofcompany,
+        days:typeofestablishment,
+        days:url,
+        days:urlsubcategory,
+        <http://data.sparna.fr/vocabularies/days#validityofthelicence/notification/registration>,
+        days:value,
+        <http://data.sparna.fr/vocabularies/days#versionnumber.>,
+        days:website,
+        days:websiteforms,
+        <http://data.sparna.fr/vocabularies/days#whatwillchange/haschanged?>,
+        days:wheelchairaccessible,
+        <http://data.sparna.fr/vocabularies/days#when?>,
+        <http://data.sparna.fr/vocabularies/days#whowe’reconsulting>,
+        <http://data.sparna.fr/vocabularies/days#whowe’reworkingwith> .
+
