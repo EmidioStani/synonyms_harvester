@@ -49,6 +49,6 @@ optional arguments:
 
 Example:
 ```
-python getSynonyms.py -k 1234567890
+python getSynonyms.py -k 1234567890 # replace it with your own key
 ```
 would generate by default the file "output.ttl" containing the synonyms as SKOS alternative labels.
