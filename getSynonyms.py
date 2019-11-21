@@ -24,7 +24,7 @@ def synonymsWiktionary(term, filename):
     g2.parse(filename, format="turtle")
     for s, p, o in g2.triples((None, RDF.type, ns1.Concept)):
         for a, b, c in g2.triples((s, ns1.prefLabel, None)):
-            if term.strip() == c.strip():
+            if term.strip().lower() == c.strip().lower():
                 # print("Found term in Wiktionary %s"  %c)
                 return g2.triples((s, ns1.altLabel, None))
 
@@ -39,7 +39,7 @@ def synonymsFromSPARQLEndpoint(endpoint, term):
             ?term rdf:type skos:Concept .
             ?term skos:prefLabel ?termlabel .
             ?term skos:altLabel ?altlabel .
-            FILTER (?termlabel = '""" + term + """')
+            FILTER (lcase(?termlabel) = '""" + term.lower() + """'@en)
         }
         """)
 
@@ -62,7 +62,7 @@ def synonymsUnesco(term):
 
 def synonymsDatamuse(term):
     api = datamuse.Datamuse()
-    response = api.words(ml=term, max=10)
+    response = api.words(ml=term.lower(), max=10)
     # print(response)
     resultslist = []
     for i in response:
@@ -107,20 +107,20 @@ def timer(start, end):
     print("{:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), seconds))
 
 ALTERVISTA_KEY = 'xyz'
-WIKITIONARY_FILE = 'syn_wiktionary.ttl'
-INPUT_FILE = 'excel2skos-exemple-2-2019-10-28 (2).rdf'
+WIKTIONARY_FILE = 'syn_wiktionary.ttl'
+INPUT_FILE = 'sample.rdf'
 OUTPUT_FILE = 'output.ttl'
 PARSER = argparse.ArgumentParser(description="Enrich skos list with synonyms")
-PARSER.add_argument("-k", "--apikey", help="key file for Altervista")
-PARSER.add_argument("-w", "--wikitionaryfile", help="syn file for wikitionary")
+PARSER.add_argument("-k", "--apikey", help="api key for Altervista")
+PARSER.add_argument("-w", "--wiktionaryfile", help="syn file for wikitionary")
 PARSER.add_argument("-i", "--input", help="input file in RDF/XML")
 PARSER.add_argument("-o", "--output", help="output file in Turtle")
 ARGS = PARSER.parse_args()
 
 if ARGS.apikey:
     ALTERVISTA_KEY = ARGS.apikey
-if ARGS.wikitionaryfile:
-    WIKITIONARY_FILE = ARGS.wikitionaryfile
+if ARGS.wiktionaryfile:
+    WIKTIONARY_FILE = ARGS.wiktionaryfile
 if ARGS.input:
     INPUT_FILE = ARGS.input
 if ARGS.output:
@@ -128,39 +128,39 @@ if ARGS.output:
 start = time.time()
 g = Graph()
 g.parse(INPUT_FILE , format="xml")
-for s, p, o in g.triples((None, RDF.type, SKOS.Concept)):
-    for a, b, c in g.triples((s, SKOS.prefLabel, None)):
+for s, p, o in sorted(g.triples((None, RDF.type, SKOS.Concept))):
+    for a, b, c in sorted(g.triples((s, SKOS.prefLabel, None))):
         print("%s has label %s" % (a, c))
         # syns = synonymsThesaurus(c.lower())
         # for synonym in syns:
         #    print(synonym.text)
         #    g.add( (a, SKOS.altLabel, Literal(synonym.text, lang="en")) )
         print("Searching in Wiktionary")
-        syns2 = synonymsWiktionary(c.lower(), WIKITIONARY_FILE)
+        syns2 = synonymsWiktionary(c, WIKTIONARY_FILE)
         if(syns2):
             for x, y, z in syns2:
                 print("Adding alternative label %s" % z)
                 g.add((a, SKOS.altLabel, Literal(z, lang="en")))
         print("Searching in Wordnet")
         syns3 = None
-        syns3 = synonymsWordNet2(c.lower())
+        syns3 = synonymsWordNet2(c)
         if(syns3):
             for z in syns3:
                 print("Adding alternative label %s" % z)
                 g.add((a, SKOS.altLabel, Literal(z, lang="en")))
         print("Searching in Unesco")
         syns6 = None
-        syns6 = synonymsUnesco(c.lower())
+        syns6 = synonymsUnesco(c)
         if(syns6):
             for z in syns6:
                 print("Adding alternative label %s" % z)
                 g.add((a, SKOS.altLabel, Literal(z, lang="en")))
         if(not(syns2 or syns3 or syns6)):
             print("Searching in Datamuse")
-            syns4 = synonymsDatamuse(c.lower())
+            syns4 = synonymsDatamuse(c)
             if(len(syns4)) == 0:
                 print("Searching in Altervista")
-                syns5 = synonymsAltervista(c.lower(), ALTERVISTA_KEY)
+                syns5 = synonymsAltervista(c, ALTERVISTA_KEY)
                 if(syns5):
                     for z in syns5:
                         print("Adding alternative label %s" % z)
