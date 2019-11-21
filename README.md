@@ -4,16 +4,15 @@ A python script to enrich a skos list with synonyms taken from different sources
 The script uses the following data sources:
 
 1) Wiktionary:
-   - downloaded from dbnary (http://kaiko.getalp.org/about-dbnary/download/)
+   - downloaded from dbnary (http://kaiko.getalp.org/about-dbnary/download/ the core in English)
    - uploaded on GraphDB (under the user folder graphdb-import) with graph name "wiktionary"
-   - the data is filtered with the script getSynonymsWiktionary.py
-   - a file is generated with name syn_wiktionary.ttl (already present in this repository)
+   - the data is filtered with the script getSynonymsWiktionary.py which generates a file with name syn_wiktionary.ttl (already present in this repository)
+   - as the syn_wiktionary.ttl file is relatively small it is parsed directly
 
 2) Wordnet:
   - downloaded from wordnet-rdf (https://wordnet-rdf.princeton.edu/about)
    - uploaded on GraphDB (under the user folder graphdb-import) with graph name "wordnet"
-   - the data is filtered with the script getSynonymsWordnet.py
-   - a file is generated with name syn_wordnet.ttl (already present in this repository)
+   - the data is filtered with the script getSynonymsWordnet.py which generates a file with name syn_wordnet.ttl (already present in this repository)
    - the file has been uploaded on the graph name "wordnet-synonyms"
 
 3) Unesco:
