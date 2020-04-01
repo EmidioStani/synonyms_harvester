@@ -16,10 +16,22 @@ The script uses the following data sources:
    - the file has been uploaded on the graph name "wordnet-synonyms"
 
 3) Unesco:
-  - downloaded from vocabularies.unesco.org (http://vocabularies.unesco.org/exports/thesaurus/latest/)
+   - downloaded from vocabularies.unesco.org (http://vocabularies.unesco.org/exports/thesaurus/latest/)
    - uploaded on GraphDB (under the user folder graphdb-import) with graph name "unesco"
 
-If no value has been found in 1),2) or 3) then search in:
+4) FIBO:
+   - downloaded from https://spec.edmcouncil.org/fibo/vocabulary (the production)
+   - uploaded on GraphDB (under the user folder graphdb-import) with graph name "fibo"
+
+5) STW:
+   - downloaded from http://zbw.eu/stw/version/latest/download/about.en.html (v 9.06)
+   - uploaded on GraphDB (under the user folder graphdb-import) with graph name "stw"
+
+6) LCSH new pilot:
+   - downloaded from http://id.loc.gov/download/ "LC Subject Headings (LCSH) *NEW Pilot* (SKOS/RDF only)
+   - uploaded on GraphDB (under the user folder graphdb-import) with graph name "lcsh
+
+If no value has been found in 1), 2), 3), 4), 5) or 6) then search in:
 
 4) Datamuse API (max 100.000 requests per day with no key):
    - connecting to https://www.datamuse.com/api/ via https://github.com/gmarmstrong/python-datamuse

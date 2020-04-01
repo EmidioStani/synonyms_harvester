@@ -7,7 +7,7 @@
 
 
 import requests
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import RDF, SKOS
 from rdflib import Namespace
 import time
@@ -16,7 +16,24 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from datamuse import datamuse
 import re
 import argparse
+import nltk
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
+nltk.download('stopwords')
+from nltk.stem import WordNetLemmatizer 
+from nltk import word_tokenize
+from nltk.corpus import wordnet
+from nltk.corpus import stopwords
+from stop_words import get_stop_words
+from nltk.tokenize import RegexpTokenizer
 
+import html2text
+import nltk.data
+from gensim import corpora, models, similarities
+import jieba
+import numpy as np
+from statistics import mean
 
 def synonymsWiktionary(term, filename):
     g2 = Graph()
@@ -40,6 +57,7 @@ def synonymsFromSPARQLEndpoint(endpoint, term):
             ?term skos:prefLabel ?termlabel .
             ?term skos:altLabel ?altlabel .
             FILTER (lcase(?termlabel) = '""" + term.lower() + """'@en)
+            FILTER(lang(?altlabel)="en" || lang(?altlabel)="")
         }
         """)
 
@@ -47,7 +65,43 @@ def synonymsFromSPARQLEndpoint(endpoint, term):
     results = sparql.query().convert()
     resultslist = []
     for result in results["results"]["bindings"]:
-        resultslist.append(result["altlabel"]["value"])
+        label = result["altlabel"]["value"]
+        label = label.lower().replace("_", " ")
+        resultslist.append(label)
+
+    return resultslist
+
+def synonymsFromCosineSPARQLEndpoint(endpoint, term):
+    sparql = SPARQLWrapper(endpoint)
+    sparql.setQuery("""
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX jsfn:<http://www.ontotext.com/js#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+        SELECT ?altlabel ?sim
+        WHERE {
+            SELECT ?label ?altlabel ?sim
+            WHERE {
+                ?s skos:prefLabel ?label . 
+                ?s skos:altLabel ?altlabel .
+                BIND('""" + term.lower() + """'@en as ?label2)
+                FILTER(lang(?altlabel)="en" || lang(?altlabel)="")
+                BIND(jsfn:textCosineSimilarity(lcase(str(?label)), str(?label2)) as ?sim)
+                FILTER(?sim > 0.7 && str(?sim) != "NaN")
+            }
+        }
+        ORDER BY DESC(?sim)
+        """)
+
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    resultslist = []
+    for result in results["results"]["bindings"]:
+        label = result["altlabel"]["value"]
+        if not label.isupper():
+            label = label.lower()
+        label = label.replace("_", " ")
+        resultslist.append(label)
 
     return resultslist
 
@@ -55,25 +109,58 @@ def synonymsFromSPARQLEndpoint(endpoint, term):
 def synonymsWordNet2(term):
     return synonymsFromSPARQLEndpoint("http://localhost:7200/repositories/wordnet-synonyms", term)
 
-
 def synonymsUnesco(term):
     return synonymsFromSPARQLEndpoint("http://localhost:7200/repositories/unesco", term)
 
+def synonymsFIBO(term):
+    return synonymsFromSPARQLEndpoint("http://localhost:7200/repositories/fibo", term)
 
-def synonymsDatamuse(term):
+def synonymsSTW(term):
+    return synonymsFromSPARQLEndpoint("http://localhost:7200/repositories/stw", term)
+
+def synonymsLCSH(term):
+    return synonymsFromSPARQLEndpoint("http://localhost:7200/repositories/lcsh", term)
+
+def synonymsWordNet2J(term):
+    return synonymsFromCosineSPARQLEndpoint("http://localhost:7200/repositories/wordnet-synonyms", term)
+
+def synonymsUnescoJ(term):
+    return synonymsFromCosineSPARQLEndpoint("http://localhost:7200/repositories/unesco", term)
+
+def synonymsFIBOJ(term):
+    return synonymsFromCosineSPARQLEndpoint("http://localhost:7200/repositories/fibo", term)
+
+def synonymsSTWJ(term):
+    return synonymsFromCosineSPARQLEndpoint("http://localhost:7200/repositories/stw", term)
+
+def synonymsLCSHJ(term):
+    return synonymsFromCosineSPARQLEndpoint("http://localhost:7200/repositories/lcsh", term)
+
+
+def synonymsDatamuse(term, max):
     api = datamuse.Datamuse()
-    response = api.words(ml=term.lower(), max=10)
-    # print(response)
+    response = api.words(ml=term.lower())
     resultslist = []
+    counter = 0
     for i in response:
         if(i.get('tags') and ('syn' in i['tags'])):
-            resultslist.append(i['word'])
+            if(counter < max):
+                word = i['word'].lower().replace("_", " ")
+                resultslist.append(word)
+                counter += 1
+            else:
+                break
     if(len(resultslist) == 0 and len(response) > 0):
-        counter = 0
+        counter2 = 0
         maxwords = min(5, len(response))
-        while(counter < maxwords):
-            resultslist.append(response[counter]['word'])
-            counter += 1
+        for i in response:
+            if (i.get('tags') and ('ant' not in i['tags'])):
+                if(counter2 < maxwords):
+                    word = i['word'].lower().replace("_", " ")
+                    resultslist.append(word)
+                    counter2 += 1
+                else:
+                    break
     return resultslist
 
 
@@ -87,24 +174,159 @@ def synonymsAltervista(term, apikey):
     arrayWithoutAntonyms = []
     try:
         response = requests.get(url).json()
-        print(response)
+        # print(response)
         syns = ''
         if 'error' not in response:
             for i in response['response']:
                 # if i['list']['category'] == '(noun)':
                 syns = syns + i['list']['synonyms'] + '|'
             arraylist = syns.split("|")
-            arraylist = [re.sub(r'\(generic term\)', r'', a) for a in arraylist]
-            arrayWithoutAntonyms = [x for x in arraylist if 'antonym' not in x]
+            arraylist = [a for a in arraylist if a]
+            arraylist = [re.sub(r' \(generic term\)', r'', a) for a in arraylist]
+            arraylist = [re.sub(r' \(related term\)', r'', a) for a in arraylist]
+            arraylist = [a.replace("_", " ") for a in arraylist]
+            lower_case_list = []
+            for a in arraylist:
+                if not a.isupper():
+                    a = a.lower()
+                lower_case_list.append(a)
+            arrayWithoutAntonyms = [x for x in lower_case_list if 'antonym' not in x]
     except requests.exceptions.RequestException as e:
         print(e)
     return arrayWithoutAntonyms
 
+def get_wordnet_pos(treebank_tag):
 
+    if treebank_tag.startswith('J'):
+        return wordnet.ADJ
+    elif treebank_tag.startswith('V'):
+        return wordnet.VERB
+    elif treebank_tag.startswith('N'):
+        return wordnet.NOUN
+    elif treebank_tag.startswith('R'):
+        return wordnet.ADV
+    else:
+        return ''
+	
 def timer(start, end):
     hours, rem = divmod(end-start, 3600)
     minutes, seconds = divmod(rem, 60)
     print("{:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), seconds))
+
+def checkExactMatch(c, wik_file):
+        x= []
+        print("Searching in Wiktionary")
+        syns2 = synonymsWiktionary(c, wik_file)
+        if(syns2):
+            for a, b, z in syns2:
+                print("Adding alternative label %s" % z)
+                x.append(z)
+        print("Searching in Wordnet")
+        syns3 = None
+        syns3 = synonymsWordNet2(c)
+        if(syns3):
+            for z in syns3:
+                print("Adding alternative label %s" % z)
+                x.append(z)
+        print("Searching in Unesco")
+        syns6 = None
+        syns6 = synonymsUnesco(c)
+        if(syns6):
+            for z in syns6:
+                print("Adding alternative label %s" % z)
+                x.append(z)
+        print("Searching in FIBO")
+        syns7 = None
+        syns7 = synonymsFIBO(c)
+        if(syns7):
+            for z in syns7:
+                print("Adding alternative label %s" % z)
+                x.append(z)
+        print("Searching in STW")
+        syns8 = None
+        syns8 = synonymsSTW(c)
+        if(syns8):
+            for z in syns8:
+                print("Adding alternative label %s" % z)
+                x.append(z)
+        print("Searching in LCSH")
+        syns9 = None
+        syns9 = synonymsLCSH(c)
+        if(syns9):
+            for z in syns9:
+                print("Adding alternative label %s" % z)
+                x.append(z)
+        return x
+
+def checkCosineMatch(c, wik_file):
+        x= []
+        tokenizer = RegexpTokenizer(r'\w+')
+        tokens = tokenizer.tokenize(c.lower())
+        short_list = []
+        for token in tokens:
+            if (len(token) >= 8): #media no, policy no, monetary yes, manufacturing yes, technology yes
+                short_list.append(token)
+        short_list_str = ' '.join(short_list)
+        if(len(short_list_str) > 0):
+            print("Searching for %s" % short_list_str)
+            print("Searching in Wordnet")
+            syns3 = None
+            syns3 = synonymsWordNet2J(short_list_str)
+            if(syns3):
+                for z in syns3:
+                    print("Adding alternative label %s" % z)
+                    x.append(z)
+            print("Searching in Unesco")
+            syns6 = None
+            syns6 = synonymsUnescoJ(short_list_str)
+            if(syns6):
+                for z in syns6:
+                    print("Adding alternative label %s" % z)
+                    x.append(z)
+            print("Searching in FIBO")
+            syns7 = None
+            syns7 = synonymsFIBOJ(short_list_str)
+            if(syns7):
+                for z in syns7:
+                    print("Adding alternative label %s" % z)
+                    x.append(z)
+            print("Searching in STW")
+            syns8 = None
+            syns8 = synonymsSTWJ(short_list_str)
+            if(syns8):
+                for z in syns8:
+                    print("Adding alternative label %s" % z)
+                    x.append(z)
+            print("Searching in LCSH")
+            syns9 = None
+            syns9 = synonymsLCSHJ(short_list_str)
+            if(syns9):
+                for z in syns9:
+                    print("Adding alternative label %s" % z)
+                    x.append(z)
+        return x
+
+def checkLemmas(c, wik_file, max_num_nouns):
+    x= []
+    tokenizer = RegexpTokenizer(r'\w+')
+    tokens = tokenizer.tokenize(c.lower())
+    print("tokens %s" % tokens)
+    filtered_sentence = [w for w in tokens if not w in stop_words]
+    print("filtered_sentence %s" % filtered_sentence)
+    post_tags = nltk.pos_tag(filtered_sentence)
+    print("post_tags %s" % post_tags)
+    # https://stackoverflow.com/questions/40167612/how-to-keep-only-the-noun-words-in-a-wordlist-python-nltk
+    nouns = list(set([word for word,pos in post_tags if (pos == 'NN' or pos == 'NNP' or pos == 'NNS' or pos == 'NNPS')]))
+    print("nouns %s" % nouns)
+    if(len(nouns) == max_num_nouns):
+        for noun in nouns:
+            lemma =  lemmatizer.lemmatize(noun)
+            print(noun, "=>", lemma)
+            if(lemma != c.lower()):  # skip the case of 1 word which is equal to the lemma and thus already checked in the exact match
+                x.extend(checkExactMatch(lemma, wik_file))
+
+    return x
+
 
 ALTERVISTA_KEY = 'xyz'
 WIKTIONARY_FILE = 'syn_wiktionary.ttl'
@@ -126,49 +348,151 @@ if ARGS.input:
 if ARGS.output:
     OUTPUT_FILE = ARGS.output
 start = time.time()
+SKOSXL = Namespace("http://www.w3.org/2008/05/skos-xl#")
 g = Graph()
-g.parse(INPUT_FILE , format="xml")
+g.parse(INPUT_FILE , format="ttl")
+lemmatizer = WordNetLemmatizer()
+#stop_words = set(stopwords.words('english')) 
+stop_words = list(get_stop_words('en'))         #Have around 900 stopwords
+nltk_words = list(stopwords.words('english'))   #Have around 150 stopwords
+stop_words.extend(nltk_words)
+
+# https://medium.com/better-programming/introduction-to-gensim-calculating-text-similarity-9e8b55de342d
+
+html = open("services_in_the_internal_market.html").read()
+data = html2text.html2text(html)
+tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+texts = tokenizer.tokenize(data)
+texts_cut = [jieba.lcut(text) for text in texts]
+dictionary = corpora.Dictionary(texts_cut)
+feature_cnt = len(dictionary.token2id)
+corpus = [dictionary.doc2bow(text) for text in texts_cut]
+tfidf = models.TfidfModel(corpus)
+
+html2 = open("establishing_single_digital_gateway.html",  encoding="utf8").read()
+data2 = html2text.html2text(html2)
+tokenizer2 = nltk.data.load('tokenizers/punkt/english.pickle')
+texts2 = tokenizer.tokenize(data2)
+texts_cut2 = [jieba.lcut(text) for text in texts2]
+dictionary2 = corpora.Dictionary(texts_cut2)
+feature_cnt2 = len(dictionary2.token2id)
+corpus2 = [dictionary2.doc2bow(text) for text in texts_cut2]
+tfidf2 = models.TfidfModel(corpus2) 
+
+
+html3 = open("gdpr.html",  encoding="utf8").read()
+data3 = html2text.html2text(html3)
+tokenizer3 = nltk.data.load('tokenizers/punkt/english.pickle')
+texts3 = tokenizer.tokenize(data3)
+texts_cut3 = [jieba.lcut(text) for text in texts3]
+dictionary3 = corpora.Dictionary(texts_cut3)
+feature_cnt3 = len(dictionary3.token2id)
+corpus3 = [dictionary3.doc2bow(text) for text in texts_cut3]
+tfidf3 = models.TfidfModel(corpus3) 
+
+
 for s, p, o in sorted(g.triples((None, RDF.type, SKOS.Concept))):
-    for a, b, c in sorted(g.triples((s, SKOS.prefLabel, None))):
-        print("%s has label %s" % (a, c))
-        # syns = synonymsThesaurus(c.lower())
-        # for synonym in syns:
-        #    print(synonym.text)
-        #    g.add( (a, SKOS.altLabel, Literal(synonym.text, lang="en")) )
-        print("Searching in Wiktionary")
-        syns2 = synonymsWiktionary(c, WIKTIONARY_FILE)
-        if(syns2):
-            for x, y, z in syns2:
-                print("Adding alternative label %s" % z)
-                g.add((a, SKOS.altLabel, Literal(z, lang="en")))
-        print("Searching in Wordnet")
-        syns3 = None
-        syns3 = synonymsWordNet2(c)
-        if(syns3):
-            for z in syns3:
-                print("Adding alternative label %s" % z)
-                g.add((a, SKOS.altLabel, Literal(z, lang="en")))
-        print("Searching in Unesco")
-        syns6 = None
-        syns6 = synonymsUnesco(c)
-        if(syns6):
-            for z in syns6:
-                print("Adding alternative label %s" % z)
-                g.add((a, SKOS.altLabel, Literal(z, lang="en")))
-        if(not(syns2 or syns3 or syns6)):
+    for d, e, f in g.triples((s, SKOSXL.prefLabel, None)): 
+        for a, b, c in sorted(g.triples((f, SKOSXL.literalForm , None))):
+            total_syns = 0
+            print("%s has label %s" % (a, c))
+            
+            #c = c.replace('&', ' ')
+            #tokens = word_tokenize(c.lower())
+            # syns = synonymsThesaurus(c.lower())
+            # for synonym in syns:
+            #    print(synonym.text)
+            #    g.add( (a, SKOS.altLabel, Literal(synonym.text, lang="en")) )
+            mylist = []
+            mylist = checkExactMatch(c,WIKTIONARY_FILE)
+
+            mylist = list(set(mylist))
+            print("Checking term with 1 lemmas...")
+            list2 = checkLemmas(c,WIKTIONARY_FILE, 1)
+            mylist.extend(list2)
+
+            mylist = list(set(mylist))
+ 
             print("Searching in Datamuse")
-            syns4 = synonymsDatamuse(c)
-            if(len(syns4)) == 0:
+            syns4 = synonymsDatamuse(c, 10)
+            if(syns4):
+                for z in syns4:
+                    print("Adding alternative label %s" % z)
+                    mylist.append(z)
+
+            mylist = list(set(mylist))
+            if(len(mylist) < 10):
                 print("Searching in Altervista")
                 syns5 = synonymsAltervista(c, ALTERVISTA_KEY)
                 if(syns5):
                     for z in syns5:
                         print("Adding alternative label %s" % z)
-                        g.add((a, SKOS.altLabel, Literal(z, lang="en")))
-            else:
-                for z in syns4:
-                        print("Adding alternative label %s" % z)
-                        g.add((a, SKOS.altLabel, Literal(z, lang="en")))
+                        mylist.append(z)
+
+            mylist = list(set(mylist))
+            if(len(mylist) < 10):
+                print("Checking cosine distance...")
+                list2 = checkCosineMatch(c,WIKTIONARY_FILE)
+                mylist.extend(list2)
+
+            mylist = list(set(mylist))
+            if(len(mylist) < 10):
+                print("Checking term with 2 lemmas...")
+                list2 = checkLemmas(c,WIKTIONARY_FILE, 2)
+                mylist.extend(list2)
+
+            mylist = list(set(mylist))
+            if(len(mylist) < 10):
+                print("Checking term with 3 lemmas...")
+                list2 = checkLemmas(c,WIKTIONARY_FILE, 3)
+                mylist.extend(list2)
+        
+            mylist = list(set(mylist))
+
+            mylist2 = []
+            for element in mylist:
+                kw_vector = dictionary.doc2bow(jieba.lcut(element))
+                index = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features = feature_cnt)
+                sim = index[tfidf[kw_vector]]
+                arr1 = np.array(sim)
+                
+                # https://thispointer.com/find-max-value-its-index-in-numpy-array-numpy-amax/
+                maxSimilarity = np.amax(arr1)
+                print('Element %s has Max similarity in internal market %s ' % (element, maxSimilarity))
+                
+                kw_vector2 = dictionary2.doc2bow(jieba.lcut(element))
+                index2 = similarities.SparseMatrixSimilarity(tfidf[corpus2], num_features = feature_cnt2)
+                sim2 = index2[tfidf[kw_vector2]]
+                arr2 = np.array(sim2)
+                maxSimilarity2 = np.amax(arr2)
+                print('Element %s has Max similarity in digital single gateway %s ' % (element, maxSimilarity2))
+
+                kw_vector3 = dictionary3.doc2bow(jieba.lcut(element))
+                index3 = similarities.SparseMatrixSimilarity(tfidf[corpus3], num_features = feature_cnt3)
+                sim3 = index3[tfidf[kw_vector3]]
+                arr3 = np.array(sim3)
+                maxSimilarity3 = np.amax(arr3)
+                print('Element %s has Max similarity in digital single gateway %s ' % (element, maxSimilarity3))
+
+                list_sim = [maxSimilarity, maxSimilarity2, maxSimilarity3]
+                average = np.mean(list_sim)
+                if(average > 0):
+                    mylist2.append(element)
+                #    result = np.where(arr1 == np.amax(arr1))
+                #    print('Returned tuple of arrays :', result)
+                #    print('List of Indices of maximum element :', result[0])
+                #    print('text: ', texts[result[0][0].astype(int)])
+
+            # result = np.where(arr1 == np.amax(arr1))
+            #print('Returned tuple of arrays :', result)
+            # print('List of Indices of maximum element :', result[0])
+            #print('text: ', texts[result[0][0].astype(int)])
+
+            for element in mylist2:
+                labelURI = element.replace(" ","-").replace("(","-").replace(")","-").replace(",","-").replace("*","-").replace("&amp;","-").replace(".","-").replace("'","-")
+                altLabelURI = URIRef("http://publications.europa.eu/resource/authority/publicservice-theme/label/" + labelURI)
+                g.add((s, SKOSXL.altLabel, altLabelURI))
+                g.add((altLabelURI, SKOSXL.literalForm, Literal(element, lang="en")))
 g.serialize(destination=OUTPUT_FILE, format='turtle')
 end = time.time()
 timer(start, end)

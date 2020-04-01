@@ -1,10 +1,11 @@
-@prefix concept-status: <http://publications.europa.eu/resource/authority/concept-status/> .
-@prefix days: <http://data.sparna.fr/vocabularies/days#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdr-publicservice-label: <http://publications.europa.eu/resource/authority/publicservice-theme/label/> .
+@prefix mdr-publicservice-scheme: <http://publications.europa.eu/resource/authority/publicservice-theme/scheme/> .
+@prefix mdr-publicservice-theme: <http://publications.europa.eu/resource/authority/publicservice-theme/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -17,405 +18,1995 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-days:ability a skos:Concept ;
-    skos:altLabel "Academic admission"@en,
-        "Admisión académica"@en,
-        "Admisión de estudiantes"@en,
-        "Admisión en el colegio"@en,
-        "Admisión en la universidad"@en,
-        "Admission académique"@en,
-        "Admission au collège"@en,
-        "Admission criteria"@en,
-        "Admission précoce"@en,
-        "Admission à l'université"@en,
-        "Admission à l'école"@en,
-        "Criterios de ingreso"@en,
-        "Critères d'admission"@en,
-        "Early admission"@en,
-        "Educational admission"@en,
-        "Ingreso en el colegio"@en,
-        "Ingreso en la escuela"@en,
-        "Requisitos de ingreso"@en,
-        "School admission"@en,
-        "Selección de estudiantes"@en,
-        "Student admission"@en,
-        "Student selection"@en,
-        "Sélection d'étudiants"@en,
-        "Допуск к учебе"@en,
-        "Досрочное поступление"@en,
-        "Критерии поступления"@en,
-        "Отбор учащихся"@en,
-        "Прием в учебное заведение"@en,
-        "Прием в школу"@en,
-        "Прием учащихся в учебное заведение"@en ;
-    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
-    skos:prefLabel "Admission requirements"@en ;
-    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+mdr-publicservice-theme:AgricultureAndFood a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:agriculture-department,
+        mdr-publicservice-label:business,
+        mdr-publicservice-label:business-enterprise,
+        mdr-publicservice-label:commercial-enterprise,
+        mdr-publicservice-label:department-of-agriculture,
+        mdr-publicservice-label:executive-department,
+        mdr-publicservice-label:factory-farm,
+        mdr-publicservice-label:social-class,
+        mdr-publicservice-label:socio-economic-class ;
+    skosxl:prefLabel mdr-publicservice-label:AgricultureAndFood .
 
-days:certificate a skos:Concept ;
-    skos:altLabel "certification"@en,
-        "credential"@en,
-        "credentials"@en,
-        "security"@en ;
-    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
-    skos:prefLabel "Certificate"@en ;
-    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+mdr-publicservice-theme:Animal a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:animate-being,
+        mdr-publicservice-label:physical ;
+    skosxl:prefLabel mdr-publicservice-label:Animal .
 
-<http://data.sparna.fr/vocabularies/days#help&support> a skos:Concept ;
-    skos:altLabel ""@en,
-        "activity "@en,
-        "advance "@en,
-        "aid"@en,
-        "ameliorate "@en,
-        "amend "@en,
-        "assist"@en,
-        "assistance"@en,
-        "assistant"@en,
-        "avail"@en,
-        "back up "@en,
-        "better "@en,
-        "boost "@en,
-        "cater "@en,
-        "encourage "@en,
-        "exploit "@en,
-        "facilitate"@en,
-        "forbear "@en,
-        "further "@en,
-        "help oneself"@en,
-        "helper"@en,
-        "helpfulness "@en,
-        "improve "@en,
-        "meliorate "@en,
-        "ply "@en,
-        "promote "@en,
-        "provide "@en,
-        "refrain "@en,
-        "resource "@en,
-        "serve"@en,
-        "serve "@en,
-        "service"@en,
-        "supply "@en,
-        "support "@en,
-        "supporter"@en,
-        "work "@en,
-        "worker "@en ;
-    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
-    skos:prefLabel "Help&Support"@en ;
-    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+mdr-publicservice-theme:BorderControl a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:borders,
+        mdr-publicservice-label:boundary-line,
+        mdr-publicservice-label:control-condition,
+        mdr-publicservice-label:controller,
+        mdr-publicservice-label:controls,
+        mdr-publicservice-label:frontiers,
+        mdr-publicservice-label:margin ;
+    skosxl:prefLabel mdr-publicservice-label:BorderControl .
 
-days:produces a skos:Concept ;
-    skos:altLabel "acquire"@en,
-        "bring about"@en,
-        "bring out"@en,
-        "create"@en,
-        "develop"@en,
-        "farm"@en,
-        "get"@en,
-        "grow"@en,
-        "make"@en,
-        "raise"@en ;
-    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
-    skos:prefLabel "Produces"@en ;
-    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+mdr-publicservice-theme:CultureSportAndLeisure a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:cultural-sociology,
+        mdr-publicservice-label:culture--social-aspects,
+        mdr-publicservice-label:free-time--leisure-,
+        mdr-publicservice-label:games--sport-,
+        mdr-publicservice-label:leisure-time,
+        mdr-publicservice-label:play,
+        mdr-publicservice-label:society,
+        mdr-publicservice-label:sociology-of-culture ;
+    skosxl:prefLabel mdr-publicservice-label:CultureSportAndLeisure .
 
-days:subcategory a skos:Concept ;
-    skos:altLabel "child_category"@en ;
-    skos:inScheme <http://data.sparna.fr/vocabularies/days> ;
-    skos:prefLabel "Subcategory"@en ;
-    skos:topConceptOf <http://data.sparna.fr/vocabularies/days> .
+mdr-publicservice-theme:Defence a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:civil-defence,
+        mdr-publicservice-label:defence-force,
+        mdr-publicservice-label:defence-mechanism,
+        mdr-publicservice-label:defence-reaction,
+        mdr-publicservice-label:defending-team,
+        mdr-publicservice-label:defense-force,
+        mdr-publicservice-label:defense-lawyers,
+        mdr-publicservice-label:defense-mechanism,
+        mdr-publicservice-label:defense-reaction,
+        mdr-publicservice-label:defense-team,
+        mdr-publicservice-label:defensive-measure,
+        mdr-publicservice-label:defensive-structure,
+        mdr-publicservice-label:denial,
+        mdr-publicservice-label:military-defence ;
+    skosxl:prefLabel mdr-publicservice-label:Defence .
 
-<http://data.sparna.fr/vocabularies/days> a skos:ConceptScheme ;
-    dct:description "Thedaysoftheweek"@en ;
-    dct:title "Weekdays"@en ;
-    skos:hasTopConcept days:accompanies,
-        days:acknowledgement,
-        days:actasfollows,
-        days:actions,
-        days:activity,
-        days:additionalinformation,
-        days:address,
-        <http://data.sparna.fr/vocabularies/days#alltheregion’sservices>,
-        days:alsoimportant,
-        days:annex,
-        days:annextoapplication,
-        days:applicationdossieraliapplicationformarketingauthorization,
-        days:arrangeyourbusinesswiththegovernmentonline,
-        days:associatedprocedures,
-        days:audience,
-        days:author,
-        days:authorisationtobeobtained,
-        days:availabilityrestriction,
-        days:availableservices,
-        days:background,
-        days:backgroundpaper,
-        days:bankaccount,
-        days:beforeyoubegin,
-        days:businessactivitieswhichapply,
-        days:businessesnotrequiringalicence,
-        days:businessid,
-        days:capital,
-        days:casestudies,
-        days:category,
-        days:certificate,
-        days:circumstances,
-        days:city,
-        days:code,
-        days:comment,
-        days:commune,
-        days:competentauthority,
-        days:competentorgan,
-        days:conditionsandevidence,
-        days:contact,
-        days:contactdetails,
-        days:costsofproceedings,
-        days:country,
-        days:countryoforigin,
-        days:cross-borderorestablishment,
-        days:cross-borderprovisionsofprofession,
-        days:cross-borderserviceprovision,
-        days:currency,
-        days:date,
-        days:deadline,
-        days:department,
-        days:departmentsandorganizationalunits,
-        days:dependencies,
-        days:description,
-        days:documents,
-        days:downloadformsforprinting,
-        days:drivingdirections,
-        days:e-mail,
-        days:e-notes,
-        days:education,
-        days:effectivedate,
-        days:electronicapplicationformorservices,
-        days:elsewhereontheweb,
-        days:email,
-        days:employees,
-        days:enteredintoforce,
-        days:events,
-        days:exclusionsfromthescope,
-        days:exemptions,
-        days:externallinks,
-        days:faq,
-        days:faqs,
-        days:fax,
-        days:fees,
-        days:field,
-        days:figure,
-        days:financialorganization,
-        days:firstname,
-        days:firstpublished,
-        days:follows,
-        days:form,
-        days:formid,
-        days:forms,
-        <http://data.sparna.fr/vocabularies/days#forwhom?>,
-        days:frequency,
-        days:from,
-        days:goodtoknow,
-        days:guides,
-        days:hasaddress,
-        days:haschannel,
-        days:hascompetentauthority,
-        days:hascontactpoint,
-        days:hascost,
-        days:hascriterion,
-        days:hasinput,
-        days:haslegalresource,
-        days:hasparticipation,
-        days:hasyettoenterintoforce,
-        <http://data.sparna.fr/vocabularies/days#help&support>,
-        days:highlights,
-        <http://data.sparna.fr/vocabularies/days#howtoapply?>,
-        days:identifier,
-        days:ifaccessedthrough,
-        days:implements,
-        days:importantnumbers,
-        days:inperson,
-        days:instructions,
-        days:inwhatpartofthecountrythisformalityisobserved,
-        days:isclassifiedby,
-        days:isdefinedby,
-        days:isgroupedby,
-        days:issue,
-        days:issuer,
-        days:jobdescription,
-        days:jobtitle,
-        days:keyword,
-        days:landingpage,
-        days:language,
-        days:lastmodified,
-        days:lastupdate,
-        days:lastupdated,
-        days:latestonthispolicy,
-        days:lawsandregulations,
-        days:legalauthority,
-        days:legalbasis,
-        <http://data.sparna.fr/vocabularies/days#legalbasis/grounds>,
-        days:legalprotection,
-        days:legalrepresentative,
-        days:legislation,
-        days:level,
-        <http://data.sparna.fr/vocabularies/days#licence/notification/registrationname>,
-        days:lifecycle,
-        days:liftavailable,
-        days:links,
-        days:listofactivities,
-        days:listofdocuments,
-        days:locationonthemap,
-        days:mailaddress,
-        days:makeanappointment,
-        days:member,
-        days:methodofcommencement,
-        days:municipalities,
-        days:name,
-        <http://data.sparna.fr/vocabularies/days#name(person)>,
-        days:nameoftheorganisation,
-        days:nationaldevelopmentplans,
-        days:news,
-        <http://data.sparna.fr/vocabularies/days#no.crt.>,
-        days:note,
-        days:notes,
-        days:notificationofcross-borderservicesprovision,
-        days:number,
-        days:numberofpages,
-        days:obligations,
-        days:offsets,
-        days:openinghours,
-        <http://data.sparna.fr/vocabularies/days#organisation’spresentation>,
-        days:organization,
-        days:otheractivities,
-        days:othercontacts,
-        days:otherdetails,
-        days:otherinformation,
-        days:otherlanguages,
-        days:otherpossiblesteps,
-        days:otherusefulinformation,
-        days:ownedby,
-        days:parking,
-        days:parkinglot,
-        days:participants,
-        days:particularlyforcompanies,
-        days:partof,
-        days:paymentfortheservicestep,
-        days:paymenttype,
-        days:penalties,
-        days:performance,
-        days:permitcode,
-        days:phone,
-        days:playsrole,
-        days:popular,
-        days:population,
-        days:postalcode,
-        days:preferredlabel,
-        days:pricelisttable,
-        days:privateexperts,
-        <http://data.sparna.fr/vocabularies/days#procedure/institutionwebsite>,
-        days:procedures,
-        days:process,
-        days:processingpointname,
-        days:processingtime,
-        days:produces,
-        days:products,
-        days:province,
-        days:provinces,
-        days:publication,
-        days:publicrelationspointofcontact,
-        days:publictransport,
-        days:publisher,
-        <http://data.sparna.fr/vocabularies/days#questions?/contact>,
-        days:quicklinks,
-        days:readmore,
-        days:receiver,
-        days:recognitionofqualificationsacquiredabroad,
-        days:referencesandcontact,
-        days:referencestandards,
-        days:region,
-        days:registeredauthority,
-        days:registrationcode,
-        days:regulation,
-        days:related,
-        days:relatedcontent,
-        days:relateddocumentation,
-        days:relatedexternalservices,
-        days:relatedinstitution,
-        days:relatedlinks,
-        days:relatedservice,
-        days:relatedtags,
-        days:relatedtopic,
-        days:relativelinks,
-        days:reply,
-        days:reports,
-        days:requires,
-        days:responsibilities,
-        days:responsibilityresponsiblepartyotherproviders,
-        days:responsible,
-        days:responsiblefor,
-        days:responsibleforsuap,
-        days:responsibleorganisation,
-        days:role,
-        days:rss,
-        days:rules,
-        days:searchwords,
-        days:sector,
-        days:sectororganisations,
-        days:seealso,
-        days:sendpractises,
-        days:service,
-        days:serviceprovider,
-        days:services,
-        days:servicesoftheorganisation,
-        days:site,
-        days:size,
-        days:spatial,
-        days:statistics,
-        days:statisticsapplication,
-        days:status,
-        days:statutorytimeframefortheexecution,
-        days:step-by-stepguide,
-        days:step-by-stepguides,
-        days:stepnumber,
-        days:stepsofproceedings,
-        days:subcategories,
-        days:subcategory,
-        days:subject,
-        days:subrequirementsservices,
-        days:subsector,
-        days:subsidies,
-        days:substitute,
-        days:summary,
-        days:supportingdetails,
-        days:supportingevidence,
-        days:supraregionalresponsibilities,
-        days:surname,
-        days:taxes,
-        days:telephone,
-        days:template,
-        days:thematicarea,
-        days:thisinformationispostedby,
-        days:timelimit,
-        days:timetable,
-        days:tips,
-        days:tool,
-        days:toolcategory,
-        days:tools,
-        days:topic,
-        days:topics,
-        days:topicurl,
-        days:townorcity,
-        days:type,
-        days:typeofcompany,
-        days:typeofestablishment,
-        days:url,
-        days:urlsubcategory,
-        <http://data.sparna.fr/vocabularies/days#validityofthelicence/notification/registration>,
-        days:value,
-        <http://data.sparna.fr/vocabularies/days#versionnumber.>,
-        days:website,
-        days:websiteforms,
-        <http://data.sparna.fr/vocabularies/days#whatwillchange/haschanged?>,
-        days:wheelchairaccessible,
-        <http://data.sparna.fr/vocabularies/days#when?>,
-        <http://data.sparna.fr/vocabularies/days#whowe’reconsulting>,
-        <http://data.sparna.fr/vocabularies/days#whowe’reworkingwith> .
+mdr-publicservice-theme:Digital a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:electronic,
+        mdr-publicservice-label:member,
+        mdr-publicservice-label:whole-number ;
+    skosxl:prefLabel mdr-publicservice-label:Digital .
+
+mdr-publicservice-theme:Education a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:children--education,
+        mdr-publicservice-label:department-of-education,
+        mdr-publicservice-label:education--primitive,
+        mdr-publicservice-label:education-department,
+        mdr-publicservice-label:education-of-children,
+        mdr-publicservice-label:educational-activity,
+        mdr-publicservice-label:human-resource-development,
+        mdr-publicservice-label:students--education,
+        mdr-publicservice-label:training,
+        mdr-publicservice-label:youth--education ;
+    skosxl:prefLabel mdr-publicservice-label:Education .
+
+mdr-publicservice-theme:Emergency a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:emergency-brake,
+        mdr-publicservice-label:hand-brake,
+        mdr-publicservice-label:parking-brake,
+        mdr-publicservice-label:temporary-state ;
+    skosxl:prefLabel mdr-publicservice-label:Emergency .
+
+mdr-publicservice-theme:Environmental a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:EMAS,
+        mdr-publicservice-label:archaeology--environmental,
+        mdr-publicservice-label:auditing--environmental,
+        mdr-publicservice-label:background-music,
+        mdr-publicservice-label:biological-science,
+        mdr-publicservice-label:biomonitoring--ecology-,
+        mdr-publicservice-label:carbon-tax,
+        mdr-publicservice-label:carbon-taxation,
+        mdr-publicservice-label:chemistry--environmental,
+        mdr-publicservice-label:clean-technology,
+        mdr-publicservice-label:cognitive-ergonomics,
+        mdr-publicservice-label:corporate-environmental-accounting,
+        mdr-publicservice-label:corporate-environmental-strategy,
+        mdr-publicservice-label:corporate-environmentalism,
+        mdr-publicservice-label:degradation--environmental,
+        mdr-publicservice-label:destruction--environmental,
+        mdr-publicservice-label:deterioration--environmental,
+        mdr-publicservice-label:eco-auditing,
+        mdr-publicservice-label:eco-consulting,
+        mdr-publicservice-label:eco-disasters,
+        mdr-publicservice-label:eco-justice,
+        mdr-publicservice-label:eco-management-and-audit-scheme,
+        mdr-publicservice-label:ecological-accountability,
+        mdr-publicservice-label:ecological-disasters,
+        mdr-publicservice-label:ecological-economics,
+        mdr-publicservice-label:ecological-ethics,
+        mdr-publicservice-label:ecological-indicators,
+        mdr-publicservice-label:ecological-libraries,
+        mdr-publicservice-label:ecological-literature,
+        mdr-publicservice-label:ecological-monitoring,
+        mdr-publicservice-label:ecological-psychology,
+        mdr-publicservice-label:ecological-responsibility,
+        mdr-publicservice-label:economics--environmental-aspects,
+        mdr-publicservice-label:effluent-charge,
+        mdr-publicservice-label:enrichment-of-environment,
+        mdr-publicservice-label:environment-and-state,
+        mdr-publicservice-label:environment-law,
+        mdr-publicservice-label:environment-testing,
+        mdr-publicservice-label:environmental-accountability,
+        mdr-publicservice-label:environmental-accounting,
+        mdr-publicservice-label:environmental-auditing,
+        mdr-publicservice-label:environmental-changes,
+        mdr-publicservice-label:environmental-compliance-auditing,
+        mdr-publicservice-label:environmental-concern,
+        mdr-publicservice-label:environmental-consciousness,
+        mdr-publicservice-label:environmental-control,
+        mdr-publicservice-label:environmental-crime,
+        mdr-publicservice-label:environmental-destruction,
+        mdr-publicservice-label:environmental-deterioration,
+        mdr-publicservice-label:environmental-disclosure,
+        mdr-publicservice-label:environmental-effects,
+        mdr-publicservice-label:environmental-ethics,
+        mdr-publicservice-label:environmental-geotechnics,
+        mdr-publicservice-label:environmental-history,
+        mdr-publicservice-label:environmental-impact-assessment,
+        mdr-publicservice-label:environmental-indexes,
+        mdr-publicservice-label:environmental-indicator,
+        mdr-publicservice-label:environmental-indices,
+        mdr-publicservice-label:environmental-insurance,
+        mdr-publicservice-label:environmental-justice-movement,
+        mdr-publicservice-label:environmental-law,
+        mdr-publicservice-label:environmental-law--cases--digests,
+        mdr-publicservice-label:environmental-management--government-policy,
+        mdr-publicservice-label:environmental-management-accounting,
+        mdr-publicservice-label:environmental-migrants,
+        mdr-publicservice-label:environmental-monitoring,
+        mdr-publicservice-label:environmental-movement,
+        mdr-publicservice-label:environmental-ngos,
+        mdr-publicservice-label:environmental-perception,
+        mdr-publicservice-label:environmental-permits--law-and-legislation,
+        mdr-publicservice-label:environmental-philosophy,
+        mdr-publicservice-label:environmental-planning,
+        mdr-publicservice-label:environmental-policy-research,
+        mdr-publicservice-label:environmental-protection,
+        mdr-publicservice-label:environmental-protection--government-policy,
+        mdr-publicservice-label:environmental-protection--law-and-legislation,
+        mdr-publicservice-label:environmental-protection-costs,
+        mdr-publicservice-label:environmental-quality,
+        mdr-publicservice-label:environmental-quality--economic-aspects,
+        mdr-publicservice-label:environmental-quality--government-policy,
+        mdr-publicservice-label:environmental-quality--health-aspects,
+        mdr-publicservice-label:environmental-quality--law-and-legislation,
+        mdr-publicservice-label:environmental-quality--measurement,
+        mdr-publicservice-label:environmental-quality--monitoring,
+        mdr-publicservice-label:environmental-quality--moral-and-ethical-aspects,
+        mdr-publicservice-label:environmental-quality--psychological-aspects,
+        mdr-publicservice-label:environmental-quality-management,
+        mdr-publicservice-label:environmental-regulation,
+        mdr-publicservice-label:environmental-scenography,
+        mdr-publicservice-label:environmental-science,
+        mdr-publicservice-label:environmental-social-sciences,
+        mdr-publicservice-label:environmental-stewardship,
+        mdr-publicservice-label:environmental-stresses,
+        mdr-publicservice-label:environmental-technology,
+        mdr-publicservice-label:environmental-theater,
+        mdr-publicservice-label:environmental-training,
+        mdr-publicservice-label:environmental-value-mapping,
+        mdr-publicservice-label:environmentally-displaced-persons,
+        mdr-publicservice-label:ethics-of-nature,
+        mdr-publicservice-label:geoenvironmental-engineering,
+        mdr-publicservice-label:global-environmental-justice,
+        mdr-publicservice-label:green-accounting,
+        mdr-publicservice-label:green-reporting,
+        mdr-publicservice-label:green-taxation,
+        mdr-publicservice-label:green-technology,
+        mdr-publicservice-label:health--environmental-aspects,
+        mdr-publicservice-label:health-ecology,
+        mdr-publicservice-label:human-ecology--moral-and-ethical-aspects,
+        mdr-publicservice-label:human-factors-science,
+        mdr-publicservice-label:indexes--environmental,
+        mdr-publicservice-label:indicators--environmental,
+        mdr-publicservice-label:indices--environmental,
+        mdr-publicservice-label:life-cycle-assessment,
+        mdr-publicservice-label:literacy--environmental,
+        mdr-publicservice-label:marginal-abatement-cost,
+        mdr-publicservice-label:mediation--environmental,
+        mdr-publicservice-label:mediation--natural-resources,
+        mdr-publicservice-label:monitoring--environmental,
+        mdr-publicservice-label:natural-resource-agencies,
+        mdr-publicservice-label:natural-resources-agencies,
+        mdr-publicservice-label:natural-resources-mediation,
+        mdr-publicservice-label:non-frontal-scenography,
+        mdr-publicservice-label:pollutants--toxicology,
+        mdr-publicservice-label:polluter-pays-principle,
+        mdr-publicservice-label:pollution--toxicology,
+        mdr-publicservice-label:pollution-charge,
+        mdr-publicservice-label:pollution-control,
+        mdr-publicservice-label:pollution-monitoring,
+        mdr-publicservice-label:pollution-standard,
+        mdr-publicservice-label:pollution-tax,
+        mdr-publicservice-label:precautionary-principle,
+        mdr-publicservice-label:pro-environmental-behaviour,
+        mdr-publicservice-label:protection-of-environment,
+        mdr-publicservice-label:quality-of-environment,
+        mdr-publicservice-label:reporting--environmental,
+        mdr-publicservice-label:reporting--green,
+        mdr-publicservice-label:resource-agencies--environmental-agencies-,
+        mdr-publicservice-label:resources-agencies--environmental-agencies-,
+        mdr-publicservice-label:situation,
+        mdr-publicservice-label:state-and-environment,
+        mdr-publicservice-label:state-of-affairs,
+        mdr-publicservice-label:stewardship--environmental,
+        mdr-publicservice-label:travel-cost-approach,
+        mdr-publicservice-label:travel-cost-model,
+        mdr-publicservice-label:value-mapping--environmental ;
+    skosxl:prefLabel mdr-publicservice-label:Environmental .
+
+mdr-publicservice-theme:Family a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:biography--ancestry,
+        mdr-publicservice-label:biography--descendants,
+        mdr-publicservice-label:biography--family,
+        mdr-publicservice-label:crime-syndicate,
+        mdr-publicservice-label:family-life,
+        mdr-publicservice-label:family-line,
+        mdr-publicservice-label:family-unit,
+        mdr-publicservice-label:flesh_and_blood,
+        mdr-publicservice-label:home,
+        mdr-publicservice-label:household,
+        mdr-publicservice-label:relations-with-family ;
+    skosxl:prefLabel mdr-publicservice-label:Family .
+
+mdr-publicservice-theme:GeneralBusiness a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:business-concern,
+        mdr-publicservice-label:business-enterprise,
+        mdr-publicservice-label:business-organisation,
+        mdr-publicservice-label:business-organization,
+        mdr-publicservice-label:business-sector,
+        mdr-publicservice-label:commercial-enterprise,
+        mdr-publicservice-label:concern,
+        mdr-publicservice-label:enterprise,
+        mdr-publicservice-label:line,
+        mdr-publicservice-label:line-of-work,
+        mdr-publicservice-label:occupation,
+        mdr-publicservice-label:stage-business,
+        mdr-publicservice-label:trade ;
+    skosxl:prefLabel mdr-publicservice-label:GeneralBusiness .
+
+mdr-publicservice-theme:GeneralGovernment a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:administration,
+        mdr-publicservice-label:authorities,
+        mdr-publicservice-label:federal-government,
+        mdr-publicservice-label:governance,
+        mdr-publicservice-label:governing,
+        mdr-publicservice-label:government-activity,
+        mdr-publicservice-label:political-science,
+        mdr-publicservice-label:public,
+        mdr-publicservice-label:regime,
+        mdr-publicservice-label:state ;
+    skosxl:prefLabel mdr-publicservice-label:GeneralGovernment .
+
+mdr-publicservice-theme:GeneralPersonCivilStatus a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:condition,
+        mdr-publicservice-label:degree,
+        mdr-publicservice-label:individual,
+        mdr-publicservice-label:natural-person,
+        mdr-publicservice-label:position,
+        mdr-publicservice-label:state ;
+    skosxl:prefLabel mdr-publicservice-label:GeneralPersonCivilStatus .
+
+mdr-publicservice-theme:HealthCare a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:education,
+        mdr-publicservice-label:healthcare,
+        mdr-publicservice-label:medical,
+        mdr-publicservice-label:medicine,
+        mdr-publicservice-label:preventive ;
+    skosxl:prefLabel mdr-publicservice-label:HealthCare .
+
+mdr-publicservice-theme:Housing a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:accommodation,
+        mdr-publicservice-label:affordable-housing,
+        mdr-publicservice-label:case,
+        mdr-publicservice-label:cover,
+        mdr-publicservice-label:covering,
+        mdr-publicservice-label:houses,
+        mdr-publicservice-label:housing--social-aspects,
+        mdr-publicservice-label:housing-needs,
+        mdr-publicservice-label:living-accommodations,
+        mdr-publicservice-label:lodging,
+        mdr-publicservice-label:slum-clearance,
+        mdr-publicservice-label:urban-housing ;
+    skosxl:prefLabel mdr-publicservice-label:Housing .
+
+mdr-publicservice-theme:Legal a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:judicial,
+        mdr-publicservice-label:lawful,
+        mdr-publicservice-label:legitimate,
+        mdr-publicservice-label:statutory,
+        mdr-publicservice-label:sub-judice,
+        mdr-publicservice-label:valid ;
+    skosxl:prefLabel mdr-publicservice-label:Legal .
+
+mdr-publicservice-theme:Manufacturing a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:CAD-CAM,
+        mdr-publicservice-label:automated-production,
+        mdr-publicservice-label:cae--computer-aided-engineering-,
+        mdr-publicservice-label:cai--computer-aided-industry-,
+        mdr-publicservice-label:cellular-manufacturing,
+        mdr-publicservice-label:computer-aided-industry,
+        mdr-publicservice-label:computer-aided-manufacturing,
+        mdr-publicservice-label:computer-integrated-enterprise,
+        mdr-publicservice-label:die-and-mold-manufacturing,
+        mdr-publicservice-label:die-manufacturing,
+        mdr-publicservice-label:digital-manufacturing,
+        mdr-publicservice-label:group-technology,
+        mdr-publicservice-label:hms--holonic-manufacturing-system-,
+        mdr-publicservice-label:holonic-manufacturing-system,
+        mdr-publicservice-label:holonic-production,
+        mdr-publicservice-label:industrial-labour,
+        mdr-publicservice-label:industrial-processing,
+        mdr-publicservice-label:industry,
+        mdr-publicservice-label:intelligent-manufacturing,
+        mdr-publicservice-label:job-shop-production,
+        mdr-publicservice-label:lean-production,
+        mdr-publicservice-label:manufactures--accounting,
+        mdr-publicservice-label:manufacturing-employment,
+        mdr-publicservice-label:manufacturing-industry,
+        mdr-publicservice-label:mechanical-tool-industry,
+        mdr-publicservice-label:power-tool-industry,
+        mdr-publicservice-label:process-engineering--manufactures-,
+        mdr-publicservice-label:processes--manufacturing,
+        mdr-publicservice-label:processing--industrial,
+        mdr-publicservice-label:processing-industries,
+        mdr-publicservice-label:production-plant,
+        mdr-publicservice-label:production-processes,
+        mdr-publicservice-label:production-system,
+        mdr-publicservice-label:small-and-medium-sized-manufacturers ;
+    skosxl:prefLabel mdr-publicservice-label:Manufacturing .
+
+mdr-publicservice-theme:Media a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:M,
+        mdr-publicservice-label:culture-medium,
+        mdr-publicservice-label:mass-media,
+        mdr-publicservice-label:mass-medium,
+        mdr-publicservice-label:sensitive ;
+    skosxl:prefLabel mdr-publicservice-label:Media .
+
+mdr-publicservice-theme:MonetaryPolicy a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:balance-sheet-channel,
+        mdr-publicservice-label:bank-lending-channel,
+        mdr-publicservice-label:central-bank,
+        mdr-publicservice-label:common-currencies,
+        mdr-publicservice-label:credit-channel,
+        mdr-publicservice-label:currency-area,
+        mdr-publicservice-label:currency-areas,
+        mdr-publicservice-label:currency-bloc,
+        mdr-publicservice-label:currency-union,
+        mdr-publicservice-label:currency-unions,
+        mdr-publicservice-label:financial-accelerator,
+        mdr-publicservice-label:financial-statistics,
+        mdr-publicservice-label:history-of-money,
+        mdr-publicservice-label:inflationary,
+        mdr-publicservice-label:insurance,
+        mdr-publicservice-label:insurance-policy,
+        mdr-publicservice-label:interest-rate-pass-through,
+        mdr-publicservice-label:metallic-standard,
+        mdr-publicservice-label:monetary-economics,
+        mdr-publicservice-label:monetary-management,
+        mdr-publicservice-label:monetary-regime,
+        mdr-publicservice-label:monetary-targets,
+        mdr-publicservice-label:money-stock-targeting,
+        mdr-publicservice-label:optimum-currency-areas,
+        mdr-publicservice-label:p--approach,
+        mdr-publicservice-label:p-star,
+        mdr-publicservice-label:p-star-approach,
+        mdr-publicservice-label:p-star-model,
+        mdr-publicservice-label:p-star-theory,
+        mdr-publicservice-label:policy_racket ;
+    skosxl:prefLabel mdr-publicservice-label:MonetaryPolicy .
+
+mdr-publicservice-theme:MoneyAndDebt a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:beer_ticket,
+        mdr-publicservice-label:cash,
+        mdr-publicservice-label:currency,
+        mdr-publicservice-label:folding_stuff,
+        mdr-publicservice-label:fund,
+        mdr-publicservice-label:funds,
+        mdr-publicservice-label:legal_tender,
+        mdr-publicservice-label:means,
+        mdr-publicservice-label:medium-of-exchange,
+        mdr-publicservice-label:monetary-question,
+        mdr-publicservice-label:monetary-system,
+        mdr-publicservice-label:money--primitive,
+        mdr-publicservice-label:principal,
+        mdr-publicservice-label:standard-of-value,
+        mdr-publicservice-label:tender ;
+    skosxl:prefLabel mdr-publicservice-label:MoneyAndDebt .
+
+mdr-publicservice-theme:NaturalResources a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:environment,
+        mdr-publicservice-label:environmental-goods,
+        mdr-publicservice-label:national-resources,
+        mdr-publicservice-label:natural-resources--economic-aspects,
+        mdr-publicservice-label:nature,
+        mdr-publicservice-label:resource,
+        mdr-publicservice-label:resources--natural ;
+    skosxl:prefLabel mdr-publicservice-label:NaturalResources .
+
+mdr-publicservice-theme:PublicSpaceManagementAndHeritage a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:Mgmt-,
+        mdr-publicservice-label:administration,
+        mdr-publicservice-label:blank-space,
+        mdr-publicservice-label:blind-trust,
+        mdr-publicservice-label:direction,
+        mdr-publicservice-label:distance,
+        mdr-publicservice-label:gap,
+        mdr-publicservice-label:mgmt-,
+        mdr-publicservice-label:mng-t,
+        mdr-publicservice-label:outer-space,
+        mdr-publicservice-label:outer_space,
+        mdr-publicservice-label:place,
+        mdr-publicservice-label:spot,
+        mdr-publicservice-label:volume ;
+    skosxl:prefLabel mdr-publicservice-label:PublicSpaceManagementAndHeritage .
+
+mdr-publicservice-theme:Religious a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:god-fearing ;
+    skosxl:prefLabel mdr-publicservice-label:Religious .
+
+mdr-publicservice-theme:Retail a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:consumer,
+        mdr-publicservice-label:marketing,
+        mdr-publicservice-label:sales,
+        mdr-publicservice-label:selling,
+        mdr-publicservice-label:shopping ;
+    skosxl:prefLabel mdr-publicservice-label:Retail .
+
+mdr-publicservice-theme:ScienceAndTechnology a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:ICT,
+        mdr-publicservice-label:advanced-technology,
+        mdr-publicservice-label:agricultural-engineering,
+        mdr-publicservice-label:agro-technology,
+        mdr-publicservice-label:alternative-technology,
+        mdr-publicservice-label:applied-science,
+        mdr-publicservice-label:appropriate-technologies,
+        mdr-publicservice-label:arts--useful,
+        mdr-publicservice-label:assessment-of-technology,
+        mdr-publicservice-label:assisted-reproduction,
+        mdr-publicservice-label:automotive-engineering,
+        mdr-publicservice-label:biomedical-engineering,
+        mdr-publicservice-label:biomedical-technology,
+        mdr-publicservice-label:broadcasting-engineering,
+        mdr-publicservice-label:business-incubator,
+        mdr-publicservice-label:cdi-technology,
+        mdr-publicservice-label:chemical-engineering,
+        mdr-publicservice-label:choice-of-technology,
+        mdr-publicservice-label:clean-technology,
+        mdr-publicservice-label:coal-technology,
+        mdr-publicservice-label:communication-engineering,
+        mdr-publicservice-label:compact-disc-interactive-technology,
+        mdr-publicservice-label:compact-disk-interactive-technology,
+        mdr-publicservice-label:computer-integrated-railroading,
+        mdr-publicservice-label:concentrated-solar-power,
+        mdr-publicservice-label:corn--post-harvest-technology,
+        mdr-publicservice-label:corn--postharvest-biotechnology,
+        mdr-publicservice-label:corn--postharvest-facilities,
+        mdr-publicservice-label:dental-laboratory-technology,
+        mdr-publicservice-label:drivetrain-technology,
+        mdr-publicservice-label:earth-friendly-technology,
+        mdr-publicservice-label:electrical-engineering,
+        mdr-publicservice-label:endogenous-technology,
+        mdr-publicservice-label:engineering--rehabilitation,
+        mdr-publicservice-label:engineering-science,
+        mdr-publicservice-label:environmental-technology,
+        mdr-publicservice-label:export-of-technology,
+        mdr-publicservice-label:farm-mechanization,
+        mdr-publicservice-label:fisheries-technology,
+        mdr-publicservice-label:fishing-gear,
+        mdr-publicservice-label:food-engineering,
+        mdr-publicservice-label:gas-technology,
+        mdr-publicservice-label:green-technology,
+        mdr-publicservice-label:health-care-technology,
+        mdr-publicservice-label:health-technology,
+        mdr-publicservice-label:high-tech,
+        mdr-publicservice-label:high-tech-industry,
+        mdr-publicservice-label:high-technology--selling,
+        mdr-publicservice-label:horizontal-technology-transfer,
+        mdr-publicservice-label:human-performance-technology,
+        mdr-publicservice-label:ict--information-and-communication-technologies-,
+        mdr-publicservice-label:import-of-technology,
+        mdr-publicservice-label:industrial-vacuum,
+        mdr-publicservice-label:information-and-communication-technologies,
+        mdr-publicservice-label:infra-red-technology,
+        mdr-publicservice-label:innovation-center,
+        mdr-publicservice-label:innovation-policy,
+        mdr-publicservice-label:instructional-technology,
+        mdr-publicservice-label:intel-mmx-technology,
+        mdr-publicservice-label:intermediate-technology,
+        mdr-publicservice-label:it--information-technology-,
+        mdr-publicservice-label:laser-medicine,
+        mdr-publicservice-label:low-observable-technology,
+        mdr-publicservice-label:measuring-instrument,
+        mdr-publicservice-label:medical-engineering,
+        mdr-publicservice-label:mining-equipment,
+        mdr-publicservice-label:mmx-media-enhancement-technology,
+        mdr-publicservice-label:motor,
+        mdr-publicservice-label:nuclear-medicine,
+        mdr-publicservice-label:office-communication-system,
+        mdr-publicservice-label:office-machinery,
+        mdr-publicservice-label:online-analytical-processing-technology,
+        mdr-publicservice-label:operating-room-technology,
+        mdr-publicservice-label:paper-industry,
+        mdr-publicservice-label:parties,
+        mdr-publicservice-label:petroleum-technology,
+        mdr-publicservice-label:pharmaceutical-laboratory-techniques,
+        mdr-publicservice-label:pharmaceutical-laboratory-technology,
+        mdr-publicservice-label:post-harvest-technology-of-crops,
+        mdr-publicservice-label:postharvest-biotechnology-of-crops,
+        mdr-publicservice-label:postharvest-technology-of-crops,
+        mdr-publicservice-label:postharvest-technology-of-seeds,
+        mdr-publicservice-label:pulp-technology,
+        mdr-publicservice-label:r-d-competition,
+        mdr-publicservice-label:rehabilitation-engineering,
+        mdr-publicservice-label:rehabilitative-engineering,
+        mdr-publicservice-label:reproduction--technological-innovations,
+        mdr-publicservice-label:research-policy,
+        mdr-publicservice-label:schumpeterian-competition,
+        mdr-publicservice-label:science--applied,
+        mdr-publicservice-label:science-and-technology,
+        mdr-publicservice-label:science-and-technology-policy,
+        mdr-publicservice-label:science-park,
+        mdr-publicservice-label:science-policy,
+        mdr-publicservice-label:scientific,
+        mdr-publicservice-label:seed-farming,
+        mdr-publicservice-label:seed-growing,
+        mdr-publicservice-label:seed-production,
+        mdr-publicservice-label:sensor-system,
+        mdr-publicservice-label:soft-technology,
+        mdr-publicservice-label:soi-devices,
+        mdr-publicservice-label:solar-power-plant,
+        mdr-publicservice-label:technological,
+        mdr-publicservice-label:technological-gap,
+        mdr-publicservice-label:technological-transfer,
+        mdr-publicservice-label:technologies,
+        mdr-publicservice-label:technology--cd-i,
+        mdr-publicservice-label:technology--performance,
+        mdr-publicservice-label:technology--pharmaceutical,
+        mdr-publicservice-label:technology--rehabilitation,
+        mdr-publicservice-label:technology--surgical,
+        mdr-publicservice-label:technology-center,
+        mdr-publicservice-label:technology-centre,
+        mdr-publicservice-label:technology-counselors,
+        mdr-publicservice-label:technology-evaluation,
+        mdr-publicservice-label:technology-forecasting,
+        mdr-publicservice-label:technology-gap,
+        mdr-publicservice-label:technology-in-education,
+        mdr-publicservice-label:technology-roadmap,
+        mdr-publicservice-label:telecommunications-engineering,
+        mdr-publicservice-label:telecommunications-technology,
+        mdr-publicservice-label:transfer-of-techniques,
+        mdr-publicservice-label:transfer-of-technology,
+        mdr-publicservice-label:useful-arts,
+        mdr-publicservice-label:vacuum--industrial-applications,
+        mdr-publicservice-label:vacuum-in-industry,
+        mdr-publicservice-label:vehicle-engineering,
+        mdr-publicservice-label:vertical-technology-transfer,
+        mdr-publicservice-label:wearable-devices,
+        mdr-publicservice-label:wearable-electronics,
+        mdr-publicservice-label:wearable-tech,
+        mdr-publicservice-label:wearables--wearable-technology-,
+        mdr-publicservice-label:wheel-rail-interface ;
+    skosxl:prefLabel mdr-publicservice-label:ScienceAndTechnology .
+
+mdr-publicservice-theme:StockMarket a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:award,
+        mdr-publicservice-label:awards,
+        mdr-publicservice-label:equity-market,
+        mdr-publicservice-label:exchange,
+        mdr-publicservice-label:exchanges,
+        mdr-publicservice-label:securities-market,
+        mdr-publicservice-label:share-market,
+        mdr-publicservice-label:stock-exchange ;
+    skosxl:prefLabel mdr-publicservice-label:StockMarket .
+
+mdr-publicservice-theme:TourismAndTravelling a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:holiday-industry,
+        mdr-publicservice-label:operators--tour--industry-,
+        mdr-publicservice-label:tour-operators--industry-,
+        mdr-publicservice-label:tourism--economic-aspects,
+        mdr-publicservice-label:tourism-industry,
+        mdr-publicservice-label:tourism-operators--industry-,
+        mdr-publicservice-label:tourist-guides,
+        mdr-publicservice-label:tourist-industry,
+        mdr-publicservice-label:tourist-information,
+        mdr-publicservice-label:tourist-trade,
+        mdr-publicservice-label:tourist-traffic,
+        mdr-publicservice-label:transport,
+        mdr-publicservice-label:travel,
+        mdr-publicservice-label:travel-industry,
+        mdr-publicservice-label:visitor-industry ;
+    skosxl:prefLabel mdr-publicservice-label:TourismAndTravelling .
+
+mdr-publicservice-theme:TransportationAndTransportationInfrastructure a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:business,
+        mdr-publicservice-label:business-enterprise,
+        mdr-publicservice-label:charge,
+        mdr-publicservice-label:commercial-enterprise,
+        mdr-publicservice-label:department-of-transportation,
+        mdr-publicservice-label:equipment,
+        mdr-publicservice-label:executive-department,
+        mdr-publicservice-label:facility,
+        mdr-publicservice-label:installation,
+        mdr-publicservice-label:movement,
+        mdr-publicservice-label:transfer,
+        mdr-publicservice-label:transport,
+        mdr-publicservice-label:transportation-system ;
+    skosxl:prefLabel mdr-publicservice-label:TransportationAndTransportationInfrastructure .
+
+mdr-publicservice-theme:Utilities a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:businesses,
+        mdr-publicservice-label:companies,
+        mdr-publicservice-label:electricity,
+        mdr-publicservice-label:firms,
+        mdr-publicservice-label:plants,
+        mdr-publicservice-label:public-service-corporation,
+        mdr-publicservice-label:public-utility,
+        mdr-publicservice-label:public-utility-company,
+        mdr-publicservice-label:service-program,
+        mdr-publicservice-label:utility-program ;
+    skosxl:prefLabel mdr-publicservice-label:Utilities .
+
+mdr-publicservice-theme:WelfareAndSocialCare a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:benefit,
+        mdr-publicservice-label:benefits,
+        mdr-publicservice-label:financial-aid,
+        mdr-publicservice-label:good,
+        mdr-publicservice-label:services,
+        mdr-publicservice-label:social-welfare,
+        mdr-publicservice-label:welfare-state,
+        mdr-publicservice-label:well-being ;
+    skosxl:prefLabel mdr-publicservice-label:WelfareAndSocialCare .
+
+mdr-publicservice-theme:Work a skos:Concept ;
+    skos:inScheme mdr-publicservice-scheme:PublicServiceTheme ;
+    skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme ;
+    skosxl:altLabel mdr-publicservice-label:act,
+        mdr-publicservice-label:body-of-work,
+        mdr-publicservice-label:bring,
+        mdr-publicservice-label:employment,
+        mdr-publicservice-label:go,
+        mdr-publicservice-label:industry--psychology-,
+        mdr-publicservice-label:method-of-work,
+        mdr-publicservice-label:operate,
+        mdr-publicservice-label:piece-of-work,
+        mdr-publicservice-label:play,
+        mdr-publicservice-label:process,
+        mdr-publicservice-label:study,
+        mdr-publicservice-label:work--method-of,
+        mdr-publicservice-label:workplace ;
+    skosxl:prefLabel mdr-publicservice-label:Work .
+
+mdr-publicservice-label:AgricultureAndFood a skosxl:Label ;
+    skosxl:literalForm "Agriculture & food"@en .
+
+mdr-publicservice-label:Animal a skosxl:Label ;
+    skosxl:literalForm "Animal"@en .
+
+mdr-publicservice-label:BorderControl a skosxl:Label ;
+    skosxl:literalForm "Border control"@en .
+
+mdr-publicservice-label:CAD-CAM skosxl:literalForm "CAD-CAM"@en .
+
+mdr-publicservice-label:CultureSportAndLeisure a skosxl:Label ;
+    skosxl:literalForm "Culture, sport and leisure"@en .
+
+mdr-publicservice-label:Defence a skosxl:Label ;
+    skosxl:literalForm "Defence"@en .
+
+mdr-publicservice-label:Digital a skosxl:Label ;
+    skosxl:literalForm "Digital"@en .
+
+mdr-publicservice-label:EMAS skosxl:literalForm "EMAS"@en .
+
+mdr-publicservice-label:Education a skosxl:Label ;
+    skosxl:literalForm "Education"@en .
+
+mdr-publicservice-label:Emergency a skosxl:Label ;
+    skosxl:literalForm "Emergency"@en .
+
+mdr-publicservice-label:Environmental a skosxl:Label ;
+    skosxl:literalForm "Environmental"@en .
+
+mdr-publicservice-label:Family a skosxl:Label ;
+    skosxl:literalForm "Family"@en .
+
+mdr-publicservice-label:GeneralBusiness a skosxl:Label ;
+    skosxl:literalForm "General Business"@en .
+
+mdr-publicservice-label:GeneralGovernment a skosxl:Label ;
+    skosxl:literalForm "General Government"@en .
+
+mdr-publicservice-label:GeneralPersonCivilStatus a skosxl:Label ;
+    skosxl:literalForm "General Person / Civil status"@en .
+
+mdr-publicservice-label:HealthCare a skosxl:Label ;
+    skosxl:literalForm "Health care"@en .
+
+mdr-publicservice-label:Housing a skosxl:Label ;
+    skosxl:literalForm "Housing"@en .
+
+mdr-publicservice-label:ICT skosxl:literalForm "ICT"@en .
+
+mdr-publicservice-label:Legal a skosxl:Label ;
+    skosxl:literalForm "Legal"@en .
+
+mdr-publicservice-label:M skosxl:literalForm "M"@en .
+
+mdr-publicservice-label:Manufacturing a skosxl:Label ;
+    skosxl:literalForm "Manufacturing"@en .
+
+mdr-publicservice-label:Media a skosxl:Label ;
+    skosxl:literalForm "Media"@en .
+
+mdr-publicservice-label:Mgmt- skosxl:literalForm "Mgmt."@en .
+
+mdr-publicservice-label:MonetaryPolicy a skosxl:Label ;
+    skosxl:literalForm "Monetary policy"@en .
+
+mdr-publicservice-label:MoneyAndDebt a skosxl:Label ;
+    skosxl:literalForm "Money & Debt"@en .
+
+mdr-publicservice-label:NaturalResources a skosxl:Label ;
+    skosxl:literalForm "Natural resources"@en .
+
+mdr-publicservice-label:PublicServiceTheme a skosxl:Label ;
+    skosxl:literalForm "Public Service Theme"@en .
+
+mdr-publicservice-label:PublicSpaceManagementAndHeritage a skosxl:Label ;
+    skosxl:literalForm "Public space management & heritage"@en .
+
+mdr-publicservice-label:Religious a skosxl:Label ;
+    skosxl:literalForm "Religious"@en .
+
+mdr-publicservice-label:Retail a skosxl:Label ;
+    skosxl:literalForm "Retail"@en .
+
+mdr-publicservice-label:ScienceAndTechnology a skosxl:Label ;
+    skosxl:literalForm "Science and technology"@en .
+
+mdr-publicservice-label:StockMarket a skosxl:Label ;
+    skosxl:literalForm "Stock market"@en .
+
+mdr-publicservice-label:TourismAndTravelling a skosxl:Label ;
+    skosxl:literalForm "Tourism & travelling"@en .
+
+mdr-publicservice-label:TransportationAndTransportationInfrastructure a skosxl:Label ;
+    skosxl:literalForm "Transportation & transportation infrastructure"@en .
+
+mdr-publicservice-label:Utilities a skosxl:Label ;
+    skosxl:literalForm "Utilities"@en .
+
+mdr-publicservice-label:WelfareAndSocialCare a skosxl:Label ;
+    skosxl:literalForm "Welfare & social care"@en .
+
+mdr-publicservice-label:Work a skosxl:Label ;
+    skosxl:literalForm "Work"@en .
+
+mdr-publicservice-label:accommodation skosxl:literalForm "accommodation"@en .
+
+mdr-publicservice-label:act skosxl:literalForm "act"@en .
+
+mdr-publicservice-label:advanced-technology skosxl:literalForm "advanced technology"@en .
+
+mdr-publicservice-label:affordable-housing skosxl:literalForm "affordable housing"@en .
+
+mdr-publicservice-label:agricultural-engineering skosxl:literalForm "agricultural engineering"@en .
+
+mdr-publicservice-label:agriculture-department skosxl:literalForm "agriculture department"@en .
+
+mdr-publicservice-label:agro-technology skosxl:literalForm "agro-technology"@en .
+
+mdr-publicservice-label:alternative-technology skosxl:literalForm "alternative technology"@en .
+
+mdr-publicservice-label:animate-being skosxl:literalForm "animate being"@en .
+
+mdr-publicservice-label:applied-science skosxl:literalForm "applied science"@en .
+
+mdr-publicservice-label:appropriate-technologies skosxl:literalForm "appropriate technologies"@en .
+
+mdr-publicservice-label:archaeology--environmental skosxl:literalForm "archaeology, environmental"@en .
+
+mdr-publicservice-label:arts--useful skosxl:literalForm "arts, useful"@en .
+
+mdr-publicservice-label:assessment-of-technology skosxl:literalForm "assessment of technology"@en .
+
+mdr-publicservice-label:assisted-reproduction skosxl:literalForm "assisted reproduction"@en .
+
+mdr-publicservice-label:auditing--environmental skosxl:literalForm "auditing, environmental"@en .
+
+mdr-publicservice-label:authorities skosxl:literalForm "authorities"@en .
+
+mdr-publicservice-label:automated-production skosxl:literalForm "automated production"@en .
+
+mdr-publicservice-label:automotive-engineering skosxl:literalForm "automotive engineering"@en .
+
+mdr-publicservice-label:award skosxl:literalForm "award"@en .
+
+mdr-publicservice-label:awards skosxl:literalForm "awards"@en .
+
+mdr-publicservice-label:background-music skosxl:literalForm "background music"@en .
+
+mdr-publicservice-label:balance-sheet-channel skosxl:literalForm "balance sheet channel"@en .
+
+mdr-publicservice-label:bank-lending-channel skosxl:literalForm "bank lending channel"@en .
+
+mdr-publicservice-label:beer_ticket skosxl:literalForm "beer_ticket"@en .
+
+mdr-publicservice-label:benefit skosxl:literalForm "benefit"@en .
+
+mdr-publicservice-label:benefits skosxl:literalForm "benefits"@en .
+
+mdr-publicservice-label:biography--ancestry skosxl:literalForm "biography--ancestry"@en .
+
+mdr-publicservice-label:biography--descendants skosxl:literalForm "biography--descendants"@en .
+
+mdr-publicservice-label:biography--family skosxl:literalForm "biography--family"@en .
+
+mdr-publicservice-label:biological-science skosxl:literalForm "biological science"@en .
+
+mdr-publicservice-label:biomedical-engineering skosxl:literalForm "biomedical engineering"@en .
+
+mdr-publicservice-label:biomedical-technology skosxl:literalForm "biomedical technology"@en .
+
+mdr-publicservice-label:biomonitoring--ecology- skosxl:literalForm "biomonitoring (ecology)"@en .
+
+mdr-publicservice-label:blank-space skosxl:literalForm "blank space"@en .
+
+mdr-publicservice-label:blind-trust skosxl:literalForm "blind trust"@en .
+
+mdr-publicservice-label:body-of-work skosxl:literalForm "body of work"@en .
+
+mdr-publicservice-label:borders skosxl:literalForm "borders"@en .
+
+mdr-publicservice-label:boundary-line skosxl:literalForm "boundary line"@en .
+
+mdr-publicservice-label:bring skosxl:literalForm "bring"@en .
+
+mdr-publicservice-label:broadcasting-engineering skosxl:literalForm "broadcasting engineering"@en .
+
+mdr-publicservice-label:business-concern skosxl:literalForm "business concern"@en .
+
+mdr-publicservice-label:business-incubator skosxl:literalForm "business incubator"@en .
+
+mdr-publicservice-label:business-organisation skosxl:literalForm "business organisation"@en .
+
+mdr-publicservice-label:business-organization skosxl:literalForm "business organization"@en .
+
+mdr-publicservice-label:business-sector skosxl:literalForm "business sector"@en .
+
+mdr-publicservice-label:businesses skosxl:literalForm "businesses"@en .
+
+mdr-publicservice-label:cae--computer-aided-engineering- skosxl:literalForm "cae (computer-aided engineering)"@en .
+
+mdr-publicservice-label:cai--computer-aided-industry- skosxl:literalForm "cai (computer-aided industry)"@en .
+
+mdr-publicservice-label:carbon-tax skosxl:literalForm "carbon tax"@en .
+
+mdr-publicservice-label:carbon-taxation skosxl:literalForm "carbon taxation"@en .
+
+mdr-publicservice-label:case skosxl:literalForm "case"@en .
+
+mdr-publicservice-label:cash skosxl:literalForm "cash"@en .
+
+mdr-publicservice-label:cdi-technology skosxl:literalForm "cdi technology"@en .
+
+mdr-publicservice-label:cellular-manufacturing skosxl:literalForm "cellular manufacturing"@en .
+
+mdr-publicservice-label:central-bank skosxl:literalForm "central bank"@en .
+
+mdr-publicservice-label:charge skosxl:literalForm "charge"@en .
+
+mdr-publicservice-label:chemical-engineering skosxl:literalForm "chemical engineering"@en .
+
+mdr-publicservice-label:chemistry--environmental skosxl:literalForm "chemistry, environmental"@en .
+
+mdr-publicservice-label:children--education skosxl:literalForm "children--education"@en .
+
+mdr-publicservice-label:choice-of-technology skosxl:literalForm "choice of technology"@en .
+
+mdr-publicservice-label:civil-defence skosxl:literalForm "civil defence"@en .
+
+mdr-publicservice-label:coal-technology skosxl:literalForm "coal technology"@en .
+
+mdr-publicservice-label:cognitive-ergonomics skosxl:literalForm "cognitive ergonomics"@en .
+
+mdr-publicservice-label:common-currencies skosxl:literalForm "common currencies"@en .
+
+mdr-publicservice-label:communication-engineering skosxl:literalForm "communication engineering"@en .
+
+mdr-publicservice-label:compact-disc-interactive-technology skosxl:literalForm "compact disc interactive technology"@en .
+
+mdr-publicservice-label:compact-disk-interactive-technology skosxl:literalForm "compact disk interactive technology"@en .
+
+mdr-publicservice-label:companies skosxl:literalForm "companies"@en .
+
+mdr-publicservice-label:computer-aided-industry skosxl:literalForm "computer-aided industry"@en .
+
+mdr-publicservice-label:computer-aided-manufacturing skosxl:literalForm "computer-aided manufacturing"@en .
+
+mdr-publicservice-label:computer-integrated-enterprise skosxl:literalForm "computer-integrated enterprise"@en .
+
+mdr-publicservice-label:computer-integrated-railroading skosxl:literalForm "computer-integrated railroading"@en .
+
+mdr-publicservice-label:concentrated-solar-power skosxl:literalForm "concentrated solar power"@en .
+
+mdr-publicservice-label:concern skosxl:literalForm "concern"@en .
+
+mdr-publicservice-label:condition skosxl:literalForm "condition"@en .
+
+mdr-publicservice-label:consumer skosxl:literalForm "consumer"@en .
+
+mdr-publicservice-label:control-condition skosxl:literalForm "control condition"@en .
+
+mdr-publicservice-label:controller skosxl:literalForm "controller"@en .
+
+mdr-publicservice-label:controls skosxl:literalForm "controls"@en .
+
+mdr-publicservice-label:corn--post-harvest-technology skosxl:literalForm "corn--post harvest technology"@en .
+
+mdr-publicservice-label:corn--postharvest-biotechnology skosxl:literalForm "corn--postharvest biotechnology"@en .
+
+mdr-publicservice-label:corn--postharvest-facilities skosxl:literalForm "corn--postharvest facilities"@en .
+
+mdr-publicservice-label:corporate-environmental-accounting skosxl:literalForm "corporate environmental accounting"@en .
+
+mdr-publicservice-label:corporate-environmental-strategy skosxl:literalForm "corporate environmental strategy"@en .
+
+mdr-publicservice-label:corporate-environmentalism skosxl:literalForm "corporate environmentalism"@en .
+
+mdr-publicservice-label:cover skosxl:literalForm "cover"@en .
+
+mdr-publicservice-label:covering skosxl:literalForm "covering"@en .
+
+mdr-publicservice-label:credit-channel skosxl:literalForm "credit channel"@en .
+
+mdr-publicservice-label:crime-syndicate skosxl:literalForm "crime syndicate"@en .
+
+mdr-publicservice-label:cultural-sociology skosxl:literalForm "cultural sociology"@en .
+
+mdr-publicservice-label:culture--social-aspects skosxl:literalForm "culture--social aspects"@en .
+
+mdr-publicservice-label:culture-medium skosxl:literalForm "culture medium"@en .
+
+mdr-publicservice-label:currency skosxl:literalForm "currency"@en .
+
+mdr-publicservice-label:currency-area skosxl:literalForm "currency area"@en .
+
+mdr-publicservice-label:currency-areas skosxl:literalForm "currency areas"@en .
+
+mdr-publicservice-label:currency-bloc skosxl:literalForm "currency bloc"@en .
+
+mdr-publicservice-label:currency-union skosxl:literalForm "currency union"@en .
+
+mdr-publicservice-label:currency-unions skosxl:literalForm "currency unions"@en .
+
+mdr-publicservice-label:defence-force skosxl:literalForm "defence force"@en .
+
+mdr-publicservice-label:defence-mechanism skosxl:literalForm "defence mechanism"@en .
+
+mdr-publicservice-label:defence-reaction skosxl:literalForm "defence reaction"@en .
+
+mdr-publicservice-label:defending-team skosxl:literalForm "defending team"@en .
+
+mdr-publicservice-label:defense-force skosxl:literalForm "defense force"@en .
+
+mdr-publicservice-label:defense-lawyers skosxl:literalForm "defense lawyers"@en .
+
+mdr-publicservice-label:defense-mechanism skosxl:literalForm "defense mechanism"@en .
+
+mdr-publicservice-label:defense-reaction skosxl:literalForm "defense reaction"@en .
+
+mdr-publicservice-label:defense-team skosxl:literalForm "defense team"@en .
+
+mdr-publicservice-label:defensive-measure skosxl:literalForm "defensive measure"@en .
+
+mdr-publicservice-label:defensive-structure skosxl:literalForm "defensive structure"@en .
+
+mdr-publicservice-label:degradation--environmental skosxl:literalForm "degradation, environmental"@en .
+
+mdr-publicservice-label:degree skosxl:literalForm "degree"@en .
+
+mdr-publicservice-label:denial skosxl:literalForm "denial"@en .
+
+mdr-publicservice-label:dental-laboratory-technology skosxl:literalForm "dental laboratory technology"@en .
+
+mdr-publicservice-label:department-of-agriculture skosxl:literalForm "department of agriculture"@en .
+
+mdr-publicservice-label:department-of-education skosxl:literalForm "department of education"@en .
+
+mdr-publicservice-label:department-of-transportation skosxl:literalForm "department of transportation"@en .
+
+mdr-publicservice-label:destruction--environmental skosxl:literalForm "destruction, environmental"@en .
+
+mdr-publicservice-label:deterioration--environmental skosxl:literalForm "deterioration, environmental"@en .
+
+mdr-publicservice-label:die-and-mold-manufacturing skosxl:literalForm "die and mold manufacturing"@en .
+
+mdr-publicservice-label:die-manufacturing skosxl:literalForm "die manufacturing"@en .
+
+mdr-publicservice-label:digital-manufacturing skosxl:literalForm "digital manufacturing"@en .
+
+mdr-publicservice-label:direction skosxl:literalForm "direction"@en .
+
+mdr-publicservice-label:distance skosxl:literalForm "distance"@en .
+
+mdr-publicservice-label:drivetrain-technology skosxl:literalForm "drivetrain technology"@en .
+
+mdr-publicservice-label:earth-friendly-technology skosxl:literalForm "earth-friendly technology"@en .
+
+mdr-publicservice-label:eco-auditing skosxl:literalForm "eco-auditing"@en .
+
+mdr-publicservice-label:eco-consulting skosxl:literalForm "eco consulting"@en .
+
+mdr-publicservice-label:eco-disasters skosxl:literalForm "eco-disasters"@en .
+
+mdr-publicservice-label:eco-justice skosxl:literalForm "eco-justice"@en .
+
+mdr-publicservice-label:eco-management-and-audit-scheme skosxl:literalForm "eco-management and audit scheme"@en .
+
+mdr-publicservice-label:ecological-accountability skosxl:literalForm "ecological accountability"@en .
+
+mdr-publicservice-label:ecological-disasters skosxl:literalForm "ecological disasters"@en .
+
+mdr-publicservice-label:ecological-economics skosxl:literalForm "ecological economics"@en .
+
+mdr-publicservice-label:ecological-ethics skosxl:literalForm "ecological ethics"@en .
+
+mdr-publicservice-label:ecological-indicators skosxl:literalForm "ecological indicators"@en .
+
+mdr-publicservice-label:ecological-libraries skosxl:literalForm "ecological libraries"@en .
+
+mdr-publicservice-label:ecological-literature skosxl:literalForm "ecological literature"@en .
+
+mdr-publicservice-label:ecological-monitoring skosxl:literalForm "ecological monitoring"@en .
+
+mdr-publicservice-label:ecological-psychology skosxl:literalForm "ecological psychology"@en .
+
+mdr-publicservice-label:ecological-responsibility skosxl:literalForm "ecological responsibility"@en .
+
+mdr-publicservice-label:economics--environmental-aspects skosxl:literalForm "economics--environmental aspects"@en .
+
+mdr-publicservice-label:education skosxl:literalForm "education"@en .
+
+mdr-publicservice-label:education--primitive skosxl:literalForm "education, primitive"@en .
+
+mdr-publicservice-label:education-department skosxl:literalForm "education department"@en .
+
+mdr-publicservice-label:education-of-children skosxl:literalForm "education of children"@en .
+
+mdr-publicservice-label:educational-activity skosxl:literalForm "educational activity"@en .
+
+mdr-publicservice-label:effluent-charge skosxl:literalForm "effluent charge"@en .
+
+mdr-publicservice-label:electrical-engineering skosxl:literalForm "electrical engineering"@en .
+
+mdr-publicservice-label:electricity skosxl:literalForm "electricity"@en .
+
+mdr-publicservice-label:electronic skosxl:literalForm "electronic"@en .
+
+mdr-publicservice-label:emergency-brake skosxl:literalForm "emergency brake"@en .
+
+mdr-publicservice-label:employment skosxl:literalForm "employment"@en .
+
+mdr-publicservice-label:endogenous-technology skosxl:literalForm "endogenous technology"@en .
+
+mdr-publicservice-label:engineering--rehabilitation skosxl:literalForm "engineering, rehabilitation"@en .
+
+mdr-publicservice-label:engineering-science skosxl:literalForm "engineering science"@en .
+
+mdr-publicservice-label:enrichment-of-environment skosxl:literalForm "enrichment of environment"@en .
+
+mdr-publicservice-label:enterprise skosxl:literalForm "enterprise"@en .
+
+mdr-publicservice-label:environment skosxl:literalForm "environment"@en .
+
+mdr-publicservice-label:environment-and-state skosxl:literalForm "environment and state"@en .
+
+mdr-publicservice-label:environment-law skosxl:literalForm "environment law"@en .
+
+mdr-publicservice-label:environment-testing skosxl:literalForm "environment testing"@en .
+
+mdr-publicservice-label:environmental-accountability skosxl:literalForm "environmental accountability"@en .
+
+mdr-publicservice-label:environmental-accounting skosxl:literalForm "environmental accounting"@en .
+
+mdr-publicservice-label:environmental-auditing skosxl:literalForm "environmental auditing"@en .
+
+mdr-publicservice-label:environmental-changes skosxl:literalForm "environmental changes"@en .
+
+mdr-publicservice-label:environmental-compliance-auditing skosxl:literalForm "environmental compliance auditing"@en .
+
+mdr-publicservice-label:environmental-concern skosxl:literalForm "environmental concern"@en .
+
+mdr-publicservice-label:environmental-consciousness skosxl:literalForm "environmental consciousness"@en .
+
+mdr-publicservice-label:environmental-control skosxl:literalForm "environmental control"@en .
+
+mdr-publicservice-label:environmental-crime skosxl:literalForm "environmental crime"@en .
+
+mdr-publicservice-label:environmental-destruction skosxl:literalForm "environmental destruction"@en .
+
+mdr-publicservice-label:environmental-deterioration skosxl:literalForm "environmental deterioration"@en .
+
+mdr-publicservice-label:environmental-disclosure skosxl:literalForm "environmental disclosure"@en .
+
+mdr-publicservice-label:environmental-effects skosxl:literalForm "environmental effects"@en .
+
+mdr-publicservice-label:environmental-ethics skosxl:literalForm "environmental ethics"@en .
+
+mdr-publicservice-label:environmental-geotechnics skosxl:literalForm "environmental geotechnics"@en .
+
+mdr-publicservice-label:environmental-goods skosxl:literalForm "environmental goods"@en .
+
+mdr-publicservice-label:environmental-history skosxl:literalForm "environmental history"@en .
+
+mdr-publicservice-label:environmental-impact-assessment skosxl:literalForm "environmental impact assessment"@en .
+
+mdr-publicservice-label:environmental-indexes skosxl:literalForm "environmental indexes"@en .
+
+mdr-publicservice-label:environmental-indicator skosxl:literalForm "environmental indicator"@en .
+
+mdr-publicservice-label:environmental-indices skosxl:literalForm "environmental indices"@en .
+
+mdr-publicservice-label:environmental-insurance skosxl:literalForm "environmental insurance"@en .
+
+mdr-publicservice-label:environmental-justice-movement skosxl:literalForm "environmental justice movement"@en .
+
+mdr-publicservice-label:environmental-law skosxl:literalForm "environmental law"@en .
+
+mdr-publicservice-label:environmental-law--cases--digests skosxl:literalForm "environmental law--cases--digests"@en .
+
+mdr-publicservice-label:environmental-management--government-policy skosxl:literalForm "environmental management--government policy"@en .
+
+mdr-publicservice-label:environmental-management-accounting skosxl:literalForm "environmental management accounting"@en .
+
+mdr-publicservice-label:environmental-migrants skosxl:literalForm "environmental migrants"@en .
+
+mdr-publicservice-label:environmental-monitoring skosxl:literalForm "environmental monitoring"@en .
+
+mdr-publicservice-label:environmental-movement skosxl:literalForm "environmental movement"@en .
+
+mdr-publicservice-label:environmental-ngos skosxl:literalForm "environmental ngos"@en .
+
+mdr-publicservice-label:environmental-perception skosxl:literalForm "environmental perception"@en .
+
+mdr-publicservice-label:environmental-permits--law-and-legislation skosxl:literalForm "environmental permits--law and legislation"@en .
+
+mdr-publicservice-label:environmental-philosophy skosxl:literalForm "environmental philosophy"@en .
+
+mdr-publicservice-label:environmental-planning skosxl:literalForm "environmental planning"@en .
+
+mdr-publicservice-label:environmental-policy-research skosxl:literalForm "environmental policy research"@en .
+
+mdr-publicservice-label:environmental-protection skosxl:literalForm "environmental protection"@en .
+
+mdr-publicservice-label:environmental-protection--government-policy skosxl:literalForm "environmental protection--government policy"@en .
+
+mdr-publicservice-label:environmental-protection--law-and-legislation skosxl:literalForm "environmental protection--law and legislation"@en .
+
+mdr-publicservice-label:environmental-protection-costs skosxl:literalForm "environmental protection costs"@en .
+
+mdr-publicservice-label:environmental-quality skosxl:literalForm "environmental quality"@en .
+
+mdr-publicservice-label:environmental-quality--economic-aspects skosxl:literalForm "environmental quality--economic aspects"@en .
+
+mdr-publicservice-label:environmental-quality--government-policy skosxl:literalForm "environmental quality--government policy"@en .
+
+mdr-publicservice-label:environmental-quality--health-aspects skosxl:literalForm "environmental quality--health aspects"@en .
+
+mdr-publicservice-label:environmental-quality--law-and-legislation skosxl:literalForm "environmental quality--law and legislation"@en .
+
+mdr-publicservice-label:environmental-quality--measurement skosxl:literalForm "environmental quality--measurement"@en .
+
+mdr-publicservice-label:environmental-quality--monitoring skosxl:literalForm "environmental quality--monitoring"@en .
+
+mdr-publicservice-label:environmental-quality--moral-and-ethical-aspects skosxl:literalForm "environmental quality--moral and ethical aspects"@en .
+
+mdr-publicservice-label:environmental-quality--psychological-aspects skosxl:literalForm "environmental quality--psychological aspects"@en .
+
+mdr-publicservice-label:environmental-quality-management skosxl:literalForm "environmental quality management"@en .
+
+mdr-publicservice-label:environmental-regulation skosxl:literalForm "environmental regulation"@en .
+
+mdr-publicservice-label:environmental-scenography skosxl:literalForm "environmental scenography"@en .
+
+mdr-publicservice-label:environmental-science skosxl:literalForm "environmental science"@en .
+
+mdr-publicservice-label:environmental-social-sciences skosxl:literalForm "environmental social sciences"@en .
+
+mdr-publicservice-label:environmental-stewardship skosxl:literalForm "environmental stewardship"@en .
+
+mdr-publicservice-label:environmental-stresses skosxl:literalForm "environmental stresses"@en .
+
+mdr-publicservice-label:environmental-theater skosxl:literalForm "environmental theater"@en .
+
+mdr-publicservice-label:environmental-training skosxl:literalForm "environmental training"@en .
+
+mdr-publicservice-label:environmental-value-mapping skosxl:literalForm "environmental value mapping"@en .
+
+mdr-publicservice-label:environmentally-displaced-persons skosxl:literalForm "environmentally displaced persons"@en .
+
+mdr-publicservice-label:equipment skosxl:literalForm "equipment"@en .
+
+mdr-publicservice-label:equity-market skosxl:literalForm "equity market"@en .
+
+mdr-publicservice-label:ethics-of-nature skosxl:literalForm "ethics of nature"@en .
+
+mdr-publicservice-label:exchange skosxl:literalForm "exchange"@en .
+
+mdr-publicservice-label:exchanges skosxl:literalForm "exchanges"@en .
+
+mdr-publicservice-label:export-of-technology skosxl:literalForm "export of technology"@en .
+
+mdr-publicservice-label:facility skosxl:literalForm "facility"@en .
+
+mdr-publicservice-label:factory-farm skosxl:literalForm "factory farm"@en .
+
+mdr-publicservice-label:family-life skosxl:literalForm "family life"@en .
+
+mdr-publicservice-label:family-line skosxl:literalForm "family line"@en .
+
+mdr-publicservice-label:family-unit skosxl:literalForm "family unit"@en .
+
+mdr-publicservice-label:farm-mechanization skosxl:literalForm "farm mechanization"@en .
+
+mdr-publicservice-label:federal-government skosxl:literalForm "federal government"@en .
+
+mdr-publicservice-label:financial-accelerator skosxl:literalForm "financial accelerator"@en .
+
+mdr-publicservice-label:financial-aid skosxl:literalForm "financial aid"@en .
+
+mdr-publicservice-label:financial-statistics skosxl:literalForm "financial statistics"@en .
+
+mdr-publicservice-label:firms skosxl:literalForm "firms"@en .
+
+mdr-publicservice-label:fisheries-technology skosxl:literalForm "fisheries technology"@en .
+
+mdr-publicservice-label:fishing-gear skosxl:literalForm "fishing gear"@en .
+
+mdr-publicservice-label:flesh_and_blood skosxl:literalForm "flesh_and_blood"@en .
+
+mdr-publicservice-label:folding_stuff skosxl:literalForm "folding_stuff"@en .
+
+mdr-publicservice-label:food-engineering skosxl:literalForm "food engineering"@en .
+
+mdr-publicservice-label:free-time--leisure- skosxl:literalForm "free time (leisure)"@en .
+
+mdr-publicservice-label:frontiers skosxl:literalForm "frontiers"@en .
+
+mdr-publicservice-label:fund skosxl:literalForm "fund"@en .
+
+mdr-publicservice-label:funds skosxl:literalForm "funds"@en .
+
+mdr-publicservice-label:games--sport- skosxl:literalForm "games (sport)"@en .
+
+mdr-publicservice-label:gap skosxl:literalForm "gap"@en .
+
+mdr-publicservice-label:gas-technology skosxl:literalForm "gas technology"@en .
+
+mdr-publicservice-label:geoenvironmental-engineering skosxl:literalForm "geoenvironmental engineering"@en .
+
+mdr-publicservice-label:global-environmental-justice skosxl:literalForm "global environmental justice"@en .
+
+mdr-publicservice-label:go skosxl:literalForm "go"@en .
+
+mdr-publicservice-label:god-fearing skosxl:literalForm "god-fearing"@en .
+
+mdr-publicservice-label:good skosxl:literalForm "good"@en .
+
+mdr-publicservice-label:governance skosxl:literalForm "governance"@en .
+
+mdr-publicservice-label:governing skosxl:literalForm "governing"@en .
+
+mdr-publicservice-label:government-activity skosxl:literalForm "government activity"@en .
+
+mdr-publicservice-label:green-accounting skosxl:literalForm "green accounting"@en .
+
+mdr-publicservice-label:green-reporting skosxl:literalForm "green reporting"@en .
+
+mdr-publicservice-label:green-taxation skosxl:literalForm "green taxation"@en .
+
+mdr-publicservice-label:group-technology skosxl:literalForm "group technology"@en .
+
+mdr-publicservice-label:hand-brake skosxl:literalForm "hand brake"@en .
+
+mdr-publicservice-label:health--environmental-aspects skosxl:literalForm "health--environmental aspects"@en .
+
+mdr-publicservice-label:health-care-technology skosxl:literalForm "health care technology"@en .
+
+mdr-publicservice-label:health-ecology skosxl:literalForm "health ecology"@en .
+
+mdr-publicservice-label:health-technology skosxl:literalForm "health technology"@en .
+
+mdr-publicservice-label:healthcare skosxl:literalForm "healthcare"@en .
+
+mdr-publicservice-label:high-tech skosxl:literalForm "high tech"@en .
+
+mdr-publicservice-label:high-tech-industry skosxl:literalForm "high-tech industry"@en .
+
+mdr-publicservice-label:high-technology--selling skosxl:literalForm "high technology--selling"@en .
+
+mdr-publicservice-label:history-of-money skosxl:literalForm "history of money"@en .
+
+mdr-publicservice-label:hms--holonic-manufacturing-system- skosxl:literalForm "hms (holonic manufacturing system)"@en .
+
+mdr-publicservice-label:holiday-industry skosxl:literalForm "holiday industry"@en .
+
+mdr-publicservice-label:holonic-manufacturing-system skosxl:literalForm "holonic manufacturing system"@en .
+
+mdr-publicservice-label:holonic-production skosxl:literalForm "holonic production"@en .
+
+mdr-publicservice-label:home skosxl:literalForm "home"@en .
+
+mdr-publicservice-label:horizontal-technology-transfer skosxl:literalForm "horizontal technology transfer"@en .
+
+mdr-publicservice-label:household skosxl:literalForm "household"@en .
+
+mdr-publicservice-label:houses skosxl:literalForm "houses"@en .
+
+mdr-publicservice-label:housing--social-aspects skosxl:literalForm "housing--social aspects"@en .
+
+mdr-publicservice-label:housing-needs skosxl:literalForm "housing needs"@en .
+
+mdr-publicservice-label:human-ecology--moral-and-ethical-aspects skosxl:literalForm "human ecology--moral and ethical aspects"@en .
+
+mdr-publicservice-label:human-factors-science skosxl:literalForm "human factors science"@en .
+
+mdr-publicservice-label:human-performance-technology skosxl:literalForm "human performance technology"@en .
+
+mdr-publicservice-label:human-resource-development skosxl:literalForm "human resource development"@en .
+
+mdr-publicservice-label:ict--information-and-communication-technologies- skosxl:literalForm "ict (information and communication technologies)"@en .
+
+mdr-publicservice-label:import-of-technology skosxl:literalForm "import of technology"@en .
+
+mdr-publicservice-label:indexes--environmental skosxl:literalForm "indexes, environmental"@en .
+
+mdr-publicservice-label:indicators--environmental skosxl:literalForm "indicators, environmental"@en .
+
+mdr-publicservice-label:indices--environmental skosxl:literalForm "indices, environmental"@en .
+
+mdr-publicservice-label:individual skosxl:literalForm "individual"@en .
+
+mdr-publicservice-label:industrial-labour skosxl:literalForm "industrial labour"@en .
+
+mdr-publicservice-label:industrial-processing skosxl:literalForm "industrial processing"@en .
+
+mdr-publicservice-label:industrial-vacuum skosxl:literalForm "industrial vacuum"@en .
+
+mdr-publicservice-label:industry skosxl:literalForm "industry"@en .
+
+mdr-publicservice-label:industry--psychology- skosxl:literalForm "industry (psychology)"@en .
+
+mdr-publicservice-label:inflationary skosxl:literalForm "inflationary"@en .
+
+mdr-publicservice-label:information-and-communication-technologies skosxl:literalForm "information and communication technologies"@en .
+
+mdr-publicservice-label:infra-red-technology skosxl:literalForm "infra-red technology"@en .
+
+mdr-publicservice-label:innovation-center skosxl:literalForm "innovation center"@en .
+
+mdr-publicservice-label:innovation-policy skosxl:literalForm "innovation policy"@en .
+
+mdr-publicservice-label:installation skosxl:literalForm "installation"@en .
+
+mdr-publicservice-label:instructional-technology skosxl:literalForm "instructional technology"@en .
+
+mdr-publicservice-label:insurance skosxl:literalForm "insurance"@en .
+
+mdr-publicservice-label:insurance-policy skosxl:literalForm "insurance policy"@en .
+
+mdr-publicservice-label:intel-mmx-technology skosxl:literalForm "intel mmx technology"@en .
+
+mdr-publicservice-label:intelligent-manufacturing skosxl:literalForm "intelligent manufacturing"@en .
+
+mdr-publicservice-label:interest-rate-pass-through skosxl:literalForm "interest rate pass-through"@en .
+
+mdr-publicservice-label:intermediate-technology skosxl:literalForm "intermediate technology"@en .
+
+mdr-publicservice-label:it--information-technology- skosxl:literalForm "it (information technology)"@en .
+
+mdr-publicservice-label:job-shop-production skosxl:literalForm "job-shop production"@en .
+
+mdr-publicservice-label:judicial skosxl:literalForm "judicial"@en .
+
+mdr-publicservice-label:laser-medicine skosxl:literalForm "laser medicine"@en .
+
+mdr-publicservice-label:lawful skosxl:literalForm "lawful"@en .
+
+mdr-publicservice-label:lean-production skosxl:literalForm "lean production"@en .
+
+mdr-publicservice-label:legal_tender skosxl:literalForm "legal_tender"@en .
+
+mdr-publicservice-label:legitimate skosxl:literalForm "legitimate"@en .
+
+mdr-publicservice-label:leisure-time skosxl:literalForm "leisure time"@en .
+
+mdr-publicservice-label:life-cycle-assessment skosxl:literalForm "life cycle assessment"@en .
+
+mdr-publicservice-label:line skosxl:literalForm "line"@en .
+
+mdr-publicservice-label:line-of-work skosxl:literalForm "line of work"@en .
+
+mdr-publicservice-label:literacy--environmental skosxl:literalForm "literacy, environmental"@en .
+
+mdr-publicservice-label:living-accommodations skosxl:literalForm "living accommodations"@en .
+
+mdr-publicservice-label:lodging skosxl:literalForm "lodging"@en .
+
+mdr-publicservice-label:low-observable-technology skosxl:literalForm "low-observable technology"@en .
+
+mdr-publicservice-label:manufactures--accounting skosxl:literalForm "manufactures--accounting"@en .
+
+mdr-publicservice-label:manufacturing-employment skosxl:literalForm "manufacturing employment"@en .
+
+mdr-publicservice-label:manufacturing-industry skosxl:literalForm "manufacturing industry"@en .
+
+mdr-publicservice-label:margin skosxl:literalForm "margin"@en .
+
+mdr-publicservice-label:marginal-abatement-cost skosxl:literalForm "marginal abatement cost"@en .
+
+mdr-publicservice-label:marketing skosxl:literalForm "marketing"@en .
+
+mdr-publicservice-label:mass-media skosxl:literalForm "mass media"@en .
+
+mdr-publicservice-label:mass-medium skosxl:literalForm "mass medium"@en .
+
+mdr-publicservice-label:means skosxl:literalForm "means"@en .
+
+mdr-publicservice-label:measuring-instrument skosxl:literalForm "measuring instrument"@en .
+
+mdr-publicservice-label:mechanical-tool-industry skosxl:literalForm "mechanical tool industry"@en .
+
+mdr-publicservice-label:mediation--environmental skosxl:literalForm "mediation, environmental"@en .
+
+mdr-publicservice-label:mediation--natural-resources skosxl:literalForm "mediation, natural resources"@en .
+
+mdr-publicservice-label:medical skosxl:literalForm "medical"@en .
+
+mdr-publicservice-label:medical-engineering skosxl:literalForm "medical engineering"@en .
+
+mdr-publicservice-label:medicine skosxl:literalForm "medicine"@en .
+
+mdr-publicservice-label:medium-of-exchange skosxl:literalForm "medium of exchange"@en .
+
+mdr-publicservice-label:member skosxl:literalForm "member"@en .
+
+mdr-publicservice-label:metallic-standard skosxl:literalForm "metallic standard"@en .
+
+mdr-publicservice-label:method-of-work skosxl:literalForm "method of work"@en .
+
+mdr-publicservice-label:mgmt- skosxl:literalForm "mgmt."@en .
+
+mdr-publicservice-label:military-defence skosxl:literalForm "military defence"@en .
+
+mdr-publicservice-label:mining-equipment skosxl:literalForm "mining equipment"@en .
+
+mdr-publicservice-label:mmx-media-enhancement-technology skosxl:literalForm "mmx media enhancement technology"@en .
+
+mdr-publicservice-label:mng-t skosxl:literalForm "mng't"@en .
+
+mdr-publicservice-label:monetary-economics skosxl:literalForm "monetary economics"@en .
+
+mdr-publicservice-label:monetary-management skosxl:literalForm "monetary management"@en .
+
+mdr-publicservice-label:monetary-question skosxl:literalForm "monetary question"@en .
+
+mdr-publicservice-label:monetary-regime skosxl:literalForm "monetary regime"@en .
+
+mdr-publicservice-label:monetary-system skosxl:literalForm "monetary system"@en .
+
+mdr-publicservice-label:monetary-targets skosxl:literalForm "monetary targets"@en .
+
+mdr-publicservice-label:money--primitive skosxl:literalForm "money, primitive"@en .
+
+mdr-publicservice-label:money-stock-targeting skosxl:literalForm "money stock targeting"@en .
+
+mdr-publicservice-label:monitoring--environmental skosxl:literalForm "monitoring, environmental"@en .
+
+mdr-publicservice-label:motor skosxl:literalForm "motor"@en .
+
+mdr-publicservice-label:movement skosxl:literalForm "movement"@en .
+
+mdr-publicservice-label:national-resources skosxl:literalForm "national resources"@en .
+
+mdr-publicservice-label:natural-person skosxl:literalForm "natural person"@en .
+
+mdr-publicservice-label:natural-resource-agencies skosxl:literalForm "natural resource agencies"@en .
+
+mdr-publicservice-label:natural-resources--economic-aspects skosxl:literalForm "natural resources--economic aspects"@en .
+
+mdr-publicservice-label:natural-resources-agencies skosxl:literalForm "natural resources agencies"@en .
+
+mdr-publicservice-label:natural-resources-mediation skosxl:literalForm "natural resources mediation"@en .
+
+mdr-publicservice-label:nature skosxl:literalForm "nature"@en .
+
+mdr-publicservice-label:non-frontal-scenography skosxl:literalForm "non-frontal scenography"@en .
+
+mdr-publicservice-label:nuclear-medicine skosxl:literalForm "nuclear medicine"@en .
+
+mdr-publicservice-label:occupation skosxl:literalForm "occupation"@en .
+
+mdr-publicservice-label:office-communication-system skosxl:literalForm "office communication system"@en .
+
+mdr-publicservice-label:office-machinery skosxl:literalForm "office machinery"@en .
+
+mdr-publicservice-label:online-analytical-processing-technology skosxl:literalForm "online analytical processing technology"@en .
+
+mdr-publicservice-label:operate skosxl:literalForm "operate"@en .
+
+mdr-publicservice-label:operating-room-technology skosxl:literalForm "operating room technology"@en .
+
+mdr-publicservice-label:operators--tour--industry- skosxl:literalForm "operators, tour (industry)"@en .
+
+mdr-publicservice-label:optimum-currency-areas skosxl:literalForm "optimum currency areas"@en .
+
+mdr-publicservice-label:outer-space skosxl:literalForm "outer space"@en .
+
+mdr-publicservice-label:outer_space skosxl:literalForm "outer_space"@en .
+
+mdr-publicservice-label:p--approach skosxl:literalForm "p* approach"@en .
+
+mdr-publicservice-label:p-star skosxl:literalForm "p star"@en .
+
+mdr-publicservice-label:p-star-approach skosxl:literalForm "p-star approach"@en .
+
+mdr-publicservice-label:p-star-model skosxl:literalForm "p-star model"@en .
+
+mdr-publicservice-label:p-star-theory skosxl:literalForm "p-star theory"@en .
+
+mdr-publicservice-label:paper-industry skosxl:literalForm "paper industry"@en .
+
+mdr-publicservice-label:parking-brake skosxl:literalForm "parking brake"@en .
+
+mdr-publicservice-label:parties skosxl:literalForm "parties"@en .
+
+mdr-publicservice-label:petroleum-technology skosxl:literalForm "petroleum technology"@en .
+
+mdr-publicservice-label:pharmaceutical-laboratory-techniques skosxl:literalForm "pharmaceutical laboratory techniques"@en .
+
+mdr-publicservice-label:pharmaceutical-laboratory-technology skosxl:literalForm "pharmaceutical laboratory technology"@en .
+
+mdr-publicservice-label:physical skosxl:literalForm "physical"@en .
+
+mdr-publicservice-label:piece-of-work skosxl:literalForm "piece of work"@en .
+
+mdr-publicservice-label:place skosxl:literalForm "place"@en .
+
+mdr-publicservice-label:plants skosxl:literalForm "plants"@en .
+
+mdr-publicservice-label:policy_racket skosxl:literalForm "policy_racket"@en .
+
+mdr-publicservice-label:political-science skosxl:literalForm "political science"@en .
+
+mdr-publicservice-label:pollutants--toxicology skosxl:literalForm "pollutants--toxicology"@en .
+
+mdr-publicservice-label:polluter-pays-principle skosxl:literalForm "polluter-pays principle"@en .
+
+mdr-publicservice-label:pollution--toxicology skosxl:literalForm "pollution--toxicology"@en .
+
+mdr-publicservice-label:pollution-charge skosxl:literalForm "pollution charge"@en .
+
+mdr-publicservice-label:pollution-control skosxl:literalForm "pollution control"@en .
+
+mdr-publicservice-label:pollution-monitoring skosxl:literalForm "pollution monitoring"@en .
+
+mdr-publicservice-label:pollution-standard skosxl:literalForm "pollution standard"@en .
+
+mdr-publicservice-label:pollution-tax skosxl:literalForm "pollution tax"@en .
+
+mdr-publicservice-label:position skosxl:literalForm "position"@en .
+
+mdr-publicservice-label:post-harvest-technology-of-crops skosxl:literalForm "post harvest technology of crops"@en .
+
+mdr-publicservice-label:postharvest-biotechnology-of-crops skosxl:literalForm "postharvest biotechnology of crops"@en .
+
+mdr-publicservice-label:postharvest-technology-of-crops skosxl:literalForm "postharvest technology of crops"@en .
+
+mdr-publicservice-label:postharvest-technology-of-seeds skosxl:literalForm "postharvest technology of seeds"@en .
+
+mdr-publicservice-label:power-tool-industry skosxl:literalForm "power tool industry"@en .
+
+mdr-publicservice-label:precautionary-principle skosxl:literalForm "precautionary principle"@en .
+
+mdr-publicservice-label:preventive skosxl:literalForm "preventive"@en .
+
+mdr-publicservice-label:principal skosxl:literalForm "principal"@en .
+
+mdr-publicservice-label:pro-environmental-behaviour skosxl:literalForm "pro-environmental behaviour"@en .
+
+mdr-publicservice-label:process skosxl:literalForm "process"@en .
+
+mdr-publicservice-label:process-engineering--manufactures- skosxl:literalForm "process engineering (manufactures)"@en .
+
+mdr-publicservice-label:processes--manufacturing skosxl:literalForm "processes, manufacturing"@en .
+
+mdr-publicservice-label:processing--industrial skosxl:literalForm "processing, industrial"@en .
+
+mdr-publicservice-label:processing-industries skosxl:literalForm "processing industries"@en .
+
+mdr-publicservice-label:production-plant skosxl:literalForm "production plant"@en .
+
+mdr-publicservice-label:production-processes skosxl:literalForm "production processes"@en .
+
+mdr-publicservice-label:production-system skosxl:literalForm "production system"@en .
+
+mdr-publicservice-label:protection-of-environment skosxl:literalForm "protection of environment"@en .
+
+mdr-publicservice-label:public skosxl:literalForm "public"@en .
+
+mdr-publicservice-label:public-service-corporation skosxl:literalForm "public-service corporation"@en .
+
+mdr-publicservice-label:public-utility skosxl:literalForm "public utility"@en .
+
+mdr-publicservice-label:public-utility-company skosxl:literalForm "public utility company"@en .
+
+mdr-publicservice-label:pulp-technology skosxl:literalForm "pulp technology"@en .
+
+mdr-publicservice-label:quality-of-environment skosxl:literalForm "quality of environment"@en .
+
+mdr-publicservice-label:r-d-competition skosxl:literalForm "r&amp;d competition"@en .
+
+mdr-publicservice-label:regime skosxl:literalForm "regime"@en .
+
+mdr-publicservice-label:rehabilitation-engineering skosxl:literalForm "rehabilitation engineering"@en .
+
+mdr-publicservice-label:rehabilitative-engineering skosxl:literalForm "rehabilitative engineering"@en .
+
+mdr-publicservice-label:relations-with-family skosxl:literalForm "relations with family"@en .
+
+mdr-publicservice-label:reporting--environmental skosxl:literalForm "reporting, environmental"@en .
+
+mdr-publicservice-label:reporting--green skosxl:literalForm "reporting, green"@en .
+
+mdr-publicservice-label:reproduction--technological-innovations skosxl:literalForm "reproduction--technological innovations"@en .
+
+mdr-publicservice-label:research-policy skosxl:literalForm "research policy"@en .
+
+mdr-publicservice-label:resource skosxl:literalForm "resource"@en .
+
+mdr-publicservice-label:resource-agencies--environmental-agencies- skosxl:literalForm "resource agencies (environmental agencies)"@en .
+
+mdr-publicservice-label:resources--natural skosxl:literalForm "resources, natural"@en .
+
+mdr-publicservice-label:resources-agencies--environmental-agencies- skosxl:literalForm "resources agencies (environmental agencies)"@en .
+
+mdr-publicservice-label:sales skosxl:literalForm "sales"@en .
+
+mdr-publicservice-label:schumpeterian-competition skosxl:literalForm "schumpeterian competition"@en .
+
+mdr-publicservice-label:science--applied skosxl:literalForm "science, applied"@en .
+
+mdr-publicservice-label:science-and-technology skosxl:literalForm "science and technology"@en .
+
+mdr-publicservice-label:science-and-technology-policy skosxl:literalForm "science and technology policy"@en .
+
+mdr-publicservice-label:science-park skosxl:literalForm "science park"@en .
+
+mdr-publicservice-label:science-policy skosxl:literalForm "science policy"@en .
+
+mdr-publicservice-label:scientific skosxl:literalForm "scientific"@en .
+
+mdr-publicservice-label:securities-market skosxl:literalForm "securities market"@en .
+
+mdr-publicservice-label:seed-farming skosxl:literalForm "seed farming"@en .
+
+mdr-publicservice-label:seed-growing skosxl:literalForm "seed growing"@en .
+
+mdr-publicservice-label:seed-production skosxl:literalForm "seed production"@en .
+
+mdr-publicservice-label:selling skosxl:literalForm "selling"@en .
+
+mdr-publicservice-label:sensitive skosxl:literalForm "sensitive"@en .
+
+mdr-publicservice-label:sensor-system skosxl:literalForm "sensor system"@en .
+
+mdr-publicservice-label:service-program skosxl:literalForm "service program"@en .
+
+mdr-publicservice-label:services skosxl:literalForm "services"@en .
+
+mdr-publicservice-label:share-market skosxl:literalForm "share market"@en .
+
+mdr-publicservice-label:shopping skosxl:literalForm "shopping"@en .
+
+mdr-publicservice-label:situation skosxl:literalForm "situation"@en .
+
+mdr-publicservice-label:slum-clearance skosxl:literalForm "slum clearance"@en .
+
+mdr-publicservice-label:small-and-medium-sized-manufacturers skosxl:literalForm "small and medium sized manufacturers"@en .
+
+mdr-publicservice-label:social-class skosxl:literalForm "social class"@en .
+
+mdr-publicservice-label:social-welfare skosxl:literalForm "social welfare"@en .
+
+mdr-publicservice-label:society skosxl:literalForm "society"@en .
+
+mdr-publicservice-label:socio-economic-class skosxl:literalForm "socio-economic class"@en .
+
+mdr-publicservice-label:sociology-of-culture skosxl:literalForm "sociology of culture"@en .
+
+mdr-publicservice-label:soft-technology skosxl:literalForm "soft technology"@en .
+
+mdr-publicservice-label:soi-devices skosxl:literalForm "soi devices"@en .
+
+mdr-publicservice-label:solar-power-plant skosxl:literalForm "solar power plant"@en .
+
+mdr-publicservice-label:spot skosxl:literalForm "spot"@en .
+
+mdr-publicservice-label:stage-business skosxl:literalForm "stage business"@en .
+
+mdr-publicservice-label:standard-of-value skosxl:literalForm "standard of value"@en .
+
+mdr-publicservice-label:state-and-environment skosxl:literalForm "state and environment"@en .
+
+mdr-publicservice-label:state-of-affairs skosxl:literalForm "state of affairs"@en .
+
+mdr-publicservice-label:statutory skosxl:literalForm "statutory"@en .
+
+mdr-publicservice-label:stewardship--environmental skosxl:literalForm "stewardship, environmental"@en .
+
+mdr-publicservice-label:stock-exchange skosxl:literalForm "stock exchange"@en .
+
+mdr-publicservice-label:students--education skosxl:literalForm "students--education"@en .
+
+mdr-publicservice-label:study skosxl:literalForm "study"@en .
+
+mdr-publicservice-label:sub-judice skosxl:literalForm "sub judice"@en .
+
+mdr-publicservice-label:technological skosxl:literalForm "technological"@en .
+
+mdr-publicservice-label:technological-gap skosxl:literalForm "technological gap"@en .
+
+mdr-publicservice-label:technological-transfer skosxl:literalForm "technological transfer"@en .
+
+mdr-publicservice-label:technologies skosxl:literalForm "technologies"@en .
+
+mdr-publicservice-label:technology--cd-i skosxl:literalForm "technology, cd-i"@en .
+
+mdr-publicservice-label:technology--performance skosxl:literalForm "technology, performance"@en .
+
+mdr-publicservice-label:technology--pharmaceutical skosxl:literalForm "technology, pharmaceutical"@en .
+
+mdr-publicservice-label:technology--rehabilitation skosxl:literalForm "technology, rehabilitation"@en .
+
+mdr-publicservice-label:technology--surgical skosxl:literalForm "technology, surgical"@en .
+
+mdr-publicservice-label:technology-center skosxl:literalForm "technology center"@en .
+
+mdr-publicservice-label:technology-centre skosxl:literalForm "technology centre"@en .
+
+mdr-publicservice-label:technology-counselors skosxl:literalForm "technology counselors"@en .
+
+mdr-publicservice-label:technology-evaluation skosxl:literalForm "technology evaluation"@en .
+
+mdr-publicservice-label:technology-forecasting skosxl:literalForm "technology forecasting"@en .
+
+mdr-publicservice-label:technology-gap skosxl:literalForm "technology gap"@en .
+
+mdr-publicservice-label:technology-in-education skosxl:literalForm "technology in education"@en .
+
+mdr-publicservice-label:technology-roadmap skosxl:literalForm "technology roadmap"@en .
+
+mdr-publicservice-label:telecommunications-engineering skosxl:literalForm "telecommunications engineering"@en .
+
+mdr-publicservice-label:telecommunications-technology skosxl:literalForm "telecommunications technology"@en .
+
+mdr-publicservice-label:temporary-state skosxl:literalForm "temporary state"@en .
+
+mdr-publicservice-label:tender skosxl:literalForm "tender"@en .
+
+mdr-publicservice-label:tour-operators--industry- skosxl:literalForm "tour operators (industry)"@en .
+
+mdr-publicservice-label:tourism--economic-aspects skosxl:literalForm "tourism--economic aspects"@en .
+
+mdr-publicservice-label:tourism-industry skosxl:literalForm "tourism industry"@en .
+
+mdr-publicservice-label:tourism-operators--industry- skosxl:literalForm "tourism operators (industry)"@en .
+
+mdr-publicservice-label:tourist-guides skosxl:literalForm "tourist guides"@en .
+
+mdr-publicservice-label:tourist-industry skosxl:literalForm "tourist industry"@en .
+
+mdr-publicservice-label:tourist-information skosxl:literalForm "tourist information"@en .
+
+mdr-publicservice-label:tourist-trade skosxl:literalForm "tourist trade"@en .
+
+mdr-publicservice-label:tourist-traffic skosxl:literalForm "tourist traffic"@en .
+
+mdr-publicservice-label:trade skosxl:literalForm "trade"@en .
+
+mdr-publicservice-label:training skosxl:literalForm "training"@en .
+
+mdr-publicservice-label:transfer skosxl:literalForm "transfer"@en .
+
+mdr-publicservice-label:transfer-of-techniques skosxl:literalForm "transfer of techniques"@en .
+
+mdr-publicservice-label:transfer-of-technology skosxl:literalForm "transfer of technology"@en .
+
+mdr-publicservice-label:transportation-system skosxl:literalForm "transportation system"@en .
+
+mdr-publicservice-label:travel skosxl:literalForm "travel"@en .
+
+mdr-publicservice-label:travel-cost-approach skosxl:literalForm "travel cost approach"@en .
+
+mdr-publicservice-label:travel-cost-model skosxl:literalForm "travel cost model"@en .
+
+mdr-publicservice-label:travel-industry skosxl:literalForm "travel industry"@en .
+
+mdr-publicservice-label:urban-housing skosxl:literalForm "urban housing"@en .
+
+mdr-publicservice-label:useful-arts skosxl:literalForm "useful arts"@en .
+
+mdr-publicservice-label:utility-program skosxl:literalForm "utility program"@en .
+
+mdr-publicservice-label:vacuum--industrial-applications skosxl:literalForm "vacuum--industrial applications"@en .
+
+mdr-publicservice-label:vacuum-in-industry skosxl:literalForm "vacuum in industry"@en .
+
+mdr-publicservice-label:valid skosxl:literalForm "valid"@en .
+
+mdr-publicservice-label:value-mapping--environmental skosxl:literalForm "value mapping, environmental"@en .
+
+mdr-publicservice-label:vehicle-engineering skosxl:literalForm "vehicle engineering"@en .
+
+mdr-publicservice-label:vertical-technology-transfer skosxl:literalForm "vertical technology transfer"@en .
+
+mdr-publicservice-label:visitor-industry skosxl:literalForm "visitor industry"@en .
+
+mdr-publicservice-label:volume skosxl:literalForm "volume"@en .
+
+mdr-publicservice-label:wearable-devices skosxl:literalForm "wearable devices"@en .
+
+mdr-publicservice-label:wearable-electronics skosxl:literalForm "wearable electronics"@en .
+
+mdr-publicservice-label:wearable-tech skosxl:literalForm "wearable tech"@en .
+
+mdr-publicservice-label:wearables--wearable-technology- skosxl:literalForm "wearables (wearable technology)"@en .
+
+mdr-publicservice-label:welfare-state skosxl:literalForm "welfare state"@en .
+
+mdr-publicservice-label:well-being skosxl:literalForm "well-being"@en .
+
+mdr-publicservice-label:wheel-rail-interface skosxl:literalForm "wheel-rail interface"@en .
+
+mdr-publicservice-label:whole-number skosxl:literalForm "whole number"@en .
+
+mdr-publicservice-label:work--method-of skosxl:literalForm "work, method of"@en .
+
+mdr-publicservice-label:workplace skosxl:literalForm "workplace"@en .
+
+mdr-publicservice-label:youth--education skosxl:literalForm "youth--education"@en .
+
+mdr-publicservice-label:administration skosxl:literalForm "administration"@en .
+
+mdr-publicservice-label:business skosxl:literalForm "business"@en .
+
+mdr-publicservice-label:clean-technology skosxl:literalForm "clean technology"@en .
+
+mdr-publicservice-label:environmental-technology skosxl:literalForm "environmental technology"@en .
+
+mdr-publicservice-label:executive-department skosxl:literalForm "executive department"@en .
+
+mdr-publicservice-label:green-technology skosxl:literalForm "green technology"@en .
+
+mdr-publicservice-label:play skosxl:literalForm "play"@en .
+
+mdr-publicservice-label:state skosxl:literalForm "state"@en .
+
+mdr-publicservice-label:transport skosxl:literalForm "transport"@en .
+
+mdr-publicservice-label:business-enterprise skosxl:literalForm "business enterprise"@en .
+
+mdr-publicservice-label:commercial-enterprise skosxl:literalForm "commercial enterprise"@en .
+
+mdr-publicservice-scheme:PublicServiceTheme a skos:ConceptScheme ;
+    dct:description "Classification of public services by themes"@en ;
+    dct:title "Public Services Theme"@en ;
+    skos:hasTopConcept mdr-publicservice-theme:AgricultureAndFood,
+        mdr-publicservice-theme:Animal,
+        mdr-publicservice-theme:BorderControl,
+        mdr-publicservice-theme:CultureSportAndLeisure,
+        mdr-publicservice-theme:Defence,
+        mdr-publicservice-theme:Digital,
+        mdr-publicservice-theme:Education,
+        mdr-publicservice-theme:Emergency,
+        mdr-publicservice-theme:Environmental,
+        mdr-publicservice-theme:Family,
+        mdr-publicservice-theme:GeneralBusiness,
+        mdr-publicservice-theme:GeneralGovernment,
+        mdr-publicservice-theme:GeneralPersonCivilStatus,
+        mdr-publicservice-theme:HealthCare,
+        mdr-publicservice-theme:Housing,
+        mdr-publicservice-theme:Legal,
+        mdr-publicservice-theme:Manufacturing,
+        mdr-publicservice-theme:Media,
+        mdr-publicservice-theme:MonetaryPolicy,
+        mdr-publicservice-theme:MoneyAndDebt,
+        mdr-publicservice-theme:NaturalResources,
+        mdr-publicservice-theme:PublicSpaceManagementAndHeritage,
+        mdr-publicservice-theme:Religious,
+        mdr-publicservice-theme:Retail,
+        mdr-publicservice-theme:ScienceAndTechnology,
+        mdr-publicservice-theme:StockMarket,
+        mdr-publicservice-theme:TourismAndTravelling,
+        mdr-publicservice-theme:TransportationAndTransportationInfrastructure,
+        mdr-publicservice-theme:Utilities,
+        mdr-publicservice-theme:WelfareAndSocialCare,
+        mdr-publicservice-theme:Work ;
+    skosxl:prefLabel mdr-publicservice-label:PublicServiceTheme .
 

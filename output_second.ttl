@@ -1,0 +1,616 @@
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wordnet-onto: <http://wordnet-rdf.princeton.edu/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.sparna.fr/vocabularies/days#agriculturefood> a skos:Concept ;
+    skos:altLabel ""@en,
+        "USDA"@en,
+        "agribusiness"@en,
+        "agriculture"@en,
+        "agriculture department"@en,
+        "business"@en,
+        "business enterprise"@en,
+        "class"@en,
+        "commercial enterprise"@en,
+        "cultivation"@en,
+        "department of agriculture"@en,
+        "executive department"@en,
+        "factory farm"@en,
+        "fao"@en,
+        "farming"@en,
+        "husbandry"@en,
+        "social class"@en,
+        "socio-economic class"@en ;
+    skos:prefLabel "Agriculture & food"@en .
+
+<http://data.sparna.fr/vocabularies/days#animal> a skos:Concept ;
+    skos:altLabel "animate being"@en,
+        "beast"@en,
+        "brute"@en,
+        "carnal"@en,
+        "creature"@en,
+        "fauna"@en,
+        "fishlike"@en,
+        "fleshly"@en,
+        "physical"@en,
+        "sensual"@en ;
+    skos:prefLabel "Animal"@en .
+
+<http://data.sparna.fr/vocabularies/days#bordercontrol> a skos:Concept ;
+    skos:altLabel "ascendance"@en,
+        "ascendancy"@en,
+        "ascendence"@en,
+        "ascendency"@en,
+        "borderline"@en,
+        "borders"@en,
+        "boundary line"@en,
+        "command"@en,
+        "control condition"@en,
+        "controller"@en,
+        "controls"@en,
+        "delimitation"@en,
+        "dominance"@en,
+        "edge"@en,
+        "frontiers"@en,
+        "margin"@en,
+        "mastery"@en,
+        "mete"@en,
+        "molding"@en,
+        "moulding"@en,
+        "perimeter"@en,
+        "restraint"@en ;
+    skos:prefLabel "Border control"@en .
+
+<http://data.sparna.fr/vocabularies/days#culturesportandleisure> a skos:Concept ;
+    skos:altLabel "capoeira"@en,
+        "ease"@en,
+        "pleasure"@en,
+        "society"@en,
+        "sportswear"@en ;
+    skos:prefLabel "Culture, sport and leisure"@en .
+
+<http://data.sparna.fr/vocabularies/days#defence> a skos:Concept ;
+    skos:altLabel "civil defence"@en,
+        "defence force"@en,
+        "defence mechanism"@en,
+        "defence reaction"@en,
+        "defending team"@en,
+        "defense"@en,
+        "defense force"@en,
+        "defense lawyers"@en,
+        "defense mechanism"@en,
+        "defense reaction"@en,
+        "defense team"@en,
+        "defensive measure"@en,
+        "defensive structure"@en,
+        "demurrer"@en,
+        "denial"@en,
+        "military defence"@en,
+        "refutation"@en,
+        "vindication"@en ;
+    skos:prefLabel "Defence"@en .
+
+<http://data.sparna.fr/vocabularies/days#digital> a skos:Concept ;
+    skos:altLabel ""@en,
+        "analog"@en,
+        "appendage"@en,
+        "digitization"@en,
+        "digitized"@en,
+        "digitizing"@en,
+        "electronic"@en,
+        "extremity"@en,
+        "integer"@en,
+        "member"@en,
+        "whole number"@en ;
+    skos:prefLabel "Digital"@en .
+
+<http://data.sparna.fr/vocabularies/days#education> a skos:Concept ;
+    skos:altLabel "breeding"@en,
+        "children--education"@en,
+        "department of education"@en,
+        "didactics"@en,
+        "education department"@en,
+        "education of children"@en,
+        "education, primitive"@en,
+        "educational activity"@en,
+        "human resource development"@en,
+        "instruction"@en,
+        "pedagogy"@en,
+        "schooling"@en,
+        "students--education"@en,
+        "teaching"@en,
+        "training"@en,
+        "youth--education"@en ;
+    skos:prefLabel "Education"@en .
+
+<http://data.sparna.fr/vocabularies/days#emergency> a skos:Concept ;
+    skos:altLabel ""@en,
+        "ER"@en,
+        "brake"@en,
+        "casualty"@en,
+        "crisis"@en,
+        "emerg"@en,
+        "emergency brake"@en,
+        "exigency"@en,
+        "hand brake"@en,
+        "parking brake"@en,
+        "pinch"@en,
+        "temporary state"@en,
+        "unscheduled"@en ;
+    skos:prefLabel "Emergency"@en .
+
+<http://data.sparna.fr/vocabularies/days#environmental> a skos:Concept ;
+    skos:altLabel ""@en,
+        "biological science"@en,
+        "biology"@en,
+        "ecologic"@en,
+        "ecological"@en,
+        "ecology"@en,
+        "environmentalist"@en,
+        "pollution"@en,
+        "situation"@en,
+        "state of affairs"@en ;
+    skos:prefLabel "Environmental"@en .
+
+<http://data.sparna.fr/vocabularies/days#family> a skos:Concept ;
+    skos:altLabel "ancestry"@en,
+        "biography--ancestry"@en,
+        "biography--descendants"@en,
+        "biography--family"@en,
+        "category"@en,
+        "class"@en,
+        "crime syndicate"@en,
+        "family life"@en,
+        "family line"@en,
+        "family unit"@en,
+        "fellowship"@en,
+        "flesh_and_blood"@en,
+        "folk"@en,
+        "home"@en,
+        "house"@en,
+        "household"@en,
+        "kin"@en,
+        "kinfolk"@en,
+        "kinsfolk"@en,
+        "kinsperson"@en,
+        "menage"@en,
+        "mob"@en,
+        "phratry"@en,
+        "relations with family"@en,
+        "relatives"@en,
+        "sept"@en,
+        "syndicate"@en ;
+    skos:prefLabel "Family"@en .
+
+<http://data.sparna.fr/vocabularies/days#generalbusiness> a skos:Concept ;
+    skos:altLabel "business concern"@en,
+        "business enterprise"@en,
+        "business organisation"@en,
+        "business organization"@en,
+        "business sector"@en,
+        "byplay"@en,
+        "clientele"@en,
+        "commercial enterprise"@en,
+        "concern"@en,
+        "job"@en,
+        "line"@en,
+        "line of work"@en,
+        "occupation"@en,
+        "patronage"@en,
+        "stage business"@en,
+        "trade"@en ;
+    skos:prefLabel "General Business"@en .
+
+<http://data.sparna.fr/vocabularies/days#generalgovernment> a skos:Concept ;
+    skos:altLabel "administration"@en,
+        "authorities"@en,
+        "federal government"@en,
+        "governance"@en,
+        "governing"@en,
+        "government activity"@en,
+        "governments"@en,
+        "jurisdictions"@en,
+        "political science"@en,
+        "politics"@en,
+        "public"@en,
+        "regime"@en,
+        "state"@en ;
+    skos:prefLabel "General Government"@en .
+
+<http://data.sparna.fr/vocabularies/days#generalpersoncivilstatus> a skos:Concept ;
+    skos:altLabel "citizenship"@en,
+        "condition"@en,
+        "degree"@en,
+        "individual"@en,
+        "mortal"@en,
+        "natural person"@en,
+        "position"@en,
+        "ranked"@en,
+        "ranking"@en,
+        "somebody"@en,
+        "someone"@en,
+        "soul"@en,
+        "state"@en ;
+    skos:prefLabel "General Person / Civil status"@en .
+
+<http://data.sparna.fr/vocabularies/days#healthcare> a skos:Concept ;
+    skos:altLabel ""@en,
+        "aid"@en,
+        "attention"@en,
+        "care"@en,
+        "healthcare"@en,
+        "medical"@en,
+        "medicare"@en,
+        "reform"@en,
+        "social insurance"@en,
+        "tending"@en ;
+    skos:prefLabel "Health care"@en .
+
+<http://data.sparna.fr/vocabularies/days#housing> a skos:Concept ;
+    skos:altLabel "accommodation"@en,
+        "affordable housing"@en,
+        "caparison"@en,
+        "case"@en,
+        "casing"@en,
+        "cover"@en,
+        "covering"@en,
+        "homes"@en,
+        "houses"@en,
+        "housing needs"@en,
+        "housing--social aspects"@en,
+        "lid"@en,
+        "living accommodations"@en,
+        "lodging"@en,
+        "residences"@en,
+        "shelter"@en,
+        "slum clearance"@en,
+        "trapping"@en,
+        "urban housing"@en ;
+    skos:prefLabel "Housing"@en .
+
+<http://data.sparna.fr/vocabularies/days#legal> a skos:Concept ;
+    skos:altLabel "judicial"@en,
+        "jural"@en,
+        "juristic"@en,
+        "lawful"@en,
+        "legitimate"@en,
+        "licit"@en,
+        "sanctioned"@en,
+        "statutory"@en,
+        "sub judice"@en,
+        "valid"@en ;
+    skos:prefLabel "Legal"@en .
+
+<http://data.sparna.fr/vocabularies/days#manufacturing> a skos:Concept ;
+    skos:altLabel "cellular manufacturing"@en,
+        "fabrication"@en,
+        "factory"@en,
+        "industrial labour"@en,
+        "industrial processing"@en,
+        "industry"@en,
+        "maker"@en,
+        "manufactory"@en,
+        "manufacture"@en,
+        "manufactured goods"@en,
+        "manufactured products"@en,
+        "manufacturer"@en,
+        "manufacturing"@en,
+        "manufacturing business"@en,
+        "manufacturing employment"@en,
+        "manufacturing industry"@en,
+        "manufacturing plant"@en,
+        "mill"@en,
+        "process engineering (manufactures)"@en,
+        "processes, manufacturing"@en,
+        "processing industries"@en,
+        "processing, industrial"@en,
+        "producer"@en,
+        "production plant"@en,
+        "production processes"@en,
+        "production system"@en,
+        "products"@en,
+        "products, manufactured"@en,
+        "small and medium sized manufacturers"@en ;
+    skos:prefLabel "Manufacturing"@en .
+
+<http://data.sparna.fr/vocabularies/days#media> a skos:Concept ;
+    skos:altLabel "M"@en,
+        "culture medium"@en,
+        "mass media"@en,
+        "mass medium"@en,
+        "metier"@en,
+        "sensitive"@en,
+        "spiritualist"@en ;
+    skos:prefLabel "Media"@en .
+
+<http://data.sparna.fr/vocabularies/days#monetarypolicy> a skos:Concept ;
+    skos:altLabel "accommodative"@en,
+        "central bank"@en,
+        "claude monet"@en,
+        "common currencies"@en,
+        "cost"@en,
+        "currency"@en,
+        "currency area"@en,
+        "currency areas"@en,
+        "currency bloc"@en,
+        "currency union"@en,
+        "currency unions"@en,
+        "fund"@en,
+        "inflation"@en,
+        "inflationary"@en,
+        "insurance"@en,
+        "insurance policy"@en,
+        "kingdom monera"@en,
+        "kingdom prokaryotae"@en,
+        "medium of exchange"@en,
+        "metallic standard"@en,
+        "monetary"@en,
+        "monetary economics"@en,
+        "monetary management"@en,
+        "monetary question"@en,
+        "monetary regime"@en,
+        "monetary targets"@en,
+        "money, primitive"@en,
+        "optimum currency areas"@en,
+        "policy_racket"@en,
+        "price"@en,
+        "prokayotae"@en,
+        "specie"@en,
+        "standard of value"@en ;
+    skos:prefLabel "Monetary policy"@en .
+
+<http://data.sparna.fr/vocabularies/days#moneydebt> a skos:Concept ;
+    skos:altLabel ""@en,
+        "bond"@en,
+        "currency"@en,
+        "fund"@en,
+        "installment"@en,
+        "medium of exchange"@en,
+        "monetary system"@en,
+        "principal"@en,
+        "tender"@en,
+        "wealth"@en ;
+    skos:prefLabel "Money & Debt"@en .
+
+<http://data.sparna.fr/vocabularies/days#naturalresources> a skos:Concept ;
+    skos:altLabel "commodities"@en,
+        "environment"@en,
+        "environmental goods"@en,
+        "imagination"@en,
+        "national resources"@en,
+        "natural resources--economic aspects"@en,
+        "nature"@en,
+        "nrcan"@en,
+        "resource"@en,
+        "resourcefulness"@en,
+        "resources, natural"@en,
+        "wealth"@en ;
+    skos:prefLabel "Natural resources"@en .
+
+<http://data.sparna.fr/vocabularies/days#publicspacemanagementheritage> a skos:Concept ;
+    skos:altLabel "administration"@en,
+        "audit, management"@en,
+        "blind trust"@en,
+        "business games"@en,
+        "business retreats"@en,
+        "corporate retreats"@en,
+        "direction"@en,
+        "industrial gaming"@en,
+        "industrial management games"@en,
+        "management auditing"@en,
+        "management control"@en,
+        "management prerogatives"@en,
+        "management theory"@en,
+        "operation audits"@en,
+        "operational auditing"@en,
+        "operations auditing"@en,
+        "placed"@en,
+        "placing"@en,
+        "retreats, management"@en,
+        "treasury"@en ;
+    skos:prefLabel "Public space management & heritage"@en .
+
+<http://data.sparna.fr/vocabularies/days#religious> a skos:Concept ;
+    skos:altLabel "churchgoing"@en,
+        "churchlike"@en,
+        "churchly"@en,
+        "devout"@en,
+        "god-fearing"@en,
+        "interfaith"@en,
+        "pious"@en,
+        "sacred"@en,
+        "scrupulous"@en,
+        "spiritual"@en ;
+    skos:prefLabel "Religious"@en .
+
+<http://data.sparna.fr/vocabularies/days#retail> a skos:Concept ;
+    skos:altLabel ""@en,
+        "consumer"@en,
+        "marketing"@en,
+        "merchandising"@en,
+        "retailers"@en,
+        "sales"@en,
+        "sell"@en,
+        "selling"@en,
+        "stores"@en,
+        "wholesale"@en ;
+    skos:prefLabel "Retail"@en .
+
+<http://data.sparna.fr/vocabularies/days#scienceandtechnology> a skos:Concept ;
+    skos:altLabel "applied science"@en,
+        "applied scientist"@en,
+        "arts, useful"@en,
+        "business incubator"@en,
+        "choice of technology"@en,
+        "christian theology"@en,
+        "cst"@en,
+        "cultural anthropology"@en,
+        "divinity"@en,
+        "engineer"@en,
+        "engineering"@en,
+        "engineering science"@en,
+        "ethnography"@en,
+        "export of technology"@en,
+        "horizontal technology transfer"@en,
+        "import of technology"@en,
+        "innovation center"@en,
+        "innovation policy"@en,
+        "intel mmx technology"@en,
+        "law and technology"@en,
+        "leapfrogging"@en,
+        "mmx media enhancement technology"@en,
+        "parties"@en,
+        "races of man"@en,
+        "religious research"@en,
+        "research policy"@en,
+        "science and technology"@en,
+        "science and technology policy"@en,
+        "science park"@en,
+        "science policy"@en,
+        "science, applied"@en,
+        "scientific"@en,
+        "social anthropology"@en,
+        "technological"@en,
+        "technological gap"@en,
+        "technological transfer"@en,
+        "technologies"@en,
+        "technology center"@en,
+        "technology centre"@en,
+        "technology gap"@en,
+        "theological system"@en,
+        "theology, christian"@en,
+        "theology--19th century"@en,
+        "theology--20th century"@en,
+        "transfer of techniques"@en,
+        "transfer of technology"@en,
+        "useful arts"@en,
+        "vertical technology transfer"@en ;
+    skos:prefLabel "Science and technology"@en .
+
+<http://data.sparna.fr/vocabularies/days#stockmarket> a skos:Concept ;
+    skos:altLabel "award"@en,
+        "awards"@en,
+        "city"@en,
+        "equities"@en,
+        "equity"@en,
+        "equity market"@en,
+        "exchange"@en,
+        "exchanges"@en,
+        "securities market"@en,
+        "sell"@en,
+        "share market"@en,
+        "stock exchange"@en ;
+    skos:prefLabel "Stock market"@en .
+
+<http://data.sparna.fr/vocabularies/days#tourismtravelling> a skos:Concept ;
+    skos:altLabel "holiday industry"@en,
+        "operators, tour (industry)"@en,
+        "tour operators (industry)"@en,
+        "tourism industry"@en,
+        "tourism operators (industry)"@en,
+        "tourism--economic aspects"@en,
+        "tourist guides"@en,
+        "tourist industry"@en,
+        "tourist information"@en,
+        "tourist trade"@en,
+        "tourist traffic"@en,
+        "touristry"@en,
+        "travel industry"@en,
+        "visitor industry"@en ;
+    skos:prefLabel "Tourism & travelling"@en .
+
+<http://data.sparna.fr/vocabularies/days#transportationtransportationinfrastructure> a skos:Concept ;
+    skos:altLabel ""@en,
+        "banishment"@en,
+        "business"@en,
+        "business enterprise"@en,
+        "charge"@en,
+        "commercial enterprise"@en,
+        "conveyance"@en,
+        "department of transportation"@en,
+        "deportation"@en,
+        "dot"@en,
+        "equipment"@en,
+        "executive department"@en,
+        "exile"@en,
+        "expatriation"@en,
+        "facility"@en,
+        "fare"@en,
+        "installation"@en,
+        "logistics"@en,
+        "loopback"@en,
+        "los"@en,
+        "movement"@en,
+        "proscription"@en,
+        "roads"@en,
+        "shipping"@en,
+        "transfer"@en,
+        "transferral"@en,
+        "transit"@en,
+        "transport"@en,
+        "transportation"@en,
+        "transportation system"@en ;
+    skos:prefLabel "Transportation & transportation infrastructure"@en .
+
+<http://data.sparna.fr/vocabularies/days#utilities> a skos:Concept ;
+    skos:altLabel "businesses"@en,
+        "companies"@en,
+        "electricity"@en,
+        "firms"@en,
+        "plants"@en,
+        "public utility"@en,
+        "public utility company"@en,
+        "public-service corporation"@en,
+        "service program"@en,
+        "usefulness"@en,
+        "utility program"@en ;
+    skos:prefLabel "Utilities"@en .
+
+<http://data.sparna.fr/vocabularies/days#welfaresocialcare> a skos:Concept ;
+    skos:altLabel ""@en,
+        "advocacy"@en,
+        "benefit"@en,
+        "benefits"@en,
+        "caring"@en,
+        "eudaemonia"@en,
+        "eudaimonia"@en,
+        "financial aid"@en,
+        "good"@en,
+        "goodness"@en,
+        "prosperity"@en,
+        "services"@en,
+        "social welfare"@en,
+        "successfulness"@en,
+        "upbeat"@en,
+        "welfare state"@en,
+        "well-being"@en,
+        "wellbeing"@en ;
+    skos:prefLabel "Welfare & social care"@en .
+
+<http://data.sparna.fr/vocabularies/days#work> a skos:Concept ;
+    skos:altLabel "act"@en,
+        "body of work"@en,
+        "bring"@en,
+        "employment"@en,
+        "go"@en,
+        "industry (psychology)"@en,
+        "job"@en,
+        "method of work"@en,
+        "oeuvre"@en,
+        "operate"@en,
+        "piece of work"@en,
+        "play"@en,
+        "plow"@en,
+        "process"@en,
+        "study"@en,
+        "work, method of"@en,
+        "workplace"@en ;
+    skos:prefLabel "Work"@en .
+

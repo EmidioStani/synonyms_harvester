@@ -1,0 +1,584 @@
+//This .js file holds all functionality implemented in the context of EURLEXNEW-3597
+//Function comments notation:
+//Both: Logic applies both for Notice page and Standalone HTML page.
+//Notice page: Logic applies for Notice page only.
+//Notice page - desktop: Logic for Notice page - only in desktop resolution (TOC affixed on sidebar).
+
+//Both: This function intitializes the generation of Table Of Contents(TOC). For Notice page, it also decides whether we should compute or show already computed TOC.
+function generateTOC(isStandalone, screenWarn, topLabel) {
+	var shouldCompute = true;
+	var tocContainer;
+	//Initializations for both [ages
+	if (isStandalone) {		//Standalone HTML view
+		var docHtml = $("body").html();		
+		//Wrap the doc. HTML with bootstrap container classes		
+		$("body").wrapInner("<div class='Wrapper clearfix'></div>");
+		$(".Wrapper").wrapInner("<div class='container-fluid'></div>");
+		$(".container-fluid").wrapInner("<div class='row row-offcanvas'></div>");
+		$(".row-offcanvas").wrapInner("<div id='docHtml' class='col-md-9'></div>");//col-xs-12 col-sm-12
+		$(".row-offcanvas").prepend("<div class='col-md-3' id='TOC'></div>");//hidden-xs hidden-sm 
+		$("#TOC").wrapInner("<div id='TOCSidebarWrapper'></div>");
+		$("#TOCSidebarWrapper").wrapInner("<div class=' affix-top' id='TOCSidebarSA'></div>");
+		$("#TOCSidebarSA").wrapInner("<div class='tocWrapper'></div>");
+		$(".tocWrapper").html("<i id='loadingImg' class='fa fa-spinner fa-spin'></i>");
+		$(".tocWrapper").addClass("text-center");
+		//ensures that scrollspy always works.
+		$("html").css("height", "100%");
+		$(".Wrapper").css("max-width", "none");
+		//We bind this logic on load but also on resize to be responsive. It handles display issues.
+		$(window).bind("resize load", function () {
+			$("#TOCSidebarSA").affix({	//sidebar gets affixed as soon as we scroll.
+				offset: {
+					top: 0
+				}
+			});
+			$("body").attr("style", "");
+			$("#docHtml").attr("style", "");
+			if (window.innerWidth > 991) {	//Desktop resolution
+				$("body").css("background", "#bbb");
+				$("#TOCSidebarSA").width($("#TOC").width() - 10);
+			} else {	//Mobile resolution
+				$("body").css("margin", "0");
+				$("#TOCSidebarSA").width($("#docHtml").width());
+				//Add appropriate padding under doc. HTML because TOC is positioned as fixed bottom.
+				$("#docHtml").css("padding-bottom", parseInt($("#TOCSidebarSA").css("height")) + 20);
+				//The following css rule overrides the bootstrap equivalent, so document HTML from CELLAR is rendered the best.
+				if (window.innerWidth < 768) {	//xs resolution
+					$("html").css("text-size-adjust", "170%");
+				} else {	//sm resolution
+					$("html").css("text-size-adjust", "auto");
+				}
+			}
+		});
+	} else {	//Notice Page
+		//container of TOC differs according to resolution.
+		if (window.innerWidth > 991) {	//Desktop resolution
+			tocContainer = $("#tocSidebar");
+		} else {	//Mobile resolution
+			tocContainer = $("#TOC-off-canvas");
+		}
+		
+		//Check if TOC has already been computed.
+		if (tocContainer.find(".tocWrapper .toc-sidebar").length > 0) {
+			shouldCompute = false;
+		} else {	//No TOC in DOM, we should compute it.
+			//Hide the 'display TOC' button
+			if (window.innerWidth > 991) {	//Desktop resolution
+				$("#tocBtn").addClass("hidden");
+			} else {	//Mobile resolution
+				$("#tocBtnMbl").addClass("hidden");
+			}
+			//Append a spinner in container
+			tocContainer.find(".tocWrapper").append("<i id='loadingImg' class='fa fa-spinner fa-spin'></i>");
+			tocContainer.find(".tocWrapper").addClass("text-center");
+		}
+	}
+
+	if (shouldCompute) {	//Proceed with computation of TOC. Then adjust scroll level of TOC based on page scroll. For standalone view, we should always compute on page load. 
+		adjuctScroll(isStandalone, true, tocContainer, function() {
+			getTOC(isStandalone, tocContainer, screenWarn, topLabel);		//compute it
+		});
+	} else {	//Notice page: just show the TOC - case where we have already computed it before.
+		adjuctScroll(isStandalone, false, tocContainer, function() {
+			tocContainer.find(".toc-sidebar").removeClass("hidden");	//show it
+		});
+		
+		//Hide the 'display TOC' button, show the 'hide' button, according to screen width.	
+		if (window.innerWidth > 991) {		//Desktop resolution
+			$("#tocBtn").addClass("hidden");
+			$("#tocHideBtn").removeClass("hidden");
+			
+			//computed TOC should be shown, but space is so small that its height is 0. So, also display a warning msg.
+			if ( $("#tocSidebar .toc-sidebar").css("max-height") == "0px" || $("#tocSidebar .toc-sidebar").css("height") == "2px" ) {
+				$("#tocSidebar .tocWrapper .alert-info").removeClass("hidden");		//show warning
+			}
+		} else {	//Mobile resolution
+			$("#tocBtnMbl").addClass("hidden");
+			$("#tocHideBtnMbl").removeClass("hidden");
+		}
+	}
+
+	//Handle collapsed Text
+	if (!isStandalone && window.innerWidth > 991 && !$("#PP4Contents").hasClass("in")) {	//Notice page - desktop resolution: if text is collapsed and we ask for TOC
+		$("#documentView").css("margin-bottom", $("#tocSidebar .toc-sidebar").height() + 73);		//add a margin to documentView so TOC can't collide with footer
+	}
+}
+
+//Both: This function retrieves & appends the table of contents(TOC) based on which view we are in. It also resolves display issues.
+function getTOC(isStandalone, tocContainer, screenWarn, topLabel) {	
+	var docCount;
+	//TOC calculation and append	
+	if (isStandalone) {	//Standalone HTML page: Calculate TOC, remove spinner & append TOC.
+		$(".tocWrapper").append("<nav class='toc-sidebar'></nav>");
+		var docHtml = $("#docHtml").html();
+		var TOCHTML = getTOCFromHtml(docHtml, "docHtml", topLabel);			
+		$(".tocWrapper #loadingImg").remove();
+		$(".tocWrapper").removeClass("text-center");
+		$(".tocWrapper .toc-sidebar").append(TOCHTML);
+	} else { //Notice page: Calculate TOC, remove spinner, append TOC, handle button display.
+		docCount = $("#textTabContent > .tabContent").not(".documentSeparator").length;
+		//Check if we have any streams
+		if (docCount > 0) {
+			//Append the nav parent element to both desktop and mobile containers.
+			$(".tocWrapper").append("<nav class='toc-sidebar'></nav>");
+			$("#textTabContent > .tabContent").not(".documentSeparator").each(function(index, doc) {	//iterate for each document stream of page			
+				var idDoc = String($(this).attr("id"));				
+				if (idDoc.indexOf("document") != -1) {	//backup check: Id must contain 'document'
+					var docHtml = $(this).html();
+					var TOCHTML = getTOCFromHtml(docHtml, idDoc, topLabel);
+					//remove spinner
+					tocContainer.find(".tocWrapper #loadingImg").remove();
+					tocContainer.find(".tocWrapper").removeClass("text-center");
+					//Append the TOC to both desktop and mobile containers.
+					$(".tocWrapper .toc-sidebar").append(TOCHTML);
+				}	
+			});
+			//Show the corresponding 'Hide' btn, and hide the TOC nav of the resolution we are not in.
+			if (window.innerWidth > 991) {	//Desktop resolution
+				$("#tocHideBtn").removeClass("hidden");
+				$("#TOC-off-canvas .toc-sidebar").addClass("hidden");
+			} else {	//Mobile resolution
+				$("#tocHideBtnMbl").removeClass("hidden");
+				$("#tocSidebar .toc-sidebar").addClass("hidden");
+			}
+		}
+	}
+	
+	//Code below handles display issues:	
+	
+	//We bind this on click of TOC links
+	$(".tocWrapper a").on("click", function(evt) {
+		evt.preventDefault();
+		if (!$("#PP4Contents").hasClass("in")){	 //Notice page: Text could be collapsed
+			//Expand Text tab before navigating.
+			$("#PP4Contents").collapse("show");				
+			$("html, body").animate({
+				scrollTop: $($.attr(this, "href")).offset().top
+			}, 500);
+			window.location.href = $(this).attr("href");
+		} else {	//Text already expanded, or we are in Standalone view.
+			window.location.href = $(this).attr("href");
+		}
+		$(".row-offcanvas").removeClass('active');
+	});
+	
+	//Both: We call this to handle nav height display issues, based on resolution, but also bind it on resize to be responsive.
+	calculateTOCHeight(isStandalone, screenWarn);
+	$(window).bind("resize", function () {
+		calculateTOCHeight(isStandalone, screenWarn);
+	});
+		
+	//Scrollspy: syncs scroll of body to 'active' links in the newly appended nav(s). For notice page, we have 2 scrollspy navs(one per resolution), so it is handled differently.
+	if (isStandalone) {		//Standalone view
+		$("body").scrollspy({target: ".toc-sidebar"});
+	} else {	//Notice page - 2 scrollspy navs
+		doubleScrollSpyInit();
+	}
+	
+	//Both: This adjusts TOC scroll to the 'active' link, which corresponds to the scroll level of the HTML document.
+	//Selects all TOC links in all outer ul's
+	var links = $("nav.toc-sidebar > ul > li");
+	links.each(function(index, item) {	//For each TOC link
+		var $this = $(this);
+		//create a mutation observer to observe class changes
+		var linkObserver = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.attributeName === "class") {	//only class mutations
+					var attributeValue = $(mutation.target).prop(mutation.attributeName);					
+					if (attributeValue.trim() == "active") {	//whenever some class changes to 'active'
+						var linkInCurrentNav;	//Notice page: Indicates if current link is in the nav we are showing due to responsiveness.
+						var scrollElement;	//The TOC element to scroll.
+						if (isStandalone) {		//Standalone View: It only has a single nav. All observed links are in it.					
+							linkInCurrentNav = true;
+							if (window.innerWidth > 991) {	//desktop resolution
+								scrollElement = $(".toc-sidebar");
+							} else {	//mobile resolution
+								scrollElement = $("#TOCSidebarSA");
+							}
+						} else {	//Notice page: It has 2 navs. Only scroll to observed links in the displayed nav. 
+							//Find if the active link is in our displayed TOC container.
+							if (window.innerWidth > 991) { //desktop resolution
+								scrollElement = $("#tocSidebar");
+								linkInCurrentNav = $this.closest(".tocWrapper").parent().attr("id") == "tocSidebar";
+							} else {	//mobile resolution
+								scrollElement = $("#TOC-off-canvas");
+								linkInCurrentNav = $this.closest(".tocWrapper").parent().attr("id") == "TOC-off-canvas";								
+							}
+						}
+						if (linkInCurrentNav) {	//active link is in our displayed TOC container: do the actual scroll.
+							scrollElement.find("li.active").first()[0].scrollIntoView();
+						}
+					}
+				}
+			});
+		});
+		linkObserver.observe($this[0], {
+			attributes: true
+		});
+	});
+			
+	
+	if (!isStandalone) {	//Notice page
+		//Notice page: bind adjust height on scroll, it deals with scroll-related height modifications.
+		$(window).bind("scroll", function () {
+			adjustTOCHeight(screenWarn);
+		});
+		
+		//Notice page - mobile resolution: bind the following logic on focus event of first the link of TOC(this focus is the default behavior when opening offcanvas)
+		$("#TOC-off-canvas .tocWrapper .toc-sidebar .toc-sidenav li>a").first().on("focusin", function(evt) {
+			//scroll to active link
+			var activeLinkMbl = $("#TOC-off-canvas .tocWrapper .toc-sidebar .toc-sidenav li.active");
+			if (activeLinkMbl.length > 0 ) {
+				activeLinkMbl[0].scrollIntoView();
+			}
+		});
+		
+		//Notice page - mobile resolution: observe class changes of off-canvas element(mobile display TOC container), so as to display buttons properly according its expand status.
+		//It is needed because TOC can also be hidden by clicking on page.
+		var offCanvas = $("#TOC-off-canvas");
+		var offCanvasObserver = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.attributeName === "class") {
+					var attributeValue = $(mutation.target).prop(mutation.attributeName);				
+					if (attributeValue.indexOf("is-open") != -1) {	//off-canvas open
+						$("#tocBtnMbl").addClass("hidden");
+						$("#tocHideBtnMbl").removeClass("hidden");
+					} else if (attributeValue.indexOf("is-closed") != -1) {	//off-canvas closed
+						$("#tocHideBtnMbl").addClass("hidden");
+						$("#tocBtnMbl").removeClass("hidden");
+					}
+				}
+			});
+		});
+		offCanvasObserver.observe(offCanvas[0], {
+			attributes: true
+		});
+	}
+}
+
+//Both: This function calculates the TOC's height, based on available space, using the 'max-height' attribute. It is called on compute and on resize.
+function calculateTOCHeight(isStandalone, screenWarn) {
+	var availableNavHeight;
+	if (isStandalone) {	//Standalone HTML view
+		if (window.innerWidth > 991) {	//Desktop resolution
+			availableNavHeight = window.innerHeight - 50;
+		} else {	//Mobile resolution
+			availableNavHeight = $("#TOCSidebarSA").height();
+		}
+		//Clear style attribute for TOC. It is only needed/recomputed for desktop resolution. Mobile has its own fixed max-height for the TOC's container.
+		$(".tocWrapper .toc-sidebar").attr("style", "");
+		if (window.innerWidth > 991) {	//Desktop resolution
+			$(".tocWrapper .toc-sidebar").css("overflow-y", "auto");
+			$(".tocWrapper .toc-sidebar").css("max-height", availableNavHeight);
+		}		
+	} else {	//Notice page
+		if (window.innerWidth > 991) {	//desktop resolution
+			$("#tocSidebar .toc-sidebar").css("height", "");	//clear height property so max-height applies
+			//Calculate available max height for appended nav, based on available space.
+			availableNavHeight = ($(window).height() - $("#AffixSidebar").height() - 80);
+			availableNavHeight = checkSpace(availableNavHeight, screenWarn);
+			$("#tocSidebar .toc-sidebar").css("max-height", availableNavHeight);
+			//makes height modifications based on scroll level of window.
+			adjustTOCHeight(screenWarn);			
+			//When resizing to desktop and mobile TOC is open, close mobile offcanvas and show desktop one.
+			if ($("#TOC-off-canvas").hasClass("is-open")) {
+				$(".is-open").removeClass("is-open").addClass("is-closed");
+				$("html").removeClass("has-offcanvas--visible").removeClass("has-offcanvas--bottom").removeClass("has-offcanvas--overlay");
+				$("body").removeClass("has-offcanvas--visible").removeClass("has-offcanvas--bottom").removeClass("has-offcanvas--overlay");
+				$("#tocHideBtnMbl").removeClass("is-active").addClass("hidden");
+				$("#tocBtnMbl").removeClass("hidden");
+				$("#tocBtnMbl").click();
+			}
+		}
+	}
+}
+
+var isOverFlown;	//Global variable, stores whether the TOC nav is an overflown element or not.
+
+//Notice page - desktop resolution: This function further modifies the overflown TOC's height, based on scroll level of window, using the 'height' attribute. It is called on compute, on resize and on scroll.
+function adjustTOCHeight(screenWarn) {
+	if (window.innerWidth > 991) {	//Desktop resolution
+		var maxHeight = parseInt($("#tocSidebar .toc-sidebar").css("max-height"));
+		var availableNavHeight;
+		
+		var footerTop = $("footer").offset().top;
+		var footerBottom = footerTop + $("footer").outerHeight();
+		var viewportTop = $(window).scrollTop();
+		var viewportBottom = viewportTop + $(window).height();
+		var footerInViewPort = (footerBottom > viewportTop && footerTop < viewportBottom);
+		
+		if (footerInViewPort) {		//When footer is in view: reduce TOC height.				
+			availableNavHeight = ($("footer").offset().top - $("#tocSidebar .tocWrapper").offset().top) - 53;
+		} else if ($("#AffixSidebar").hasClass("affix-top")) {	//When sidebar is affixed on top of page: reduce TOC height.
+			availableNavHeight = maxHeight - $("#AffixSidebar").offset().top + $(window).scrollTop() + 19;
+		} else {	//footer not in view and sidebar is not affixed on top of page.
+			availableNavHeight = "";
+		}
+		
+		if (availableNavHeight == "") {	 //Middle of page
+			$("#tocSidebar .toc-sidebar").css("height", "");	//clear height property so max-height applies
+			if ( !($("#tocSidebar .toc-sidebar").css("max-height")  == "0px") ) {	//if space is enough remove any previously appended warning.
+				$("#tocSidebar .tocWrapper .alert-info").addClass("hidden");
+			}
+		} else {	//Top or bottom of page
+ 			var isOpen = !$("#tocSidebar .toc-sidebar").hasClass("hidden");
+			//If TOC is not collapsed, re-compute whether it is overflown, else retain previous value.
+			isOverFlown = isOpen ? $("#tocSidebar .toc-sidebar").prop("scrollHeight") > availableNavHeight : isOverFlown;
+
+			if (availableNavHeight < maxHeight && isOverFlown) {
+				availableNavHeight = checkSpace(availableNavHeight, screenWarn);
+				$("#tocSidebar .toc-sidebar").css("height", availableNavHeight);
+				adjuctScroll(false, false, $("#tocSidebar"), "");
+			}				
+		}
+		
+		if (isOverFlown == undefined) {	//This can occur if we first compute TOC in the middle of the page.
+			isOverFlown = $("#tocSidebar .toc-sidebar").prop("scrollHeight") > $("#tocSidebar .toc-sidebar").height(); //Use this as initial value.
+		}
+	}
+}
+
+//Notice page - desktop resolution: This function checks whether computed height is so small, that we should show a 'not enough space' warning. It is called on compute, on resize and on scroll.
+function checkSpace(availableNavHeight, screenWarn) {
+	if (availableNavHeight < 100) {	//Limited space
+		availableNavHeight = 0;				
+	}			
+	//true on first compute, false on resizing
+	var justCalculated = !$("#tocSidebar .toc-sidebar").hasClass("hidden");
+	//Logic to add warning msg
+	if (justCalculated && availableNavHeight == 0) {  //TOC was just computed but we have Limited space
+		if ($("#tocSidebar .tocWrapper .alert-info").length == 0) {	//if warning not yet in DOM add it
+			$("#tocSidebar .tocWrapper").prepend("<span class='alert alert-info'><i class='fa fa-exclamation'> " + screenWarn + "</i>");
+		} else {	//just show it
+			$("#tocSidebar .tocWrapper .alert-info").removeClass("hidden");		
+		}
+	} else {	//TOC already calculated(so we are resizing/scrolling), or space is enough
+		$("#tocSidebar .tocWrapper .alert-info").addClass("hidden");	//hide  any previously appended warning
+	}
+	return availableNavHeight;
+}
+
+//Both: This function generates the actual table of contents(TOC) HTML, based on parsing of some document HTML.
+function getTOCFromHtml(docHtml, idDoc, topLabel) {
+	var TOCHTML = "";
+	TOCHTML += "<ul id='TOC_" + idDoc + "' class='nav toc-sidenav'>";
+	
+	//Indicates that the tag is applicable for the TOC.
+	var applicableTOC = false;
+	//Indicates that the first 'doc-ti' class element has been found.
+	var topFound = false;
+	//Indicates whether tag has class 'ti-section-1' -> container
+	var isContainer = false;
+	//Indicates whether we should append a container ul element at current level.
+	var startContainer = true;
+	//Indicates whether tag has class 'ti-art' -> article
+	var isArticle = false;
+	//the anchor of link: #id
+	var anchorId = '';
+	//suffix used for supplementary text
+	var suffix = '';
+	
+	//Should get all <p> elements.
+	var paragraphs = $("#" + idDoc + " p");
+	//Iterate over all <p> elements sequentially
+	for (var i = 0; i < paragraphs.length; i++) {
+		var pElement = paragraphs[i];		
+		var hasId = false;
+		
+		var pId = pElement.id;
+		//If id is not present, we will not use it.
+		if ( pId.length > 0 ){
+			hasId = true;
+			anchorId = "#" + pId;
+		}
+
+		if (hasId){			
+			var pClass = pElement.className;
+			if ( pClass.length > 0 ){
+				//Classify according to class value
+				if (pClass == ("ti-art")) {
+					isArticle = true;
+					applicableTOC = true;
+				}
+				if (pClass == ("ti-section-1")) {
+					isContainer = true;
+					applicableTOC = true;					
+					if (startContainer == false) {
+						//close previous container, next one can start
+						startContainer = true;
+						TOCHTML += "</ul>";
+					}					
+					if (startContainer == true) {	//We should open new ul container
+						startContainer = false;
+					}
+				}
+				if (pClass ==("doc-ti")) {
+					if (!topFound) {	//Top link, should not contain tag's text
+						topFound = true;
+						TOCHTML += "<li><a href='" + anchorId + "'>" + topLabel + "</a></li>";
+						$(".linkToTop").attr("href", anchorId);// replace href of Top links below each document.
+					} else {
+						applicableTOC = true;
+						if (startContainer == false) {
+							//close previous container, next one can start
+							startContainer = true; 
+							TOCHTML += "</ul>";
+						}
+					}
+				}
+			
+				if (applicableTOC && topFound){
+					var pText = pElement.innerHTML;
+					if ( pText.length > 0 ){
+						TOCHTML += "<li>";
+						TOCHTML += "<a href='"  + anchorId + "'>";
+						//remove possible embedded links in text with regex.
+						var linkRegex = /<a(.|\s)*?\>(.|\n)*?(?=<\/a>)<\/a>/gm;
+						var matchLink = ((pText || "").match(linkRegex) || []);
+						if ( matchLink.length > 0 ){										
+							pText = pText.replace(matchLink[0], "");
+						}
+						//append text of the element in link
+						TOCHTML += pText;
+						if (isContainer) {	//Container suffix logic: use value of next element ('ti-section-2') as suffix.
+							//usually text is under span child element.
+							suffix1 = $(anchorId).next(".ti-section-2").find("span").html();
+							//but not in all cases
+							suffix2 = $(anchorId).next(".ti-section-2").html();
+							if (suffix1 != undefined) {
+								TOCHTML += " - " + suffix1;
+							} else  if (suffix2 != undefined){
+								TOCHTML += " - " + suffix2;
+							}
+						}
+						if (isArticle) {	//Article suffix logic: use value of next element ('sti-art') as suffix.
+							//usually text is under span child element.
+							suffix1 = $(anchorId).next(".sti-art").find("span").html();
+							//but not in all cases
+							suffix2 = $(anchorId).next(".sti-art").html();
+							if (suffix1 != undefined) {
+								TOCHTML += " - " + suffix1;
+							} else  if (suffix2 != undefined){
+								TOCHTML += " - " + suffix2;
+							}
+						}
+						TOCHTML += "</a>";							
+						if (isContainer && startContainer == false) {	//This indicates that a new container should open here.
+							TOCHTML += "<ul class='nav'>";
+						} else {
+							TOCHTML += "</li>";
+						}
+					}
+				}
+			}
+		}
+		//reset all flags
+		applicableTOC = false;
+		isContainer = false;
+		isArticle = false;
+		anchorId = "";
+		suffix = "";
+	}	
+	//close ul and return the HTML
+	TOCHTML += "</ul>";
+	return TOCHTML;
+}
+
+//Notice page: This function hides the table of contents(TOC) and adjusts button display.
+function hideTOC(el) {
+	if (window.innerWidth > 991) {	//Desktop resolution
+		$(el).addClass("hidden");
+		$(el).siblings(".toc-sidebar").addClass("hidden");
+		$(el).siblings("#tocBtn").removeClass("hidden");
+		//TOC will be hidden - remove margin from docView. 
+		$("#documentView").css("margin-bottom", "");
+		
+		//TOC was shown, but space was so small that its height was 0. Hide also the warning that was displayed.
+		if ( $("#tocSidebar .toc-sidebar").css("max-height") == "0px" || $("#tocSidebar .toc-sidebar").css("height") == "0px" ) {
+			$("#tocSidebar .tocWrapper .alert-info").addClass("hidden");
+		}
+	} else {	//mobile resolution
+		$(el).addClass("hidden");
+		$(el).siblings("#tocBtnMbl").removeClass("hidden");	
+	}
+}
+
+//Both: This function adjusts the scroll level for the TOC, to always be at the currently active link level. It is called on compute, on resize and on scroll for Notice page, and on load & resize for Standalone view.
+function adjuctScroll(isStandalone, shouldCompute, tocContainer, callbackTOC) {
+	if (typeof callbackTOC == 'function') {
+		callbackTOC();
+	}
+
+	var scrollElement;		
+	if (isStandalone) {		//Standalone View
+		if (window.innerWidth > 991) {	//desktop resolution
+			scrollElement = $(".toc-sidebar");
+		} else {	//mobile resolution
+			scrollElement = $("#TOCSidebarSA");
+		} 
+		if ($(".toc-sidebar > ul > li.active").length > 0) {
+			var scrollTo = $(".toc-sidebar > ul > li.active:first");	//first active link
+			scrollTo[0].scrollIntoView();
+		}
+	} else {	//Notice page
+		if (window.innerWidth > 991)  {		//Desktop resolution
+			scrollElement = $("#tocSidebar .toc-sidebar");
+		} else {	//Mobile resolution
+			scrollElement = $("#TOC-off-canvas");
+		}
+		//if we have some active li TOC element.
+		if (tocContainer.find(".toc-sidebar > ul > li.active").length > 0) {
+			var scrollTo = tocContainer.find(".toc-sidebar > ul > li.active").first();	//first active link
+			scrollTo[0].scrollIntoView();	
+		}
+	}
+}
+
+//Notice page: This function enables us to have 2 navs spying on the body. One follows the other.
+function doubleScrollSpyInit() {
+	$("body").scrollspy({target: ".toc-sidebar"});
+
+    var scollSpy2ActiveLI = "";
+
+    $("body").on("activate.bs.toc-sidebar", function (evt) {
+        if (scollSpy2ActiveLI != "") {
+            scollSpy2ActiveLI.removeClass("active");            
+        }        
+        var activeTab = $("#tocSidebar li.active a").attr("href");
+        scollSpy2ActiveLI = $("#TOC-off-canvas li a[href='" + activeTab + "']").parent();
+        scollSpy2ActiveLI.addClass("active");
+    })
+
+    $("body").trigger("activate.bs.scrollspy");
+}
+
+//Notice page - desktop view: This function initializes buttons and also observes & handles the collapsing of Text panel, when TOC is applicable. It is called on doc. load, before any actual computation.
+function initToc() {
+	var noTocClasses = $(".ti-art").length == 0 && $(".ti-section-1").length == 0 && $(".doc-ti").length == 0; //true when no TOC-applicable classes were found, even though doc. sector is TOC-applicable.
+	if (!noTocClasses) {	//If TOC-applicable classes were found, show generate TOC buttons.
+		$("#tocBtn").removeClass("hidden");
+		if ($("#textLoadBtn").length == 0) { //Show mobile button when not in actual mobile view, but responsive mobile-resolution view
+			$("#tocBtnMbl").removeClass("hidden");
+		}
+		
+		var textPanel = $("#PP4Contents");
+		if (textPanel.length > 0) {
+			//observes class change on text panel
+			var textCollapseObserver = new MutationObserver(function(mutations) {
+				mutations.forEach(function(mutation) {
+					if (mutation.attributeName === "class") {
+						var attributeValue = $(mutation.target).prop(mutation.attributeName);				
+						if (window.innerWidth > 991 && attributeValue.indexOf("in") == -1 && $("#tocSidebar .toc-sidebar").length > 0 && !$("#tocSidebar .toc-sidebar").hasClass("hidden")) {	//Desktop view: Text collapsed && TOC open
+							$("#documentView").css("margin-bottom", $("#tocSidebar .toc-sidebar").height() + 73);	//add a margin to documentView so TOC can't collide with footer
+						} else {	//Desktop view with Text expanded or TOC closed, or mobile view
+							$("#documentView").css("margin-bottom", "");	//remove margin
+						}
+					}
+				});
+			});
+			textCollapseObserver.observe(textPanel[0], {
+				attributes: true
+			});
+		}
+	}
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:wordnet-onto="http://wordnet-rdf.princeton.edu/ontology#"
+	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#agriculturefood">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Agriculture &amp; food</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#animal">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Animal</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#bordercontrol">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Border control</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#culturesportandleisure">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Culture, sport and leisure</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#defence">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Defence</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#digital">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Digital</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#education">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Education</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#emergency">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Emergency</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#environmental">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Environmental</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#family">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Family</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#generalbusiness">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">General Business</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#generalgovernment">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">General Government</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#generalpersoncivilstatus">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">General Person / Civil status</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#healthcare">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Health care</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#housing">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Housing</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#legal">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Legal</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#manufacturing">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Manufacturing</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#media">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Media</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#monetarypolicy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Monetary policy</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#moneydebt">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Money &amp; Debt</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#naturalresources">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Natural resources</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#publicspacemanagementheritage">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Public space management &amp; heritage</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#religious">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Religious</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#retail">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Retail</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#scienceandtechnology">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Science and technology</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#stockmarket">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Stock market</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#tourismtravelling">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Tourism &amp; travelling</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#transportationtransportationinfrastructure">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Transportation &amp; transportation infrastructure</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#utilities">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Utilities</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#welfaresocialcare">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Welfare &amp; social care</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#work">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">Work</skos:prefLabel>
+</rdf:Description>
+
+</rdf:RDF>

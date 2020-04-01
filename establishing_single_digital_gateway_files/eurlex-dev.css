@@ -1,0 +1,2084 @@
+/*Header*/
+.MyAccount li.OptSocialNet a:before {
+    content: "\f0c0";
+}
+.MyAccount li.OptBackOffice a:before {
+    content: "\f013";
+}
+/*Header (end)*/
+
+/*Homepage*/
+#ojBoxTop > a{
+	color: #0c7ea9;
+}
+#ojBoxBottom > .HomeOJMore{
+	margin-top: 10px;
+}
+.editorialContentEditIcon img{
+	z-index: 4;
+	position: absolute;
+	right: 10px;
+}
+.Promo .editorialContentEditIcon img{
+	max-height: 35px;
+	border-radius:0px; 
+	min-width:0px;
+ }
+/*Homepage (end)*/
+
+/*Statistics Legal acts */
+table#legalActsStatisticsTable thead td{
+	height: 20px;
+	vertical-align:middle;
+	text-align:center;
+	font-weight:bold;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable thead th{
+	width: 70%;
+	height: 20px;
+	vertical-align:middle;
+	text-align:center;
+	font-weight:bold;
+	background-color:rgba(255,255,255,0.0);
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable tbody th {
+	text-align:left;
+	font-weight:normal;
+	padding:6px 4px 4px 25px;
+	vertical-align:middle;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable tbody tr td {
+	padding:2px 2px 2px 5px;
+	vertical-align:middle;
+	text-align:center;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable tbody th#labelText{
+	text-align:left;
+	font-weight:bold;
+	padding-left:6px;
+}
+table#legalActsStatisticsTable tbody th#labelTextNotBold{
+	text-align:left;
+	padding-left:6px;
+}
+table#legalActsStatisticsTable tbody th#italicText{
+	font-style:italic;
+}
+table#legalActsStatisticsTable tbody tr#totalRow td{
+	background-color:rgba(0,0,0,0.07);
+}
+table#legalActsStatisticsTable tbody th#totalRow{
+	background-color:rgba(0,0,0,0.07);
+	text-align:left;
+	padding-left:6px;
+}
+table#legalActsStatisticsTable tbody tr:hover th{
+	background-color:#FFF;
+}
+table#legalActsStatisticsTable tbody tr#totalRow:hover th{
+	background-color:#EEE;
+}
+table#legalActsStatisticsTable tbody tr:hover td{
+	background-color:#F2F3F5;
+}
+table#legalActsStatisticsTable tbody tr td:hover{
+	background-color:#80CCE5;
+}
+
+table#legalActsStatisticsTable tbody tr#totalRow:hover td{
+	background-color:#D6D6D6;
+}
+table#legalActsStatisticsTable tbody tr#totalRow td:hover{
+	background-color:#80CCE5;
+}
+/*Statistics Legal acts (end)*/
+
+/*Statistics EU - Law */
+#printTable1, #printTable2, #printTable3, #printTable4{
+		display: none;
+}
+table#textStatisticsTable  tbody  tr  th {border: 0;}
+table#sectorStatisticsTable tbody  tr  th {border: 0;}
+/*Statistics EU - Law (end)*/
+
+/*Fallback OJ widget*/
+.ojFallBackDescription{
+	margin-bottom: 20px;
+}
+table#ojFallBackTable {
+	border-bottom: 1px solid;
+	border-bottom-color: gainsboro;
+}
+#ojFallBackTable ul li ul.hoverDropdownList{
+    display: none;
+    position: relative;
+    left: 0;
+	margin: 0px;
+}
+#ojFallBackTable ul li ul.hoverDropdownList {
+    white-space: nowrap;
+}
+#ojFallBackTable ul li:hover ul.hoverDropdownList{
+    display: block;
+}
+#ojFallBackTable ul li ul.hoverDropdownList li{
+    display: block;
+}
+/*Fallback OJ widget (end)*/
+
+/*Fallback Direct Access widget*/
+.DaFallBack{
+	margin-top: 20px;
+	background: #EEE;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+/*Fallback Direct Access widget (end)*/
+
+/*Auto Complete*/
+.typeahead {
+	z-index: 1051; 
+}
+div.QuickSearch > ul.typeahead{
+	width: 100%
+}
+.autocompleteField + ul.typeahead{
+	width: 96%
+}
+.autocompleteField + .dropdown-menu > li > a {
+    white-space:normal;
+    word-wrap: break-word;
+}
+.dropdown-menu > .appearActive > a, .dropdown-menu > .appearActive > a:hover, .dropdown-menu > .appearActive > a:focus {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #087faa;
+}
+/*Auto Complete (end)*/
+
+/*Browsing Tree*/
+ul.browseTree {
+	padding-left: 15px;
+}
+ul.browseTree li {
+	list-style: none;
+	margin: 4px 0;
+	padding-left: 4px;
+}
+ul.browseTree li.leaf:before {
+	content: "\f111";
+	font-family: FontAwesome;
+	display: inline-block; 
+	width: 13px;
+	color: #CCC;
+	font-size: 6px;
+}
+ul.browseTree li.leaf:hover:before,
+ul.browseTree li.leaf:focus:before	{
+	color:#087FAA;
+}
+ul.browseTree li a {
+	font-weight: normal;
+	color: #444 ;
+}
+ul#tree.browseTree li a.gotoResultLink {
+	color: #36C;
+}
+@media (max-width: 767px){
+	ul#tree.browseTree li a.gotoResultLink {
+		margin-left: 15px;
+	}
+}
+/*OJ special edition tree with id institutionTree*/
+ul#institutionTree.browseTree > li.leaf{
+	padding-left:15px;
+}
+ul#tree.browseTree, ul#institutionTree.browseTree {
+	padding-left:0px;
+}
+ul#institutionTree.browseTree ul[id^="tree"] {
+	padding-left:10px;
+}
+ul#institutionTree.browseTree li ul li a {
+	color: #36C;
+}
+/*Add some space between top-level nodes*/
+ ul#tree.browseTree > li {
+	margin-top: 12px;
+}
+ul#tree.browseTree li a {
+	font-weight: bold;
+	color: #097eaa;
+}
+ul#tree.browseTree li a.normalTreeLink {
+	color: #444;
+}
+ul#tree.browseTree li.leaf {
+	font-weight: bold;
+	padding-left:15px;
+}
+ul#tree.browseTree li a.gotoResultLink {
+	padding-left: 25px;
+  	position: relative;
+	font-weight: normal;
+	color: #097eaa;
+}
+ul#tree.browseTree li a.gotoResultLink:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 0;
+  left: 5px;
+  content: "\f002";
+}
+ul#tree.browseTree li a.gotoResultLink:hover:before {
+	color: #5599ff;
+}
+.normalTreeLink.ViewMoreInfo{
+	padding:0 0px 0 27px;
+ 	text-transform:none;
+ 	font-size: 14px;
+ }
+/*Browsing Tree (end)*/
+
+/*Filter Input*/
+/* Advanced & Expert search field button clear*/
+#treefilterSearch-clearAdvancedSearchIconButton, #expertFilter-clearAdvancedSearchIconButton, #advancedFilter-clearAdvancedSearchIconButton, #metadataFilterSimple-clearAdvancedSearchIconButton, #metadataFilterAdvanced-clearAdvancedSearchIconButton{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    color: #B40404;
+    display:none;
+	z-index:10;
+}
+#treefilterSearch, #expertFilter, #advancedFilter, #metadataFilterSimple, #metadataFilterAdvanced {
+	padding-right:30px;
+}
+/*Filter Input (end)*/
+
+/*Highlight of EuroVoc tree nodes when searching in the filter field of the page*/
+.em{
+	color:#09C;
+	font-style:italic;
+	display: inline;
+}
+/*Highlight of EuroVoc tree nodes when searching in the filter field of the page (end)*/
+
+/*Focus Outline rules*/									
+#main_menu_glossary li a[href]:focus, .SearchResultDoc li a {
+	outline-offset:-2px;
+	}
+/* Amplifies focus effect on metadata tabs */
+.nav-tabs li a:focus, .nav-tabs li.active a:focus{	
+	outline:none;
+	box-shadow:inset 0px 0px 0px 3px #ffd617;
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    transition: all 0s ease;
+    background-color:#EEE;
+ }
+div.checkbox input.greyedOut:focus{
+	outline: none;
+}
+button#remove:focus{
+	outline: 3px solid #ffd617 ;
+	outline-offset: -3px;
+}
+div.tab-pane:focus {
+	outline: none;
+}
+@media (max-width : 767px){
+	.OJTable tr td a[href]:focus {
+		outline-offset:0;
+	}
+	#contentfiche ul.glossaryContent li a[href]:focus {
+		outline-offset:-1px;
+	}
+}
+/*Focus Outline rules (end)*/
+
+/* Glossary */
+.glossaryContent ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.glossaryContent li,  ul.glossaryContent > li:before, #contentfiche ul#main_menu_glossary > li:before {
+	background: none;
+	list-style: none;
+	margin: 0;
+	padding: 0; 
+}
+#contentfiche ul#main_menu_glossary {
+	margin-left: 0px;
+}
+/* Glossary (end)*/
+
+/*Notice TXT/ALL */
+#PP1Contents > div > p.invisible{
+	display: none;
+}
+#PPClass_Contents > .panel-body > ul > li > div {
+	display: -webkit-box;
+}
+#PPClass_Contents > .panel-body > ul > li > div > div{
+	padding-left: 25px;
+}
+.PanelBodyB > span{
+	margin-bottom: 5px;
+}
+.formatLanguagesBtn{
+	height: 30px;
+}
+.PubFormatType{
+    white-space: nowrap;	
+}	
+.rectificatifDisplay{
+    background: #FFF;
+	padding: 0;
+	float: none;
+}
+.nonTransform{
+	text-transform: none;
+}
+.languageAsterisk{
+	top: -1em;
+	left: -0.5em;
+	font-size: 55%;
+}
+.panel-group .PagePanel .eurlexPanel{
+	border: 0px solid #EEE;
+}
+#rectificatifPanelContents > div > .PubFormats > .PubFormat{
+	background: #FFF;
+}
+.exi-recueil:after{
+	top:-272px;
+}
+.sortOptionsMargin{
+	margin-top:2px;
+}
+.PagePanel .forceIndicator span {
+	display: inline-block;
+}
+/*Notice TXT/ALL (end)*/
+
+/*Notice NIM (start)*/
+#ntmTable > hr{
+    margin-bottom: 10px;
+	width: 100%;
+}
+.ntmRow{	
+	margin-bottom: 10px;
+}
+.ntmHeading{
+	background: #EEE;	
+	padding: 5px;
+}
+.transposition{
+	border: 5px;	
+	padding: 10px;
+}
+.panel-group .PagePanel .eurlexPanel .MT_panel{
+	border: 3px solid #EEE;
+}
+@media (max-width: 767px)
+{
+	#PPNtm_Contents > .panel-body {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.ntmRow {
+		padding-right: 0;
+	}
+	.ntmRow > .visible-xs{
+		margin-top: 5px;
+		background: #EFF8FB;	
+	}
+	.ntmRow > .visible-xs > b {
+		font-weight: normal;
+	}
+	a.noNims {
+		padding-left: 0;
+	}
+	a.countryToggle {
+		font-weight: bold;
+	}
+	.countryPanel {
+		padding-left: 10px;
+	}
+	.ntmRow > div.col-sm-4 {
+		padding-left: 0;
+	}
+	.countryToggle.ViewMoreInfo{
+		padding-left: 27px;
+	}
+	.countryToggle.ViewMoreInfo:before, .countryToggle.ViewMoreInfo.collapsed:before {
+		left: 0px;
+	}
+}
+.countryPanel{
+	overflow-x: auto;
+	width: 100%;
+	background: #EEE;	
+}
+.countryPanel > p > a{
+	margin-top: 15px;
+}
+.ViewMoreInfo.ntmMore:before{
+	/*content: url(../images/term.png);*/ 
+	content: none;
+	transform: none;
+}
+.ViewMoreInfo.ntmMore > span{
+	width: 22px;
+	border: 1px solid #0099CC;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #0099CC;
+	user-select: none;
+	height: 15px;
+}
+.ViewMoreInfo.ntmMore.collapsed .VMIMore{
+	display: inline-block;
+}
+.ViewMoreInfo .VMIMore, .ViewMoreInfo.collapsed .VMILess {
+    display: none;
+}
+.ViewMoreInfo.ntmMore > span:hover {
+	background-color: #0099CC;
+	color: #ffffff;
+	border-color: #0099CC;
+	cursor: pointer;
+}
+.ViewMoreInfo.ntmMore.noNimsBtn > span:hover{
+	cursor: auto;
+}
+.noNims{
+	padding-left: 33px;
+	font-size: 13px;
+}
+.noNims:hover{
+	text-decoration: none;
+	color: #3366cc;
+	cursor: auto;
+}
+.eurlexPanel + .ntmRow{
+	border-top: 1px solid #EEE;
+}
+.ntmRow > div.col-sm-4{
+	margin-top: 10px;
+}
+.ntmRow.exMemberBorder{
+	height: 1px;
+	border-top: 4px solid #EEE;
+}
+.extraMarginTop{
+	margin-top: 20px;
+}
+/*Notice NIM (end)*/
+
+/* Notice Procedure/HIS (start) */
+#procedureHeading {
+	color: #444444;
+	overflow: auto;
+}
+#procedureHeading > p {
+	margin-top: 10px;
+}
+.ProcedureCMT, .ProcedureEDPS{
+    border-radius: 0;
+}
+.ProcedureEDPS{
+	background:#006400;
+}
+.ProcedureCOR{
+	background:#8e5d00;
+}
+.ProcedureCMT{
+	background: #99ff00;
+}
+/* Notice Procedure/HIS (end) */
+
+/*Machine Translation (start)*/
+.ViewMoreInfo.MTInfo:before{
+	content: "";
+	transform: none;
+}
+.panel-collapse > .panel-body > ul{
+	padding-left: 0;
+}
+#multilingualPoint + .PagePanel{
+	margin-top: 10px;
+}
+#multilingualPoint + #multilingualPoint{
+	margin-top: 10px;
+}
+.MTlanguageSelect{
+	width: auto;
+}
+.MTbutton{
+	width: 120px;
+	height: 34px;
+}
+.MTFromTo{
+	font-weight: bold;
+	width: auto;
+}
+@media (max-width: 767px)
+{
+	.MTFromTo, .MTlanguageSelect, .MTbutton{
+		margin-bottom: 10px;
+	}
+	.MTlanguageSelect, .MTbutton{
+		margin-left: 10px;
+	}
+	.MTbutton{
+		float: left;
+	}
+}
+@media (min-width: 768px)
+{	
+	.MTFromTo{
+		padding: 0px;
+		margin-top: 7px;
+		margin-right: 15px;
+	}
+}
+.mtImg{
+	position: absolute;
+    left: 0;
+}
+.mtImg + span, .mtImg + span + span{
+	margin-left:10px;
+}
+.countryPanel.childPanel > p{
+	margin-left: 5px;
+}
+/*Machine Translation (end)*/
+
+/*See also in Summaries chapters*/
+.see-also{
+	font-weight: bold;
+}
+.see-also-list ul li{
+    list-style-type: none;
+}
+.see-also-list ul{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.editorialBottom{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+/*See also in Summaries chapters (end)*/
+
+/*Summaries sub-chapters*/
+ul.storedSummaryLink {
+    padding-left: 0px;
+}
+ul.storedSummaryLink li {
+	list-style-type: none;
+}
+ul.storedSummarybrowseTree {
+    padding-left: 0px;
+}
+ul.storedSummarybrowseTree li{
+	list-style: none;
+	margin: 4px 0;
+}
+ul.storedSummarybrowseTree li > ul.storedSummarybrowseTree {
+	margin-left: 20px;
+}
+ul.storedSummarybrowseTreeLeaf li.summaryDoc {
+	background: url(../images/lm-grey-bullet.png) 1px 7px no-repeat;
+	padding-left: 12px;
+	font-weight: normal;
+	margin-left:0px;
+}
+ul.storedSummarybrowseTree li.leaf:hover {
+	color: #848484;
+}
+ul.storedSummarybrowseTree li a {
+	font-weight: normal;
+	color: #444;
+}
+ul.storedSummarybrowseTree li a.summaryTopicTitle {
+	font-weight: bold;
+}
+.storedSummarybrowseTree li ul .summaryDoc a {
+	color: #36C;
+}
+ul.storedSummarybrowseTreeLeaf {
+	padding-left: 10px;
+}
+/*Summaries sub-chapters (end)*/
+
+/*make the very long text wrap*/
+.longtext-wrap {
+    word-break: break-all; /* webkit */
+    word-wrap: break-word;
+   /* white-space: pre;*/
+    /*white-space: -moz-pre-wrap;*/ /* fennec */
+    /*white-space: pre-wrap;*/
+    /*white-space: pre\9;*/ /* IE7+ */
+}/*Summaries sub-chapters (end)*/
+
+/*Summaries adv Search form*/
+.displayElement{
+	display:block;
+}
+/*Summaries adv Search form (end)*/
+
+/*Advanced Search form*/
+.searchHiddenBtn{
+	position:absolute;
+	left:-10000px;
+}
+.RemoveControlAddon,
+.input-group-sm > .RemoveControlAddon{
+	border:0; 
+	padding:0 0px; 
+	border-radius:0 1px 2px 0; 
+	background:rgba(0,0,0,.05); 
+	font-size:14px;
+}
+.RemoveControlAddon button{
+	color:#c00; 
+	border-style:none;
+}
+.RemoveControlAddon button:hover,
+.RemoveControlAddon button:focus{
+	color:#900;
+}
+.panel-group .AdvancedSearchPanel + script + .AdvancedSearchPanel {
+    margin-top: 10px;
+}
+/*change the margin between radio buttons*/
+.GroupRadioMargin{
+	margin-bottom:2px;
+	margin-top:2px;
+}
+.GroupCheckLabelOther{
+	pading:5px 4px;
+	display: table-cell;
+    background: rgba(255,255,255,.3);
+    vertical-align: middle;
+}
+.GroupCheckLabelOther span {
+    display: block;
+    margin-left: 20px;
+    line-height: 1.5;    
+}
+.GroupCheckLabelOther input {
+    float: left;
+}
+.DateLabelMargin{
+	margin-top:23px;
+}
+#Calendarbtn{
+	border:none;
+	padding:0px 0px 0px 0px ;
+}
+/*override the style of cursor in datepicker view mode */
+.datepicker-years .picker-switch {
+cursor: default !important;
+background: inherit !important;
+}
+.rowDateRange{
+	margin-left: 50%;
+}
+@media (max-width: 991px) {
+	.rowDateRange {
+		margin-left:0%;
+	}
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+	.AdvancedSearchPanel .col-md-push-10{
+		padding: 10px 2px;
+	}
+}
+.ProcRadioMargin{
+	margin-top:40px;
+}
+.greyedOut {
+	 opacity:0.4;
+}
+/*Scrolling Search bar: EURLEXNEW-3524*/
+.AdvancedSearchBar.affix {
+    top: 0;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+	width: 100%;
+	z-index: 10;
+	border: 3px solid rgba(8, 127, 170, 0.5);
+	max-width: 1200px;
+}
+@media (max-width: 767px) {
+	.AdvancedSearchBar .hidden-sm.hidden-md.hidden-lg {
+		z-index: 1;
+	}
+	.AdvancedSearchBar .hidden-sm.hidden-md.hidden-lg div{
+		margin-bottom: 15px;
+	}
+	.AdvancedSearchBar.affix > .row > div:not(:first-child) {
+		visibility: hidden;
+		height: 0;
+	}
+}
+.AdvancedSearch #facets {
+	background: #EEE;
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
+.AdvancedSearch #facets ul{
+    margin-left: 40px;
+    padding: 0;
+    list-style: none;
+}
+.AdvancedSearch #facets ul > li:before {
+	content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 33px;
+    width: 5px;
+    height: 5px;
+    background: #097eaa;
+}
+.AdvancedSearch #facets ul input {
+	margin-top: 3px
+}
+/*Scrolling Search bar: EURLEXNEW-3524 (end)*/
+/*Advanced Search form (end)*/
+
+/* Procedure timeline */ 
+ #timeline-container {
+	overflow-x:auto;
+	overflow-y:hidden;
+ }
+#timeline-container > dt.timelineDt {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	padding:0;
+	padding-left: 5px;
+	border-bottom: 1px solid #f5f5f5;
+}
+#timeline-container > dt.invisible{
+	padding: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#timeline-container > dd.timelineDd {
+	padding:0;
+	border-bottom: 0px solid #CCC;
+}
+#timeline-container > dd.timeline-line.timelineDd.visible-xs{
+	padding-left: 5px;
+	background: #f5f5f5;
+	color: #08749B;
+    font-weight: normal;
+}
+#timeline-container > dd.yearDd {
+	border-bottom: 0;
+	padding:0;
+}
+@media (max-width: 991px) {
+	#timeline-container > dd{
+		padding: 5px 5px;
+		width:100%;
+	}
+	.timeline-line.timelineDd.visible-xs {
+	padding: 5px 5px;
+	background: #f5f5f5;
+	color: #08749B;
+    font-weight: normal;
+	}
+}
+dd.yearDd > .tm-years > span {
+	border-top: 0;
+	z-index: 1;
+}
+.timeline-line {
+	border-bottom:1px solid #CCC;
+	background-color:#EFF8FB;
+}
+.tm-events {
+	position:relative;
+	min-height:20px;
+}
+.tm-events a {
+	position:absolute;
+	margin-left:35px;
+}
+.tm-years {
+	position:relative;
+	min-height:20px;
+	background: #FFF;
+}
+.tm-years span {
+	position:absolute;
+	width:60px;
+	text-align:center;
+}
+.tm-years span:before {
+	content : ".";
+	border-left:1px solid #ccc;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	color:#EFF8FB;
+	margin: -10px 0 0 0;
+	z-index: -1;
+}
+.tm-year-separator {
+	position:absolute;
+	border-left:1px solid #ccc;
+	height:100%;
+}
+
+/* bubble classes used by Timeline plugin. Refactored styles to reflect bootstrap's popover classes */
+.bubble-container {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1060;
+	width:299px;
+	padding:1px;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:400;
+	line-height:1.42857143;
+	text-align:left;
+	text-align:start;
+	text-decoration:none;
+	text-shadow:none;
+	text-transform:none;
+	letter-spacing:normal;
+	word-break:normal;
+	word-spacing:normal;
+	word-wrap:normal;
+	white-space:normal;
+	background-color:#fff;
+	-webkit-background-clip:padding-box;
+	background-clip:padding-box;
+	border:1px solid #ccc;
+	border:1px solid rgba(0,0,0,.2);
+	border-radius:6px;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,.2);
+	box-shadow:0 5px 10px rgba(0,0,0,.2);
+	line-break:auto;
+}
+@media(max-width: 767px){
+	.bubble-container {width: auto;}
+}
+.bubble-right {
+	margin-left:10px;
+}
+.bubble-left {
+	margin-left:-10px;
+}
+.bubble-container .bubble > dd, .bubble-container .bubble > span, .bubble-container .bubble > div, .bubble-container .bubble > .detail-ev {
+	padding: 1px 14px 1px 14px;
+}
+.bubble-container .bubble a.title-ev,.bubble-container .bubble div.title-ev {
+	display:block;	
+	padding:9px 14px 3px 14px;
+	margin:0;
+	font-size:14px;
+	background-color:#f7f7f7;
+	border-bottom:1px solid #ebebeb;
+	border-radius:5px 5px 0 0;
+}
+.bubble-container .bubble span {
+	color:#AAA;
+	display:block;
+}
+.bubble-container .bubble a.detail-ev {
+	color:#aa8b2b;
+	display:block;
+}
+.bubble > a:first-of-type {
+    display: none;
+}
+@media(min-width: 768px){
+	.bubble-container .bubble .bubble-deco{
+		position:absolute;
+		z-index:5122;
+		left:139px;
+		bottom:-15px;
+		background:url(../../images/pointe.png) center top no-repeat;
+		width:30px;
+		height:15px;
+	}
+	.bubble-right .bubble .bubble-deco{
+		left:-30px;
+		bottom:auto;
+		top:7px;
+		background:url(../../images/pointe-left.png) right center no-repeat;
+	}
+	.bubble-left .bubble .bubble-deco{
+		right:-16px;
+		bottom:auto;
+		top:7px;
+		background:url(../../images/pointe-right.png) right center no-repeat;
+		left:auto;
+	}
+}
+/*Procedure timeline (end)*/
+ 
+/*Paging*/
+.form-control.input-sm.pagingInvalid{
+	border: 1px solid red;
+	outline: 0;
+	color: red;
+}
+.form-control.fewPages{
+    padding: 5px 9px 3px 9px;    
+    border-radius: 1px;
+}
+.PaginationGroup .form-control {
+	border: 2px solid #087faa;
+}
+.bottomPaging{
+	margin-top: 10px;
+}
+/*Paging (end)*/
+
+/*Multilingual display*/
+.multilingualLink{
+	padding:15px;
+}
+.EurlexContent.col-xs-12.visible-xs-block.visible-sm-block{
+	min-height: none;
+}
+#multilingualText > tbody > tr > td{
+	padding: 2px 2px 2px 5px;
+	border: 1px solid white;
+}
+.multilingualActionLinks{
+	-webkit-padding-start: 0;
+}
+.multilingualHeading{
+	background: #EEE;
+}
+.multilingualHeading > .panel-title{
+	margin-top:0;
+}
+.nomarginSeparator{
+	margin:0;
+}
+/*TODO: re-evaluate this*/
+/*This is some of the old css used in multilingual display*/
+.multilingual-line{
+	overflow:hidden;
+	clear:both;
+	position:relative;
+	zoom:1;
+}
+.multilingual-line-text{
+	margin-bottom:5px;
+}
+.multilingual-column{
+	float:left;
+	word-wrap: break-word;
+}
+.multilingual-error-column{
+	font-weight: bold;
+}
+/*Multilingual display (end)*/
+
+/*Data Tables custom css*/
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+	font-weight: bold;
+	background-color: #dddddd;
+	text-align: left;
+	padding: 6px 4px 4px 6px;
+	vertical-align: top;
+	height: 50px;
+	cursor: pointer;
+	*cursor: hand;
+}
+.data-table #relatedDocsTb th,
+.data-table-MS #relatedDocsTbMS th{
+	border-left:1px solid white;
+}
+#relatedDocsTb_filter, #relatedDocsTbMS_filter{
+	display: none;
+}
+#relatedDocsTbMS th select,
+#relatedDocsTb th select{
+	display: block;
+	height: fit-content !important;
+	padding: unset !important;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+	background-color: #087faa !important;
+}
+/*Data Tables custom css (end)*/
+/*Expert Search form*/
+#expertHelp > .fa-spinner{
+    font-size: 35px;
+	margin-top: 200px;
+	color: #087faa;
+}
+.ExpertSearchValuePanel > .fa-spinner{
+    font-size: 35px;
+	color: #087faa;
+}
+#filter > .fa-spinner{
+    font-size: 15px;
+	color: #087faa;
+}
+.has-error .form-control.NoBorders{
+	border: 1px solid #a94442;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);		
+}
+div#input-file.has-error span.btn{
+	border: 1px solid #a94442;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	border-left: none;		
+}
+.exDate > .btn, .rangeDate > .btn{
+	margin-top: 10px;
+}
+.ExpertSearchValueTree > a.has-arrow:before, .ExpertSearchValueTree a.has-arrow.expandNode:before {
+    transform: rotate(90deg) translate(0, 10%);
+	cursor: pointer;
+}
+/* Override because cursor:pointer doesn't work in :before in IE */
+.ExpertSearchValueTree a.has-arrow{
+    cursor: pointer;
+}
+.ExpertSearchValueTree a.has-arrow:before{
+    cursor: pointer;
+}
+.ExpertSearchValueTree a.has-arrow:hover{
+    text-decoration:none;
+}
+.ExpertSearchValueTree label div, .ExpertSearchValueTree label div + div{
+	display: inline;
+}
+.ExpertSearchValueTree li.leaf:before{
+	content: "\f111";
+	font-family: FontAwesome;
+	width: 20px;
+	color: #CCC;
+	font-size: 6px;
+	position: absolute;
+    left: -10px;
+    top: 5px;
+}
+a.treeLabelLink{
+	display: block;
+    position: relative;
+    left: 0;
+    width: auto;
+    text-align: left;
+}
+.ExpertSearchFieldPanel em, .metadataGroupTree em {
+	color: #0CC;
+    font-style: italic;
+    display: inline;
+}
+.ExpertSearchFieldPanel a {
+    font-weight: normal;
+    color: #444;
+}
+.ExpertSearchValuePanel #searchResult{
+	list-style-type: none;
+}
+.ExpertSearchValuePanel #searchResult a{
+	cursor: pointer
+}
+/*Expert Search form (end)*/
+/*Switch to desktop*/
+.switchToDesktop{
+	background-color: transparent;
+	border-top: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+/*Switch to desktop (end)*/
+/*Remove - from li in tables (eg Notice MS-MD mobile)*/
+.NMetadata dd table li:before{
+	display: none;
+}
+/*Remove - from li in tables(end)*/
+
+/* Specifies the additional styling for the full page spinner in */
+.spinner-font {color: silver;}
+
+/* Search Results (start) */
+.SearchResult h2 a {
+    color:#003399;
+}
+.SearchResult > h2 > a > em{
+	color:#09C;
+	font-style:italic;
+	display: inline;
+}
+.forceIndicatorBullet{
+	margin-right:10px;
+	vertical-align: inherit;
+}
+.multiLink a {
+	color: #097eaa;
+    margin: 5px;
+}
+/*paragraphs*/
+.textUnderTitle {
+	margin-bottom: 2px; 
+}
+/* Search Results (end) */
+
+/* Highlighting in CELLAR text*/
+span.highlight {
+	background-color: yellow;
+}
+table tr.highlight td, table tr.highlight:hover td {
+	background-color:#BBB;
+}
+/* Highlighting in CELLAR text (end)*/
+
+/* Tabs */
+.tabContainer{
+	position:relative; zoom:1;
+}
+.nav-tabs{
+	overflow:hidden;
+	zoom:1;
+	margin-left:0;
+	margin-top:0px;
+	background-color:#BBB;
+}
+.nav-tabs li{
+	list-style:none;
+	float:left;
+	position: relative; white-space: nowrap;
+	background:none;
+	padding:0;
+	border-right:1px solid #FFF;
+}
+.nav-tabs li a{
+	padding:5px 15px;
+	background-color:#BBB;
+	display:block;
+	text-decoration:none;
+	color:#444;
+	font-size:1em;
+}
+.nav-tabs li.active a{
+	background:none;
+	background-color:#EEE;
+	color:#444;
+	margin-bottom:0;
+}
+.nav-tabs li:hover a{
+	color:#FFF; 
+	background-color:#59F;
+}
+.nav-tabs li.active:hover a{
+	background-color:#EEE;
+	color:#444;
+}
+.tab-content{
+    padding: 5px;
+}
+/* In case the tabs are in a Form */
+.EurlexForm .tab-content{
+    background-color:#FFF;
+}
+/* In case the tabs are in a modal */
+.modal-body .tab-content{
+    background-color:#EEE;
+}
+/* In case of modals if the EurlexForm class is used */
+.white-back{
+	background-color:#FFF;
+}
+/* In case of a modal with a EurlexForm class is used inorder for form field to be correctly displayed */
+.modal-body .EurlexForm .row{
+	margin-bottom:15px;
+}
+.tab-content .overflowedAllTabs{
+	height:300px;
+	overflow:auto;
+	zoom:1;
+	display:block;
+	position:relative;
+	background-color:#FFF;
+}
+/* In case the tabs are in a modal */
+.modal-body .tab-pane{
+	padding: 5px;
+    background-color:#FFF;	
+}
+.spacer{
+	padding-top: 15px;
+}
+.ModalActions{
+	margin-top: 15px;
+	text-align: right;
+	padding-bottom: 10px;
+}
+.fixedModalFilterForm{
+	margin-bottom: 2px;
+}
+/* Tabs (end) */
+/* browserNotSupported*/
+.browserNotSupported{
+	background-color: #fcf8e3 !important;
+	border-color: #faebcc !important;
+	color: #8a6d3b !important;
+    font-size: 0.9em;
+    margin: 0 0 5px;
+    padding: 2px 0 2px 20px;
+    text-align: center !important;
+}
+/* browserNotSupported (end) */
+
+.noDisplay{
+	display:none;
+}
+
+/* Expert zoom (start)*/
+tr.zoomHidden, a.zoomHidden {
+	display:none;
+}
+tr.zoom {
+	text-align:center;
+}
+tr.zoom td {
+	padding-bottom: 2em;
+}
+.zoomed {
+	width: 100%;
+	padding-bottom: 2em;
+}
+.zoomed ul {
+	background-color: #eee;
+	padding: 5px;
+	list-style-type: none;
+}
+.zoomed ul > li {
+	margin: 3px 0px 3px 0px;
+	word-break: break-word;
+}
+.zoomed ul > li > em{
+	color: #09C;
+	font-style: italic;
+	display: inline;
+}
+.zoom-metadata {
+	font-weight: bold;
+}
+/* Expert zoom (end)*/
+
+/* My saved documents (start) */
+	/*print icon fix */
+.SearchResult > label > a > .fa-print {
+	margin-top: 10px;
+}
+/* My saved documents (end) */
+/* Other stuff */
+.PageTitle > .row > .hidden-xs a{
+	text-decoration: none;
+}
+/* Other stuff (end) */
+/* add margin right (start) */
+.buttonFixRight{
+	margin-right: 2px;
+}
+/* add margin right (end) */
+
+/* ------------------------------------------------  2.1 ------------------------------------------------------------*/
+/* Notice Page for mobile */
+#PP4Contents #loadingImg{
+	color: #087faa;
+	font-size: 4em;
+	margin: 10px;
+}
+#textLoadBtn{
+	height: 40px;
+    margin: 10px 0 10px 0;
+	font-weight: bold;
+	font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+}
+#ojTabContent.ojDisabled{
+	border-left: none;
+	padding-left: 0;
+}
+.documentSeparator{
+	background: #EEE;
+}
+/* Notice Page for mobile (end)*/
+/* Splashscreen */
+#splash {
+	background: #039 url(../../images/SplashLaw.gif) left top no-repeat;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#splashLogo {
+	position: fixed;
+	left: 163px;
+	top: 35px;
+}
+#splashMenu {
+	position: fixed;
+	left: 249px;
+	top: 130px;
+	width: 600px;
+}
+#splash h1 {
+	margin: 0 0 6px 0;
+	font-size: 27px;
+	line-height: normal;
+	color: #9CF;
+}
+#splash h1 .siteName {
+	font-weight: bold;
+	color: #09C;
+}
+#splash ul {
+	list-style: none;
+	line-height: 17px;
+	font-size: 12.8px;
+	padding: 0;
+}
+#splash ul li a {
+	color: #9CF;
+}
+#splash span.countryCode {
+	float: left;
+	width: 2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #10B3EE;
+}
+
+#splash .Wrapper {
+	background: inherit;
+	max-width: none;
+}
+@media (max-width: 767px){
+	#splash{
+		background: #039 url(../../images/SplashLaw.gif) left -150px top no-repeat;
+	}
+ 	#splashLogo {
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-top: 10px;
+	}
+	#splashMenu {
+		position: relative;
+		left: auto;
+		top: auto;
+		width: auto;
+		margin-left:10px;
+	}
+}
+/* Splashscreen (end)*/
+/* override white-space not to wrap (start)*/
+.normalTextWrap li{
+    white-space: normal !important;
+}
+/* override white-space not to wrap (end)*/
+/* Revamp of procedures */
+.procStatus{
+	background-color: inherit;
+	border-color: inherit;
+}
+.procStatus i{
+	font-size: 18px;
+}
+.procStatus.procWithdrawn{
+	color: #da3531;
+}
+.procStatus.procPending{
+	color: #c2923e; 
+}
+.procStatus.procAdopted{
+	color: #29a82b;
+}
+#procedureHeading .col-xs-12{
+	margin-top: 10px;
+}
+#procedureHeading .col-xs-12, #procedureHeading .col-xs-6{
+	padding: 0;
+}
+#procedureHeading .col-sm-8 {
+	padding-right: 30px;
+}
+#timeline-container.revampedTl dd > .tm-events{
+	background: #eff8fb;
+	border-bottom: none;
+}
+.procDetailsLink, .procInfoLink{
+	text-transform: none;
+	color: #444444;
+	padding: 0;
+}
+.procInfoLink {
+	display: inline-block;
+}
+.procDetailsLink:after {
+	content:"\f106";
+	font-family:FontAwesome;
+	font-size:14px;
+	font-weight:normal;
+	position:absolute;
+	width:15px;
+	text-align:center;
+	color:#097eaa;
+	margin-left: 10px;
+	transition:all .1s ease-out;
+}
+.procDetailsLink.collapsed:after				{content:"\f107";}
+.procDetailsLink:hover:after,
+.procDetailsLink:focus:after					{text-decoration:underline;}
+.procDetailsLink:hover:after,
+.procDetailsLink:focus:after					{text-decoration:none;}
+.procDetailsLink .VMIMore,
+.procDetailsLink.collapsed .VMILess			{display:none;}
+.procDetailsLink .VMILess,
+.procDetailsLink.collapsed .VMIMore			{display:inherit;}
+
+#procedureHeading .GridDL dt, #pubOjHeading .GridDL dt {
+	background: inherit;
+}
+#pubOjHeading .GridDL {
+	margin: 20px;
+}
+#procedureHeading ul.Bulleted {
+	margin-top: 40px;
+}
+@media (max-width : 767px){
+	#pubOjHeading .GridDL {
+		margin: 10px 0px;
+	}
+	#procedureHeading ul.Bulleted {
+		margin-top: 20px;
+	}
+}
+#procedureHeading ul.Bulleted a{	
+	color: #31708f;
+}
+#pubOjHeading {
+	color: #444444;
+	overflow: auto;
+	background-color: #EEE;
+	border-color: #C0C0C0;
+	margin-bottom: 0;
+    background: url(../images/bg_oj.png) #eee no-repeat 95% 2%;
+    background-size: 117px auto;
+}
+.procSteps + #pubOjHeading {
+	display: inline-block;
+    width: 100%;
+	margin-top: 23px;
+}
+.procExpandCollapse {
+	position: absolute;
+    top: 100%;
+	z-index: 1;
+}
+@media (max-width: 991px) {
+.procExpandCollapse {
+		margin-left: 50px;
+	}
+}
+#pubOjHeading > span {
+	color: #444;
+	font-size: 16px;
+	font-weight: bold;
+}
+#procedureDetails > dl .ViewMoreInfo {
+	display:none;
+}
+/* Revamp of procedures (end) */
+
+/*noJS buttons (start)*/
+.openQuestionNoJS, .advancedSearchNoJS, .daByYear, .preActsNoJS, .searcResultsNoJS, .facetsNoJS{
+	margin-top:10px;
+}
+.reportAbuseNoJS{
+    margin-left: 10px;
+}
+.daFormNoJs{
+	margin-bottom:10px;
+}
+select#languageSelect, select#languageSelectNoJs{
+	display: inline-block;
+	width: auto;
+}
+.ExpertSearchValueTree input.hideInJs{
+    position: absolute;
+    top: 6px;
+    left: -10px;
+}
+.input-group-sm .input-group-btn .clearFormNoJS{
+	margin-left: 5px;
+}
+.displayMtDtNoJS {
+	margin-left: 101%;
+    margin-top: -57px;
+}
+.browseTree .ViewMoreInfo {
+	display: inline-block;
+}
+.SiteToolbar .languageSelectNoJs{
+	margin-top: -3px;
+}
+.no-js .QuickSearchOptions{
+	padding: 20px 10px 20px 40px
+}
+@media (max-width: 767px){
+	.no-js .QuickSearchOptions {
+	    padding: 15px;
+	}
+}
+/*noJS buttons (end)*/
+/*EURLEXNEW-3409 - Appearance of procedure tab when document belongs to several procedures*/
+.initiatingDocument{
+	margin-top: 10px;
+}
+#linkedProcedureTable.GridDL.GridDL4060 .linkedProcsHeading{
+	font-weight: bold;
+	background-color: #FFF;
+}
+#linkedProcedureTable {
+	margin-top: 30px;
+}
+/*EURLEXNEW-3409 - Appearance of procedure tab when document belongs to several procedures (end)*/
+/*Secondary Left navigation menu*/
+.SidebarTools.secondaryMenu a{
+	color:#3366cc;
+}
+/*Secondary Left navigation menu (end)*/
+/*Fix on notice display for small screens. When the Languages, Formats and link to OJ table is transformed into drop down menus,
+  they don't overlap with button groups below them*/
+.PubFormat:nth-child(2) > .btn-group{
+	z-index: 1010;
+}
+.PubFormat:nth-child(3) > .btn-group{
+	z-index: 1009;
+}
+.PubFormat:nth-child(4) > .btn-group{
+	z-index: 1008;
+}
+.PubFormat:nth-child(5) > .btn-group{
+	z-index: 1007;
+}
+.PubFormat:nth-child(6) > .btn-group{
+	z-index: 1006;
+}
+.PubFormat:nth-child(7) > .btn-group{
+	z-index: 1005;
+}
+/*Fix on notice display for small screens. When the Languages, Formats and link to OJ table is transformed into drop down menus,
+  they don't overlap with button groups below them (end)*/
+/*search/direct access widgets (start)*/
+.WidgetSearchBtn {
+	margin-top: 23px;
+}
+.inputNoLabel{
+	margin-top: 25px;
+}
+@media(max-width: 767px){
+	.WidgetSearchBtn {
+		float: right;
+		margin-right: 10px;
+	}
+}
+.panel-group .PanelA .panel-title.panel-title-widget{
+	font-size: 1.1em;
+}
+#WDGPanels{
+	margin-top: 20px;
+}
+/*search/direct access widgets (end)*/
+/*	Horizontal overflow fix for long notixe texts
+	Allow long words to be able to break and wrap onto the next line*/
+#PP4Contents {
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+/*usage statistics vertical alignment (start)*/
+#visitTable th:nth-child(1),
+#visitorTable th:nth-child(1),
+#pageViewsTable th:nth-child(1),
+#documentConsultedTable th{
+	white-space: normal;
+	width: 180px;
+}
+#visitTable td,#visitorTable td,
+#pageViewsTable td,
+#documentConsultedTable td{
+	width: 180px;
+}
+/* Medium Devices, Desktops */
+@media (max-width : 991px){
+	#visitTable th:nth-child(1),#visitorTable th:nth-child(1),
+	#pageViewsTable th:nth-child(1),
+	#documentConsultedTable th,#visitTable td,
+	#visitorTable td, #pageViewsTable td,
+	#documentConsultedTable td{
+		min-width: 150px;
+	}
+}
+/* Small Devices, Tablets */
+@media (max-width : 767px){
+	#visitTable th:nth-child(1),#visitorTable th:nth-child(1),
+	#pageViewsTable th:nth-child(1),#documentConsultedTable th,
+	#visitTable td,
+	#visitorTable td,
+	#pageViewsTable td,
+	#documentConsultedTable td{
+		min-width: 66px;
+	}
+}
+/*usage statistics vertical alignment (end)*/
+/* Notice search buttons layout fix -- EURLEXNEW-3486 */
+.noticeSearchLinks{
+	display: inline-block;
+}
+@media(min-width: 992px){
+	.noticeSearchLinksBtnGroup{
+		margin-left: -20px;
+	}
+}
+@media(max-width: 991px){
+	.noticeSearchLinksBtnGroup{
+		text-align: right;
+	}
+}
+/* Notice search buttons layout fix -- EURLEXNEW-3486 (end)*/
+/*disable transition for help toggle menu - EURLEXNEW-3479 (start)*/
+.notransition {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+}
+/*disable transition for help toggle menu - EURLEXNEW-3479 (end)*/
+/*remove extra padding - EURLEXNEW-3497, EURLEXNEW-3525 (start)*/
+@media (max-width : 991px) {
+	.AdvancedSearchPanel .panel-body{
+		padding-bottom: 0px;
+		margin-bottom: -5px;
+	}
+	.AdvancedSearchPanel .FormFieldset:last-child{
+		padding-bottom: 0px;
+	}
+	#documentReference_EU_CASE_LAW .panel-body,
+	#procedureReferenceBox_LEGAL_PROCEDURE .panel-body{
+		padding-bottom: 10px
+	}
+	#partiesBox_EU_CASE_LAW .CheckRadioGroup{
+		margin-bottom: 0px;
+		padding-bottom: 10px;
+	}
+}
+@media (max-width : 767px){
+    .AdvancedSearchCondition .form-group,
+    .panel.panel-default.AdvancedSearchPanel .form-group.noMarginBottom {
+        margin-bottom: 0px !important;
+    }
+}
+.modal-body .EurlexForm{
+	margin: 1px 0 1px 0;
+	padding-bottom: 1px;
+}
+/*remove extra padding - EURLEXNEW-3497 (end)*/
+/*remove line break in menu when we hide li element in mobile (start)*/
+@media (max-width : 991px){
+	.MenuList .removeBorderBottom{
+		border-bottom: none;
+	}
+}
+/*remove line break in menu when we hide li element in mobile (end)*/
+/*wrap elements in div and add this class to float together (start)*/
+.floatTogether{
+	display: inline-block;
+}
+/*wrap elements in div and add this class to float together (end)*/
+/* Styling for error messages (start)*/
+span.errorMessage{
+	color: red !important;
+	font-weight: bolder  !important;
+}
+/* Styling for error messages (end)*/
+
+/* Remove the 'X' icon from all input tags on IE (start)*/
+input[type="text"]::-ms-clear {
+    display: none;
+}
+/*  Remove the 'X' icon from all input tags on IE (end)*/
+
+/* EURLEXNEW-3554 - PublicAccess Phase 3 Adaptations (start)*/
+/* Tree structure styling for events under workflows */
+.tree li {
+  	list-style-type:none;
+  	margin:0;
+   	padding:10px 5px 0 5px;
+   	position:relative
+}	
+.tree ul:nth-child(1) {padding-left: 0px}
+.tree li::before, .tree li::after {
+	content:'';
+   	left:-20px;
+   	position:absolute;
+   	right:auto
+}
+.tree li::before {
+   	border-left:2px solid #c9c9c9;
+  	bottom:50px;
+   	height:100%;
+   	top:0;
+   	width:2px
+}
+.tree li::after {
+   	border-top:2px solid #c9c9c9;
+   	height:20px;
+   	top:25px;
+   	width:25px
+}
+.tree li span {
+     /*-moz-border-radius:5px;
+   	-webkit-border-radius:5px;
+   	border:1px solid #999;
+   	border-radius:5px;
+   	display:inline-block;
+   	padding:3px 8px;
+   	text-decoration:none*/
+}
+.tree li.parent_li>span {
+   	cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+   	border:0
+}
+.tree li:last-child::before {
+   	height:27px
+}
+.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
+   	background:#eee;
+   	border:1px solid #94a0b4;
+   	color:#000
+}
+/* EURLEXNEW-3554 - PublicAccess Phase 3 Adaptations (end)*/
+
+/* In multilingual page, make the search menu more compact and not waste too much space. */
+.row.well.multilingualToolsSpacing {
+  padding: 0px;
+}
+.multilingualActionLinks {
+  padding-left: 5px;
+}
+
+/* EURLEXNEW-3597 (start) */
+/* General */
+.toc-sidenav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.toc-sidebar .nav > li > a {
+    padding: 4px 10px;
+}
+.toc-sidenav  + .toc-sidenav {
+	border-top: 5px solid #CCC;
+}
+.toc-sidebar .nav > .active > a {
+    padding-left: 8px;
+    background-color: transparent;
+    border-left: 2px solid #AE0062;
+}
+.toc-sidebar .nav .nav {
+    display: none;
+}
+.toc-sidebar .nav > .active > ul {
+    display: block;
+}
+.toc-sidebar .nav .nav > li > a {
+    padding-left: 30px;
+}
+.toc-sidebar .nav .nav > .active > a {
+    padding-left: 10px;
+    margin-left: 18px;
+    border: none;
+    border-left: 2px solid #AE0062;
+}
+.toc-sidebar .nav li + li, .toc-sidebar .nav ul > li{
+	border-top: 1px solid #dee8ec;
+}
+.tocWrapper .toc-sidenav:first-of-type {
+	padding-top: 0;
+}
+/* Notice Page */
+#tocBtn, #tocHideBtn, #tocBtnMbl, #tocHideBtnMbl{
+	background: #eee;
+	font-size: 14px;
+	color: #3366cc;
+	border: 1px solid #cad7dc;	
+}
+#tocBtn, #tocHideBtn {
+	position: absolute;
+	width: 100%;
+}
+#tocHideBtn {
+	border-bottom: 1px solid #cad7dc;
+}
+.affix-top #tocSidebar {
+	top: 100%;
+}
+.affix #tocSidebar {
+	margin-top: 20px;
+}
+#tocSidebar {
+	position: absolute;
+	width: inherit;
+}
+.affix-bottom #tocSidebar {
+	left: -1px;
+}
+#tocSidebar .tocWrapper .toc-sidebar {
+    overflow-y: auto;
+    margin: 0;
+	position: absolute;
+    top: 33px;
+	border: 1px solid #cad7dc;
+	width: 100%;
+}
+#tocSidebar .tocWrapper .alert {
+	position: absolute;
+    width: 100%;
+    padding: 3px;
+	top: 35px;
+}
+/* Standalone HTML view */
+#TOCSidebarSA {
+	border: 1px solid #cad7dc;
+}
+@media (max-width: 991px) {
+	#TOCSidebarSA {
+		position: fixed;
+		z-index: 2;
+		background: #FFF;
+		max-height: 30%;
+		overflow-y: scroll;
+		bottom: 0;
+		box-shadow: 3px -8px 10px 0px rgba(1, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+}
+/* Mobile */
+#tocBtnMbl, #tocHideBtnMbl {
+	position: fixed;
+    bottom: 0px;
+    /* width: fit-content; */
+	width: 250px;
+	padding: 5px 20px 5px 20px;
+	right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+	z-index: 9999;
+	border-radius: 6px;
+}
+#tocBtnMbl {
+    opacity: 0.85;
+}
+aside#TOC-off-canvas {
+	border-top: 5px solid #ffd617;
+	height: fit-content;
+	max-height: 60%;
+}
+aside#TOC-off-canvas .tocWrapper {
+	padding-bottom: 20px;
+}
+/* EURLEXNEW-3597 (end) */
+
+/* EURLEXNEW-3693 - only supported by mobile safari */
+@supports (-webkit-overflow-scrolling: touch) {
+	select[readonly="readonly"], select:disabled {
+		background: #555555 !important;
+	}
+}
+
+/* EURLEXNEW-3662: E-Learning content - transfer to normal editorial pages - e-learning menu (start) */
+.eLearningMenuList, .eLearningMenuList ul {
+	list-style: none;	
+	background: #EEE;
+	margin-bottom: 0;
+}
+.eLearningMenuList {
+	padding: 10px;
+	padding-right: 25px;
+}
+.eLearningMenuList  ul {
+	padding: 0px;
+}
+/* e-learning title link on menu */
+.eLearningLink a {
+    color: #8f8f8f;
+    font-size: 25px;
+}
+.eLearningLink {
+	padding-bottom: 15px;
+}
+/* e-learning list elements & links */
+.eLearningMenuList > li > ul > li {
+	border-top: 2px solid white;
+	padding: 3px;
+	position: relative;
+	z-index: 1;
+}
+.eLearningMenuList > li > ul > li > a {
+	color: #000;
+	display: block;
+}
+.eLearningMenuList > li > ul > li > a {
+	text-decoration: none;
+}
+.eLearningMenuList > li > ul > li:not(.Selected) > a:hover, .eLearningMenuList > li > ul > li:not(first-child).Selected > a {
+	font-weight: 500;
+}
+.eLearningMenuList > li > ul > li:first-child > a {
+	color: #FFF;
+	text-transform: uppercase;
+}
+.eLearningMenuList > li > ul > li:first-child.Selected > a {
+	font-weight: normal;
+}
+/* highlight when selected */
+.eLearningMenuList > li > ul > li:before {
+  content: " ";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: 0; 
+  z-index: -1; 
+}
+.eLearningMenuList > li > ul > li.Selected:before{
+	width: 100%; 
+}
+.eLearningMenuList > li > ul > li:first-child:before, .eLearningMenuList > li > ul > li:first-child.Selected:before{ 
+    opacity: 1;
+}
+.eLearningMenuList > li > ul > li:not(first-child).Selected:before {
+    opacity: 0.3;
+}
+/* menu section theme colors */
+.eLearningMenuList > li > .ELwelcome > li:before {
+	background: rgb(0, 92, 151);
+}
+.eLearningMenuList > li > .ELwhatIsElx > li:before {
+	background: rgb(17, 152, 205);
+}
+.eLearningMenuList > li > .ELmainFeatures > li:before {
+	background: rgb(88, 162, 173);
+}
+.eLearningMenuList > li > .ELOj > li:before {
+	background: rgb(255, 121, 0);
+}
+.eLearningMenuList > li > .ELSearch > li:before {
+	background: rgb(249, 78, 0);
+}
+.eLearningMenuList > li > .ELdocView > li:before {
+	background: rgb(0, 190, 153);
+}
+.eLearningMenuList > li > .ELmoreFeatures > li:before {
+	background: rgb(0, 83, 117);
+}
+/* right arrow when selected */
+.eLearningMenuList > li > ul > li.Selected:after {
+  	content: " ";
+    height: 0;
+    width: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;  
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0; 
+    z-index: -1; 
+}
+.eLearningMenuList > li > ul > li:first-child:after, .eLearningMenuList > li > ul > li:first-child.Selected:after, 
+.eLearningMenuList > li > ul > li:not(first-child).Selected:after { 
+    opacity: 1;
+}
+.eLearningMenuList > li > .ELwelcome > li.Selected:after {
+	border-left: 13px solid rgb(0, 92, 151);
+}
+.eLearningMenuList > li > .ELwhatIsElx > li.Selected:after {
+	border-left: 13px solid rgb(17, 152, 205);
+}
+.eLearningMenuList > li > .ELmainFeatures > li.Selected:after {
+	border-left: 13px solid rgb(88, 162, 173);
+}
+.eLearningMenuList > li > .ELOj > li.Selected:after {
+	border-left: 13px solid rgb(255, 121, 0);
+}
+.eLearningMenuList > li > .ELSearch > li.Selected:after {
+	border-left: 13px solid rgb(249, 78, 0);
+}
+.eLearningMenuList > li > .ELdocView > li.Selected:after {
+	border-left: 13px solid rgb(0, 190, 153);
+}
+.eLearningMenuList > li > .ELmoreFeatures > li.Selected:after {
+	border-left: 13px solid rgb(0, 83, 117);
+}
+/* bullets */
+.eLearningMenuList > li > ul > li > a > i.fa-circle {
+	position: absolute;
+    left: 101%;
+    color: #CCC;
+    top: 23%;
+    font-size: 10px;
+}
+.eLearningMenuList > li > .ELwelcome > li:first-child > a > i {
+	color: rgb(0, 92, 151);
+}
+.eLearningMenuList > li > .ELwhatIsElx > li:first-child > a > i {
+	color: rgb(17, 152, 205);
+}
+.eLearningMenuList > li > .ELmainFeatures > li:first-child > a > i {
+	color: rgb(88, 162, 173);
+}
+.eLearningMenuList > li > .ELOj > li:first-child > a > i {
+	color: rgb(255, 121, 0);
+}
+.eLearningMenuList > li > .ELSearch > li:first-child > a > i {
+	color: rgb(249, 78, 0);
+}
+.eLearningMenuList > li > .ELdocView > li:first-child > a > i {
+	color: rgb(0, 190, 153);
+}
+.eLearningMenuList > li > .ELmoreFeatures > li:first-child > a > i {
+	color: rgb(0, 83, 117);
+}
+/* EURLEXNEW-3662: E-Learning content - transfer to normal editorial pages - e-learning menu (end) */
