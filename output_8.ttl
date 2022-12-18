@@ -1,0 +1,271 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/automated-motor-vehicles> skosxl:literalForm "automated motor vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/automobiles--government> skosxl:literalForm "automobiles, government"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/automotive-vehicles> skosxl:literalForm "automotive vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/autonomous-vehicles> skosxl:literalForm "autonomous vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/buggies--tundra> skosxl:literalForm "buggies, tundra"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/chain-track-vehicles> skosxl:literalForm "chain-track vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/commercial-motor-vehicles> skosxl:literalForm "commercial motor vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/driver-free-cars> skosxl:literalForm "driver-free cars"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/driverless-cars> skosxl:literalForm "driverless cars"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/evs--electric-vehicles-> skosxl:literalForm "evs (electric vehicles)"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/fictional-vehicles> skosxl:literalForm "fictional vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/government-automobiles> skosxl:literalForm "government automobiles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/government-cars> skosxl:literalForm "government cars"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/government-motor-vehicles> skosxl:literalForm "government motor vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/government-owned-vehicles> skosxl:literalForm "government-owned vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/half-track-vehicles> skosxl:literalForm "half-track vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/horse-powered-vehicles> skosxl:literalForm "horse-powered vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/horsedrawn-vehicles> skosxl:literalForm "horsedrawn vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/motor-vehicles--selling> skosxl:literalForm "motor vehicles--selling"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/off-highway-vehicles> skosxl:literalForm "off-highway vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/off-the-road-vehicles> skosxl:literalForm "off-the-road vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/offroad-vehicles> skosxl:literalForm "offroad vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/orvs--off-road-vehicles-> skosxl:literalForm "orvs (off road vehicles)"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/police-cars> skosxl:literalForm "police cars"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/rail-bus> skosxl:literalForm "rail bus"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/robot-cars--automated-vehicles-> skosxl:literalForm "robot cars (automated vehicles)"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/self-driving-cars> skosxl:literalForm "self-driving cars"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/solar-powered-electric-vehicles> skosxl:literalForm "solar-powered electric vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/solar-powered-vehicles> skosxl:literalForm "solar-powered vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/space-rockets> skosxl:literalForm "space rockets"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/track-type-vehicles> skosxl:literalForm "track-type vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/tracked-vehicles> skosxl:literalForm "tracked vehicles"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/transport-equipment> skosxl:literalForm "transport equipment"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/transport-facilities> skosxl:literalForm "transport facilities"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/tundra-buggies> skosxl:literalForm "tundra buggies"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--electric> skosxl:literalForm "vehicles, electric"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--government> skosxl:literalForm "vehicles, government"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--police> skosxl:literalForm "vehicles, police"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--solar> skosxl:literalForm "vehicles, solar"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--solar-powered> skosxl:literalForm "vehicles, solar-powered"@en .
+
+<http://webgate.ec.europa.eu/youreurope/sdg/annexI/C> a skos:Concept ;
+    dct:identifier "C" ;
+    skos:inScheme <http://webgate.ec.europa.eu/youreurope/sdg/annexI> ;
+    skos:topConceptOf <http://webgate.ec.europa.eu/youreurope/sdg/annexI> ;
+    skosxl:altLabel <http://publications.europa.eu/resource/authority/publicservice-theme/label/automated-motor-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/automobiles--government>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/automotive-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/autonomous-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/buggies--tundra>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/chain-track-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/commercial-motor-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/driver-free-cars>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/driverless-cars>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/evs--electric-vehicles->,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/fictional-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/government-automobiles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/government-cars>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/government-motor-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/government-owned-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/half-track-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/horse-powered-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/horsedrawn-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/motor-vehicles--selling>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/off-highway-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/off-the-road-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/offroad-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/organised>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/orvs--off-road-vehicles->,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/police-cars>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/rail-bus>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/robot-cars--automated-vehicles->,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/self-driving-cars>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/solar-powered-electric-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/solar-powered-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/space-rockets>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/track-type-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/tracked-vehicles>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/transport-equipment>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/transport-facilities>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/tundra-buggies>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--electric>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--government>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--police>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--solar>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/vehicles--solar-powered> ;
+    skosxl:prefLabel <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C-label--0> .
+
+<http://webgate.ec.europa.eu/youreurope/sdg/annexI/C-label--0> a skosxl:Label ;
+    skosxl:literalForm "Vehicles in the Union" .
+
+<http://webgate.ec.europa.eu/youreurope/sdg/annexI> a skos:ConceptScheme ;
+    dct:description "List of Annex I codes" ;
+    dct:title "Annex I codes" ;
+    skos:hasTopConcept <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B8>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B9>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/I>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/I1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J10>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J11>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J8>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J9>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M8>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M9>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/Q>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/Q1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/R>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/R1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/S>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/S1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/W>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/W1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/W2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X6> .
+

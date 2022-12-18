@@ -1,90 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF
-	xmlns:schema="http://schema.org/"
-	xmlns:concept-status="http://publications.europa.eu/resource/authority/concept-status/"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:org="http://www.w3.org/ns/org#"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:qb="http://purl.org/linked-data/cube#"
-	xmlns:dct="http://purl.org/dc/terms/"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:days="http://data.sparna.fr/vocabularies/days#"
-	xmlns:dcat="http://www.w3.org/ns/dcat#"
-	xmlns:prov="http://www.w3.org/ns/prov#"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
-	xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#">
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-	<dct:title xml:lang="en">List of words</dct:title>
-	<dct:description xml:lang="en">List of words</dct:description>
-	<skos:hasTopConcept rdf:resource="http://data.sparna.fr/vocabularies/days#subcategory"/>
-	<skos:hasTopConcept rdf:resource="http://data.sparna.fr/vocabularies/days#certificate"/>
-	<skos:hasTopConcept rdf:resource="http://data.sparna.fr/vocabularies/days#admission"/>
-	<skos:hasTopConcept rdf:resource="hhttp://data.sparna.fr/vocabularies/days#produces"/>
-	<skos:hasTopConcept rdf:resource="hhttp://data.sparna.fr/vocabularies/days#help&amp;support"/>
-	<skos:hasTopConcept rdf:resource="http://data.sparna.fr/vocabularies/days#amountofmoney"/>
-	<skos:hasTopConcept rdf:resource="http://data.sparna.fr/vocabularies/days#equilibriumtheory"/>
-	<skos:hasTopConcept rdf:resource="http://data.sparna.fr/vocabularies/days#rock-formingminerals"/>
-</rdf:Description>
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#subcategory">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Subcategory</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days> a skos:ConceptScheme;
+  dct:description "The days of the week";
+  dct:title "Weekdays";
+  skos:hasTopConcept <http://data.sparna.fr/vocabularies/days/friday>, <http://data.sparna.fr/vocabularies/days/monday>,
+    <http://data.sparna.fr/vocabularies/days/thursday>, <http://data.sparna.fr/vocabularies/days/tuesday>,
+    <http://data.sparna.fr/vocabularies/days/wednesday>, <http://data.sparna.fr/vocabularies/days/week-end> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#certificate">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Certificate</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days/monday> a skos:Concept;
+  skos:definition <http://data.sparna.fr/vocabularies/days/monday-def-0>;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "MON";
+  skos:topConceptOf <http://data.sparna.fr/vocabularies/days>;
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/monday-label--0> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#admission">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Admission requirements</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days/tuesday> a skos:Concept;
+  skos:definition <http://data.sparna.fr/vocabularies/days/tuesday-def-0>;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "TUE";
+  skos:topConceptOf <http://data.sparna.fr/vocabularies/days>;
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/tuesday-label--0> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#produces">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Produces</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days/wednesday> a skos:Concept;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "WED";
+  skos:topConceptOf <http://data.sparna.fr/vocabularies/days>;
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/wednesday-label--0> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#help&amp;support">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Help&amp;Support</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days/thursday> a skos:Concept;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "THU";
+  skos:topConceptOf <http://data.sparna.fr/vocabularies/days>;
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/thursday-label--0> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#amountofmoney">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Amount Of Money</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days/friday> a skos:Concept;
+  skos:definition <http://data.sparna.fr/vocabularies/days/friday-def-0>;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "FRI";
+  skos:topConceptOf <http://data.sparna.fr/vocabularies/days>;
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/friday-label--0> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#rock-formingminerals">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Equilibrium theory</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
+<http://data.sparna.fr/vocabularies/days/saturday> a skos:Concept;
+  skos:broader <http://data.sparna.fr/vocabularies/days/week-end>;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "SAT";
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/saturday-label--0> .
 
-<rdf:Description rdf:about="http://data.sparna.fr/vocabularies/days#rock-formingminerals">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:prefLabel xml:lang="en">Rock-forming minerals</skos:prefLabel>
-	<skos:inScheme rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-	<skos:topConceptOf rdf:resource="http://data.sparna.fr/vocabularies/days"/>
-</rdf:Description>
-</rdf:RDF>
+<http://data.sparna.fr/vocabularies/days/sunday> a skos:Concept;
+  skos:broader <http://data.sparna.fr/vocabularies/days/week-end>;
+  skos:definition <http://data.sparna.fr/vocabularies/days/sunday-def-0>;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:notation "SUN";
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/sunday-label--0> .
+
+<http://data.sparna.fr/vocabularies/days/week-end> a skos:Concept;
+  skos:definition <http://data.sparna.fr/vocabularies/days/week-end-def-0>;
+  skos:inScheme <http://data.sparna.fr/vocabularies/days>;
+  skos:narrower <http://data.sparna.fr/vocabularies/days/saturday>, <http://data.sparna.fr/vocabularies/days/sunday>;
+  skos:notation "WKND";
+  skos:topConceptOf <http://data.sparna.fr/vocabularies/days>;
+  skosxl:prefLabel <http://data.sparna.fr/vocabularies/days/week-end-label--0> .
+
+<http://data.sparna.fr/vocabularies/days/monday-label--0> a skosxl:Label;
+  skosxl:literalForm "Monday" .
+
+<http://data.sparna.fr/vocabularies/days/sunday-label--0> a skosxl:Label;
+  skosxl:literalForm "Sunday" .
+
+<http://data.sparna.fr/vocabularies/days/wednesday-label--0> a skosxl:Label;
+  skosxl:literalForm "Wednesday" .
+
+<http://data.sparna.fr/vocabularies/days/thursday-label--0> a skosxl:Label;
+  skosxl:literalForm "Thursday" .
+
+<http://data.sparna.fr/vocabularies/days/week-end-label--0> a skosxl:Label;
+  skosxl:literalForm "Week-end" .
+
+<http://data.sparna.fr/vocabularies/days/saturday-label--0> a skosxl:Label;
+  skosxl:literalForm "Saturday" .
+
+<http://data.sparna.fr/vocabularies/days/friday-label--0> a skosxl:Label;
+  skosxl:literalForm "Friday" .
+
+<http://data.sparna.fr/vocabularies/days/tuesday-label--0> a skosxl:Label;
+  skosxl:literalForm "Tuesday" .
+
+<http://data.sparna.fr/vocabularies/days/friday-def-0> rdf:value "Week-end soon !" .
+
+<http://data.sparna.fr/vocabularies/days/week-end-def-0> rdf:value "Any day of the week-end" .
+
+<http://data.sparna.fr/vocabularies/days/tuesday-def-0> rdf:value "The most productive day of the week." .
+
+<http://data.sparna.fr/vocabularies/days/sunday-def-0> rdf:value "The day you sleep." .
+
+<http://data.sparna.fr/vocabularies/days/monday-def-0> rdf:value "The day where you get back at work" .

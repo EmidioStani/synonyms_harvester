@@ -1,5 +1,5 @@
-from SPARQLWrapper import SPARQLWrapper, TURTLE
 from rdflib import Graph
+from SPARQLWrapper import TURTLE, SPARQLWrapper
 
 sparql = SPARQLWrapper("http://localhost:7200/repositories/wiktionary")
 sparql.setQuery("""
@@ -26,4 +26,4 @@ results = sparql.query().convert()
 
 g = Graph()
 g.parse(data=results, format="turtle")
-g.serialize(destination='syn_wiktionary.ttl', format='turtle')
+g.serialize(destination='syn_wiktionary_2.ttl', format='turtle')

@@ -6,34 +6,36 @@
 """
 
 
-import requests
-from rdflib import Graph, Literal, URIRef
-from rdflib.namespace import RDF, SKOS
-from rdflib import Namespace
-import time
-import simplejson
-from SPARQLWrapper import SPARQLWrapper, JSON
-from datamuse import datamuse
-import re
 import argparse
+import re
+import time
+
 import nltk
+import requests
+import simplejson
+from datamuse import datamuse
+from nltk.tokenize import WhitespaceTokenizer
+from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib.namespace import RDF, SKOS
+from SPARQLWrapper import JSON, SPARQLWrapper
+
 nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 nltk.download('stopwords')
-from nltk.stem import WordNetLemmatizer 
-from nltk import word_tokenize
-from nltk.corpus import wordnet
-from nltk.corpus import stopwords
-from stop_words import get_stop_words
-from nltk.tokenize import RegexpTokenizer
+from statistics import mean
 
 import html2text
-import nltk.data
-from gensim import corpora, models, similarities
 import jieba
+import nltk.data
 import numpy as np
-from statistics import mean
+from gensim import corpora, models, similarities
+from nltk import word_tokenize
+from nltk.corpus import stopwords, wordnet
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import RegexpTokenizer
+from stop_words import get_stop_words
+
 
 def synonymsWiktionary(term, filename):
     g2 = Graph()
@@ -260,7 +262,7 @@ def checkExactMatch(c, wik_file):
 
 def checkCosineMatch(c, wik_file):
         x= []
-        tokenizer = RegexpTokenizer(r'\w+')
+        tokenizer = RegexpTokenizer(r'[\w\-]+')
         tokens = tokenizer.tokenize(c.lower())
         short_list = []
         for token in tokens:
@@ -308,7 +310,7 @@ def checkCosineMatch(c, wik_file):
 
 def checkLemmas(c, wik_file, max_num_nouns):
     x= []
-    tokenizer = RegexpTokenizer(r'\w+')
+    tokenizer = RegexpTokenizer(r'[\w\-]+')
     tokens = tokenizer.tokenize(c.lower())
     print("tokens %s" % tokens)
     filtered_sentence = [w for w in tokens if not w in stop_words]
@@ -328,10 +330,10 @@ def checkLemmas(c, wik_file, max_num_nouns):
     return x
 
 
-ALTERVISTA_KEY = 'xyz'
-WIKTIONARY_FILE = 'syn_wiktionary.ttl'
-INPUT_FILE = 'sample.rdf'
-OUTPUT_FILE = 'output.ttl'
+ALTERVISTA_KEY = 'Kdnuiqz85LO7gGIHdGZf'
+WIKTIONARY_FILE = 'syn_wiktionary_2.ttl'
+INPUT_FILE = 'sample2.rdf'
+OUTPUT_FILE = 'output_3.ttl'
 PARSER = argparse.ArgumentParser(description="Enrich skos list with synonyms")
 PARSER.add_argument("-k", "--apikey", help="api key for Altervista")
 PARSER.add_argument("-w", "--wiktionaryfile", help="syn file for wikitionary")
@@ -446,11 +448,30 @@ for s, p, o in sorted(g.triples((None, RDF.type, SKOS.Concept))):
                 print("Checking term with 3 lemmas...")
                 list2 = checkLemmas(c,WIKTIONARY_FILE, 3)
                 mylist.extend(list2)
+
+            mylist = list(set(mylist))
+            if(len(mylist) < 10):
+                print("Checking term with 6 lemmas...")
+                list2 = checkLemmas(c,WIKTIONARY_FILE, 6)
+                mylist.extend(list2)
         
             mylist = list(set(mylist))
+            
+            # removing elements containing the following characters
+            test_str=" -'_"
+            res = []
+            for sub in mylist:
+                flag = 0
+                for ele in sub:
+                    if ele in test_str:
+                        flag = 1
+                        print('Element %s will removed from the list' % (sub) )
+                if not flag:
+                    res.append(sub)
 
             mylist2 = []
-            for element in mylist:
+
+            for element in res:
                 kw_vector = dictionary.doc2bow(jieba.lcut(element))
                 index = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features = feature_cnt)
                 sim = index[tfidf[kw_vector]]
@@ -472,7 +493,7 @@ for s, p, o in sorted(g.triples((None, RDF.type, SKOS.Concept))):
                 sim3 = index3[tfidf[kw_vector3]]
                 arr3 = np.array(sim3)
                 maxSimilarity3 = np.amax(arr3)
-                print('Element %s has Max similarity in digital single gateway %s ' % (element, maxSimilarity3))
+                print('Element %s has Max similarity in gdpr %s ' % (element, maxSimilarity3))
 
                 list_sim = [maxSimilarity, maxSimilarity2, maxSimilarity3]
                 average = np.mean(list_sim)

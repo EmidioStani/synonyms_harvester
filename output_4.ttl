@@ -1,0 +1,270 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/areas-closed-to-noncitizens> skosxl:literalForm "areas closed to noncitizens"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/automobile-touring> skosxl:literalForm "automobile touring"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/automobile-traveling> skosxl:literalForm "automobile traveling"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/bibliography--union-lists> skosxl:literalForm "bibliography--union lists"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/bus-routes> skosxl:literalForm "bus routes"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/busting-unions> skosxl:literalForm "busting unions"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/caravans--trailers-> skosxl:literalForm "caravans (trailers)"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/church-unity--ecumenism-> skosxl:literalForm "church unity (ecumenism)"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/go-around> skosxl:literalForm "go around"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/go-by> skosxl:literalForm "go by"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/go-on> skosxl:literalForm "go on"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/go-out> skosxl:literalForm "go out"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/house-trailers> skosxl:literalForm "house trailers"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/indwelling-of-god> skosxl:literalForm "indwelling of god"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/labor-union-security> skosxl:literalForm "labor union security"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/luggage-labels> skosxl:literalForm "luggage labels"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/modal-split> skosxl:literalForm "modal split"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/motor-bus-travel> skosxl:literalForm "motor bus travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/motor-trucks--russian> skosxl:literalForm "motor-trucks, russian"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/move> skosxl:literalForm "move"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/movement> skosxl:literalForm "movement"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/ocean-voyages> skosxl:literalForm "ocean voyages"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/organised> skosxl:literalForm "organised"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/p2p-travel> skosxl:literalForm "p2p travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/peer-to-peer-tourism> skosxl:literalForm "peer-to-peer tourism"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/rail-travel> skosxl:literalForm "rail travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/routes-of-travel> skosxl:literalForm "routes of travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/sea-travel> skosxl:literalForm "sea travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/sexual-union> skosxl:literalForm "sexual union"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/social-travel--peer-to-peer-> skosxl:literalForm "social travel (peer-to-peer)"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/tourist-travel> skosxl:literalForm "tourist travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/traffic> skosxl:literalForm "traffic"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/train-travel> skosxl:literalForm "train travel"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/travel-bureaus> skosxl:literalForm "travel bureaus"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/travel-expense> skosxl:literalForm "travel expense"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/traveling-clocks> skosxl:literalForm "traveling clocks"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/unio-mystica> skosxl:literalForm "unio mystica"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/union-lists> skosxl:literalForm "union lists"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/visa> skosxl:literalForm "visa"@en .
+
+<http://publications.europa.eu/resource/authority/publicservice-theme/label/voyages-and-travels--posters> skosxl:literalForm "voyages and travels--posters"@en .
+
+<http://webgate.ec.europa.eu/youreurope/sdg/annexI/A> a skos:Concept ;
+    dct:identifier "A" ;
+    skos:inScheme <http://webgate.ec.europa.eu/youreurope/sdg/annexI> ;
+    skos:topConceptOf <http://webgate.ec.europa.eu/youreurope/sdg/annexI> ;
+    skosxl:altLabel <http://publications.europa.eu/resource/authority/publicservice-theme/label/areas-closed-to-noncitizens>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/automobile-touring>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/automobile-traveling>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/bibliography--union-lists>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/bus-routes>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/busting-unions>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/caravans--trailers->,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/church-unity--ecumenism->,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/go-around>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/go-by>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/go-on>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/go-out>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/house-trailers>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/indwelling-of-god>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/labor-union-security>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/luggage-labels>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/modal-split>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/motor-bus-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/motor-trucks--russian>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/move>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/movement>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/ocean-voyages>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/organised>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/p2p-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/peer-to-peer-tourism>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/rail-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/routes-of-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/sea-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/sexual-union>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/social-travel--peer-to-peer->,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/tourist-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/traffic>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/train-travel>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/travel-bureaus>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/travel-expense>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/traveling-clocks>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/unio-mystica>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/union-lists>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/visa>,
+        <http://publications.europa.eu/resource/authority/publicservice-theme/label/voyages-and-travels--posters> ;
+    skosxl:prefLabel <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A-label--0> .
+
+<http://webgate.ec.europa.eu/youreurope/sdg/annexI/A-label--0> a skosxl:Label ;
+    skosxl:literalForm "Travel within the Union" .
+
+<http://webgate.ec.europa.eu/youreurope/sdg/annexI> a skos:ConceptScheme ;
+    dct:description "List of Annex I codes" ;
+    dct:title "Annex I codes" ;
+    skos:hasTopConcept <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/A5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B8>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/B9>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/C5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/D6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/E4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/F6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/G5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/H7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/I>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/I1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J10>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J11>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J8>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/J9>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/K5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/L5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M6>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M7>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M8>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/M9>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/N3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/O3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/P3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/Q>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/Q1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/R>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/R1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/S>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/S1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/T3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/U4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/V4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/W>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/W1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/W2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X1>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X2>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X3>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X4>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X5>,
+        <http://webgate.ec.europa.eu/youreurope/sdg/annexI/X6> .
+
